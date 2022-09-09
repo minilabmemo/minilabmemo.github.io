@@ -1,0 +1,1061 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <<<<<<< HEAD <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+    <meta name="theme-color" content="#222">
+    <meta name="generator" content="Hexo 5.3.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-Memo.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-32x32-Memo.png">
+    <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+    <link rel="stylesheet" href="/css/main.css">
+
+
+    <link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+    <script id="hexo-configurations">
+      var NexT = window.NexT || {};
+      var CONFIG = {"hostname": "yoursite.com", "root": "/", "scheme": "Pisces", "version": "7.8.0", "exturl": false, "sidebar": {"position": "left", "display": "post", "padding": 18, "offset": 12, "onmobile": false}, "copycode": {"enable": false, "show_result": false, "style": null}, "back2top": {"enable": true, "sidebar": false, "scrollpercent": true}, "bookmark": {"enable": false, "color": "#222", "save": "auto"}, "fancybox": false, "mediumzoom": false, "lazyload": false, "pangu": false, "comments": {"style": "tabs", "active": null, "storage": true, "lazyload": false, "nav": null}, "algolia": {"hits": {"per_page": 10}, "labels": {"input_placeholder": "Search for Posts", "hits_empty": "We didn't find any results for the search: ${query}", "hits_stats": "${hits} results found in ${time} ms"}}, "localsearch": {"enable": false, "trigger": "auto", "top_n_per_article": 1, "unescape": false, "preload": false}, "motion": {"enable": true, "async": false, "transition": {"post_block": "fadeIn", "post_header": "slideDownIn", "post_body": "slideDownIn", "coll_header": "slideLeftIn", "sidebar": "slideUpIn"}}};
+    </script>
+
+    <meta name="description" content="spring 加上 Fire and forget，非同步處理，發出處理後就不用等待回復繼續做其他事情">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="java spring 非同步事件">
+    <meta property="og:url" content="http://yoursite.com/2021/01/30/java-spring-asnc/index.html">
+    <meta property="og:site_name" content="Yu&#39;s 程式筆記">
+    <meta property="og:description" content="spring 加上 Fire and forget，非同步處理，發出處理後就不用等待回復繼續做其他事情">
+    <meta property="og:locale" content="en_US">
+    <meta property="article:published_time" content="2021-01-30T10:00:42.000Z">
+    <meta property="article:modified_time" content="2021-01-30T11:57:59.507Z">
+    <meta property="article:author" content="Yuri">
+    <meta property="article:tag" content="java">
+    <meta property="article:tag" content="spring">
+    =======
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+    <meta name="theme-color" content="#222">
+    <meta name="generator" content="Hexo 5.3.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-Memo.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-32x32-Memo.png">
+    <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+    <link rel="stylesheet" href="/css/main.css">
+
+
+    <link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+    <script id="hexo-configurations">
+      var NexT = window.NexT || {};
+      var CONFIG = {"hostname": "yoursite.com", "root": "/", "scheme": "Pisces", "version": "7.8.0", "exturl": false, "sidebar": {"position": "left", "display": "post", "padding": 18, "offset": 12, "onmobile": false}, "copycode": {"enable": false, "show_result": false, "style": null}, "back2top": {"enable": true, "sidebar": false, "scrollpercent": true}, "bookmark": {"enable": false, "color": "#222", "save": "auto"}, "fancybox": false, "mediumzoom": false, "lazyload": false, "pangu": false, "comments": {"style": "tabs", "active": null, "storage": true, "lazyload": false, "nav": null}, "algolia": {"hits": {"per_page": 10}, "labels": {"input_placeholder": "Search for Posts", "hits_empty": "We didn't find any results for the search: ${query}", "hits_stats": "${hits} results found in ${time} ms"}}, "localsearch": {"enable": false, "trigger": "auto", "top_n_per_article": 1, "unescape": false, "preload": false}, "motion": {"enable": true, "async": false, "transition": {"post_block": "fadeIn", "post_header": "slideDownIn", "post_body": "slideDownIn", "coll_header": "slideLeftIn", "sidebar": "slideUpIn"}}};
+    </script>
+
+    <meta name="description" content="spring 加上 Fire and forget，非同步處理，發出處理後就不用等待回復繼續做其他事情">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="java spring 非同步事件">
+    <meta property="og:url" content="http://yoursite.com/2021/01/30/java-spring-asnc/index.html">
+    <meta property="og:site_name" content="Yu&#39;s 程式筆記">
+    <meta property="og:description" content="spring 加上 Fire and forget，非同步處理，發出處理後就不用等待回復繼續做其他事情">
+    <meta property="og:locale" content="en_US">
+    <meta property="article:published_time" content="2021-01-30T10:00:42.000Z">
+    <meta property="article:modified_time" content="2021-01-30T11:57:59.507Z">
+    <meta property="article:author" content="Yuri">
+    <meta property="article:tag" content="java">
+    <meta property="article:tag" content="spring">
+    >>>>>>> 2047a790375a9d727a119bcdd0b39700e5ed4c14
+    <meta name="twitter:card" content="summary">
+
+    <link rel="canonical" href="http://yoursite.com/2021/01/30/java-spring-asnc/">
+
+
+    <script id="page-configurations">
+      // https://hexo.io/docs/variables.html
+      CONFIG.page = {
+        sidebar: "",
+        isHome: false,
+        isPost: true,
+        lang: 'en'
+      };
+    </script>
+
+    <title>java spring 非同步事件 | Yu's 程式筆記</title>
+
+    <<<<<<< HEAD <noscript>
+      <style>
+        .use-motion .brand,
+        .use-motion .menu-item,
+        .sidebar-inner,
+        .use-motion .post-block,
+        .use-motion .pagination,
+        .use-motion .comments,
+        .use-motion .post-header,
+        .use-motion .post-body,
+        .use-motion .collection-header {
+          opacity: initial;
+        }
+
+        .use-motion .site-title,
+        .use-motion .site-subtitle {
+          opacity: initial;
+          top: initial;
+        }
+
+        .use-motion .logo-line-before i {
+          left: initial;
+        }
+
+        .use-motion .logo-line-after i {
+          right: initial;
+        }
+      </style>
+      </noscript>
+      =======
+
+
+
+
+
+
+      <noscript>
+        <style>
+          .use-motion .brand,
+          .use-motion .menu-item,
+          .sidebar-inner,
+          .use-motion .post-block,
+          .use-motion .pagination,
+          .use-motion .comments,
+          .use-motion .post-header,
+          .use-motion .post-body,
+          .use-motion .collection-header {
+            opacity: initial;
+          }
+
+          .use-motion .site-title,
+          .use-motion .site-subtitle {
+            opacity: initial;
+            top: initial;
+          }
+
+          .use-motion .logo-line-before i {
+            left: initial;
+          }
+
+          .use-motion .logo-line-after i {
+            right: initial;
+          }
+        </style>
+      </noscript>
+      >>>>>>> 2047a790375a9d727a119bcdd0b39700e5ed4c14
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <<<<<<< HEAD <div class="header-inner">
+        <div class="site-brand-container">
+          <div class="site-nav-toggle">
+            <div class="toggle" aria-label="Toggle navigation bar">
+              <span class="toggle-line toggle-line-first"></span>
+              <span class="toggle-line toggle-line-middle"></span>
+              <span class="toggle-line toggle-line-last"></span>
+            </div>
+          </div>
+
+          <div class="site-meta">
+
+            <a href="/" class="brand" rel="start">
+              <span class="logo-line-before"><i></i></span>
+              <h1 class="site-title">Yu's 程式筆記</h1>
+              <span class="logo-line-after"><i></i></span>
+            </a>
+            <p class="site-subtitle" itemprop="description">小小工程師 Memo </p>
+          </div>
+
+          <div class="site-nav-right">
+            <div class="toggle popup-trigger">
+            </div>
+          </div>
+        </div>
+
+
+
+
+        <nav class="site-nav">
+          <ul id="menu" class="main-menu menu">
+            =======
+            <div class="header-inner">
+              <div class="site-brand-container">
+                <div class="site-nav-toggle">
+                  <div class="toggle" aria-label="Toggle navigation bar">
+                    <span class="toggle-line toggle-line-first"></span>
+                    <span class="toggle-line toggle-line-middle"></span>
+                    <span class="toggle-line toggle-line-last"></span>
+                  </div>
+                </div>
+
+                <div class="site-meta">
+
+                  <a href="/" class="brand" rel="start">
+                    <span class="logo-line-before"><i></i></span>
+                    <h1 class="site-title">Yu's 程式筆記</h1>
+                    <span class="logo-line-after"><i></i></span>
+                  </a>
+                  <p class="site-subtitle" itemprop="description">小小工程師 Memo </p>
+                </div>
+
+                <div class="site-nav-right">
+                  <div class="toggle popup-trigger">
+                  </div>
+                </div>
+              </div>
+
+
+
+
+              <nav class="site-nav">
+                <ul id="menu" class="main-menu menu">
+                  >>>>>>> 2047a790375a9d727a119bcdd0b39700e5ed4c14
+                  <li class="menu-item menu-item-home">
+
+                    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+
+                    <<<<<<< HEAD </li>
+                      =======
+                  </li>
+                  >>>>>>> 2047a790375a9d727a119bcdd0b39700e5ed4c14
+                  <li class="menu-item menu-item-posts">
+
+                    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>posts</a>
+
+                    <<<<<<< HEAD </li>
+                      =======
+                  </li>
+                  >>>>>>> 2047a790375a9d727a119bcdd0b39700e5ed4c14
+                  <li class="menu-item menu-item-categories">
+
+                    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a>
+
+                    <<<<<<< HEAD </li>
+                      =======
+                  </li>
+                  >>>>>>> 2047a790375a9d727a119bcdd0b39700e5ed4c14
+                  <li class="menu-item menu-item-tags">
+
+                    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a>
+
+                    <<<<<<< HEAD </li>
+                      =======
+                  </li>
+                  >>>>>>> 2047a790375a9d727a119bcdd0b39700e5ed4c14
+                  <li class="menu-item menu-item-about">
+
+                    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a>
+
+                    <<<<<<< HEAD </li>
+                </ul>
+              </nav>
+
+
+
+              =======
+              </li>
+          </ul>
+        </nav>
+
+
+
+        >>>>>>> 2047a790375a9d727a119bcdd0b39700e5ed4c14
+
+  </div>
+  </header>
+
+  <<<<<<< HEAD <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+    </div>
+
+    <a href="https://github.com/minilabmemo" class="github-corner" title="Follow me on GitHub"
+      aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250"
+        aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path
+          d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+          fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path
+          d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+          fill="currentColor" class="octo-body"></path>
+      </svg></a>
+    =======
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+      <span>0%</span>
+    </div>
+
+    <a href="https://github.com/minilabmemo" class="github-corner" title="Follow me on GitHub"
+      aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250"
+        aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path
+          d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+          fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path
+          d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+          fill="currentColor" class="octo-body"></path>
+      </svg></a>
+    >>>>>>> 2047a790375a9d727a119bcdd0b39700e5ed4c14
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+
+
+          <div class="content post posts-expand">
+            <<<<<<< HEAD <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+              <link itemprop="mainEntityOfPage" href="http://yoursite.com/2021/01/30/java-spring-asnc/">
+
+              <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <meta itemprop="image" content="/images/avatar_memo.png">
+                <meta itemprop="name" content="Yuri">
+                <meta itemprop="description" content="後端IT工程師，Go經歷一年 & 正在學習 React。 喜歡貓狗．<br> 持續紀錄自學筆記，如有誤還請您不吝指出與指教＾＾">
+              </span>
+
+              <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+                <meta itemprop="name" content="Yu's 程式筆記">
+              </span>
+              <header class="post-header">
+                <h1 class="post-title" itemprop="name headline">
+                  java spring 非同步事件
+                </h1>
+
+                <div class="post-meta">
+                  <span class="post-meta-item">
+                    <span class="post-meta-item-icon">
+                      <i class="far fa-calendar"></i>
+                    </span>
+                    <span class="post-meta-item-text">Posted on</span>
+
+
+                    <time title="Created: 2021-01-30 18:00:42 / Modified: 19:57:59" itemprop="dateCreated datePublished"
+                      datetime="2021-01-30T18:00:42+08:00">2021-01-30</time>
+                  </span>
+                  <span class="post-meta-item">
+                    <span class="post-meta-item-icon">
+                      <i class="far fa-folder"></i>
+                    </span>
+                    <span class="post-meta-item-text">In</span>
+                    <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                      <a href="/categories/Tech/" itemprop="url" rel="index"><span itemprop="name">Tech.</span></a>
+                    </span>
+                    ,
+                    <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                      <a href="/categories/Tech/back-end/" itemprop="url" rel="index"><span
+                          itemprop="name">back-end</span></a>
+                    </span>
+                    ,
+                    <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                      <a href="/categories/Tech/back-end/java/" itemprop="url" rel="index"><span
+                          itemprop="name">java</span></a>
+                    </span>
+                  </span>
+
+
+                  <span class="post-meta-item" title="Views" id="busuanzi_container_page_pv" style="display: none;">
+                    <span class="post-meta-item-icon">
+                      <i class="fa fa-eye"></i>
+                    </span>
+                    <span class="post-meta-item-text">Views: </span>
+                    <span id="busuanzi_value_page_pv"></span>
+                  </span>
+
+                </div>
+              </header>
+
+
+
+
+              <div class="post-body" itemprop="articleBody">
+
+
+                <div class="note info">
+                  <p>spring 加上 Fire and forget，非同步處理，發出處理後就不用等待回復繼續做其他事情 </p>
+                </div>
+
+                <a id="more"></a>
+
+                <p>1.找到@Configuration 的地方加上@EnableAsync</p>
+                <figure class="highlight plain">
+                  <table>
+                    <tr>
+                      <td class="gutter">
+                        <pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre>
+                      </td>
+                      <td class="code">
+                        <pre><span class="line">@Configuration</span><br><span class="line">@EnableAsync</span><br><span class="line">public class XxxConfig &#123;</span><br><span class="line">&#125;</span><br></pre>
+                      </td>
+                    </tr>
+                  </table>
+                </figure>
+                <p>2.找到想要執行非同步的方法上方加上 @Async</p>
+                <figure class="highlight plain">
+                  <table>
+                    <tr>
+                      <td class="gutter">
+                        <pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre>
+                      </td>
+                      <td class="code">
+                        <pre><span class="line">@Component</span><br><span class="line">public class MyComponent &#123;</span><br><span class="line">    @Async</span><br><span class="line">    void doSomething() &#123;</span><br><span class="line">        &#x2F;&#x2F; this will be executed asynchronously</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre>
+                      </td>
+                    </tr>
+                  </table>
+                </figure>
+                <p>如果想要拿到回傳的地方可以在 Future<XXX>拿到結果。</p>
+                <figure class="highlight plain">
+                  <table>
+                    <tr>
+                      <td class="gutter">
+                        <pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre>
+                      </td>
+                      <td class="code">
+                        <pre><span class="line">@Component</span><br><span class="line">public class MyComponent &#123;</span><br><span class="line">    @Async</span><br><span class="line">    Future&lt;String&gt; doSomething(String s, int i, long l, Object o) &#123;</span><br><span class="line">        &#x2F;&#x2F; this will be executed asynchronously</span><br><span class="line">        return new AsyncResult&lt;&gt;(&quot;result&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre>
+                      </td>
+                    </tr>
+                  </table>
+                </figure>
+                <p>3.異常處理 TBD<br>這塊自己是用 restTamplate 發出訊息，但無奈可以 catch 到錯誤，卻無法做錯誤輸出整理。<br>留下文章待做研究。</p>
+                <hr>
+                <div class="note class_name">
+                  <p>網路參考文章 </p>
+                </div>
+
+                <ul>
+                  <li><a target="_blank" rel="noopener"
+                      href="https://stackoverflow.com/questions/33243255/spring-background-fire-and-forget-processing">spring-background-fire-and-forget-processing</a>
+                  </li>
+                  <li><a target="_blank" rel="noopener" href="https://www.mdeditor.tw/pl/pIYL/zh-tw">Spring Boot(5)
+                      @Async 非同步執行緒池詳解</a></li>
+                  <li>Spring 中@Async 用法與異常處理<br><a target="_blank" rel="noopener"
+                      href="https://codertw.com/%E7%A8%8B%E5%BC%8F%E8%AA%9E%E8%A8%80/312303/">Spring 中@Async 用法</a></li>
+                </ul>
+
+              </div>
+
+
+
+
+
+              <footer class="post-footer">
+                <div class="post-tags">
+                  <a href="/tags/java/" rel="tag"># java</a>
+                  <a href="/tags/spring/" rel="tag"># spring</a>
+                </div>
+
+
+
+
+
+                <div class="post-nav">
+                  <div class="post-nav-item">
+                    <a href="/2021/01/30/hexo-hello-world/" rel="prev" title="使用Ｈexo 撰寫部落格">
+                      <i class="fa fa-chevron-left"></i> 使用Ｈexo 撰寫部落格
+                    </a>
+                  </div>
+                  <div class="post-nav-item">
+                    <a href="/2021/01/31/docker-cli/" rel="next" title="[docker]常用docker指令筆記整理">
+                      [docker]常用docker指令筆記整理 <i class="fa fa-chevron-right"></i>
+                    </a>
+                  </div>
+                </div>
+              </footer>
+
+              </article>
+
+
+
+
+
+              =======
+
+
+
+
+
+              <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+                <link itemprop="mainEntityOfPage" href="http://yoursite.com/2021/01/30/java-spring-asnc/">
+
+                <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+                  <meta itemprop="image" content="/images/avatar_memo.png">
+                  <meta itemprop="name" content="Yuri">
+                  <meta itemprop="description"
+                    content="後端IT工程師，Go經歷一年 & 正在學習 React。 喜歡貓狗．<br> 持續紀錄自學筆記，如有誤還請您不吝指出與指教＾＾">
+                </span>
+
+                <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+                  <meta itemprop="name" content="Yu's 程式筆記">
+                </span>
+                <header class="post-header">
+                  <h1 class="post-title" itemprop="name headline">
+                    java spring 非同步事件
+                  </h1>
+
+                  <div class="post-meta">
+                    <span class="post-meta-item">
+                      <span class="post-meta-item-icon">
+                        <i class="far fa-calendar"></i>
+                      </span>
+                      <span class="post-meta-item-text">Posted on</span>
+
+
+                      <time title="Created: 2021-01-30 18:00:42 / Modified: 19:57:59"
+                        itemprop="dateCreated datePublished" datetime="2021-01-30T18:00:42+08:00">2021-01-30</time>
+                    </span>
+                    <span class="post-meta-item">
+                      <span class="post-meta-item-icon">
+                        <i class="far fa-folder"></i>
+                      </span>
+                      <span class="post-meta-item-text">In</span>
+                      <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                        <a href="/categories/Tech/" itemprop="url" rel="index"><span itemprop="name">Tech.</span></a>
+                      </span>
+                      ,
+                      <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                        <a href="/categories/Tech/back-end/" itemprop="url" rel="index"><span
+                            itemprop="name">back-end</span></a>
+                      </span>
+                      ,
+                      <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                        <a href="/categories/Tech/back-end/java/" itemprop="url" rel="index"><span
+                            itemprop="name">java</span></a>
+                      </span>
+                    </span>
+
+
+                    <span class="post-meta-item" title="Views" id="busuanzi_container_page_pv" style="display: none;">
+                      <span class="post-meta-item-icon">
+                        <i class="fa fa-eye"></i>
+                      </span>
+                      <span class="post-meta-item-text">Views: </span>
+                      <span id="busuanzi_value_page_pv"></span>
+                    </span>
+
+                  </div>
+                </header>
+
+
+
+
+                <div class="post-body" itemprop="articleBody">
+
+
+                  <div class="note info">
+                    <p>spring 加上 Fire and forget，非同步處理，發出處理後就不用等待回復繼續做其他事情 </p>
+                  </div>
+
+                  <a id="more"></a>
+
+                  <p>1.找到@Configuration 的地方加上@EnableAsync</p>
+                  <figure class="highlight plain">
+                    <table>
+                      <tr>
+                        <td class="gutter">
+                          <pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre>
+                        </td>
+                        <td class="code">
+                          <pre><span class="line">@Configuration</span><br><span class="line">@EnableAsync</span><br><span class="line">public class XxxConfig &#123;</span><br><span class="line">&#125;</span><br></pre>
+                        </td>
+                      </tr>
+                    </table>
+                  </figure>
+                  <p>2.找到想要執行非同步的方法上方加上 @Async</p>
+                  <figure class="highlight plain">
+                    <table>
+                      <tr>
+                        <td class="gutter">
+                          <pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre>
+                        </td>
+                        <td class="code">
+                          <pre><span class="line">@Component</span><br><span class="line">public class MyComponent &#123;</span><br><span class="line">    @Async</span><br><span class="line">    void doSomething() &#123;</span><br><span class="line">        &#x2F;&#x2F; this will be executed asynchronously</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre>
+                        </td>
+                      </tr>
+                    </table>
+                  </figure>
+                  <p>如果想要拿到回傳的地方可以在 Future<XXX>拿到結果。</p>
+                  <figure class="highlight plain">
+                    <table>
+                      <tr>
+                        <td class="gutter">
+                          <pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre>
+                        </td>
+                        <td class="code">
+                          <pre><span class="line">@Component</span><br><span class="line">public class MyComponent &#123;</span><br><span class="line">    @Async</span><br><span class="line">    Future&lt;String&gt; doSomething(String s, int i, long l, Object o) &#123;</span><br><span class="line">        &#x2F;&#x2F; this will be executed asynchronously</span><br><span class="line">        return new AsyncResult&lt;&gt;(&quot;result&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre>
+                        </td>
+                      </tr>
+                    </table>
+                  </figure>
+                  <p>3.異常處理 TBD<br>這塊自己是用 restTamplate 發出訊息，但無奈可以 catch 到錯誤，卻無法做錯誤輸出整理。<br>留下文章待做研究。</p>
+                  <hr>
+                  <div class="note class_name">
+                    <p>網路參考文章 </p>
+                  </div>
+
+                  <ul>
+                    <li><a target="_blank" rel="noopener"
+                        href="https://stackoverflow.com/questions/33243255/spring-background-fire-and-forget-processing">spring-background-fire-and-forget-processing</a>
+                    </li>
+                    <li><a target="_blank" rel="noopener" href="https://www.mdeditor.tw/pl/pIYL/zh-tw">Spring Boot(5)
+                        @Async 非同步執行緒池詳解</a></li>
+                    <li>Spring 中@Async 用法與異常處理<br><a target="_blank" rel="noopener"
+                        href="https://codertw.com/%E7%A8%8B%E5%BC%8F%E8%AA%9E%E8%A8%80/312303/">Spring 中@Async 用法</a>
+                    </li>
+                  </ul>
+
+                </div>
+
+
+
+
+
+                <footer class="post-footer">
+                  <div class="post-tags">
+                    <a href="/tags/java/" rel="tag"># java</a>
+                    <a href="/tags/spring/" rel="tag"># spring</a>
+                  </div>
+
+
+
+
+
+                  <div class="post-nav">
+                    <div class="post-nav-item">
+                      <a href="/2021/01/30/hexo-hello-world/" rel="prev" title="使用Ｈexo 撰寫部落格">
+                        <i class="fa fa-chevron-left"></i> 使用Ｈexo 撰寫部落格
+                      </a>
+                    </div>
+                    <div class="post-nav-item">
+                      <a href="/2021/01/31/docker-cli/" rel="next" title="[docker]常用docker指令筆記整理">
+                        [docker]常用docker指令筆記整理 <i class="fa fa-chevron-right"></i>
+                      </a>
+                    </div>
+                  </div>
+                </footer>
+
+              </article>
+
+
+
+
+
+              >>>>>>> 2047a790375a9d727a119bcdd0b39700e5ed4c14
+
+          </div>
+
+
+          <script>
+            window.addEventListener('tabs:register', () => {
+              let {activeClass} = CONFIG.comments;
+              if (CONFIG.comments.storage) {
+                activeClass = localStorage.getItem('comments_active') || activeClass;
+              }
+              if (activeClass) {
+                let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+                if (activeTab) {
+                  activeTab.click();
+                }
+              }
+            });
+            if (CONFIG.comments.storage) {
+              window.addEventListener('tabs:click', event => {
+                if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+                let commentClass = event.target.classList[1];
+                localStorage.setItem('comments_active', commentClass);
+              });
+            }
+          </script>
+
+        </div>
+        <<<<<<< HEAD=======>>>>>>> 2047a790375a9d727a119bcdd0b39700e5ed4c14
+
+          <div class="toggle sidebar-toggle">
+            <span class="toggle-line toggle-line-first"></span>
+            <span class="toggle-line toggle-line-middle"></span>
+            <span class="toggle-line toggle-line-last"></span>
+          </div>
+
+          <aside class="sidebar">
+            <div class="sidebar-inner">
+
+              <ul class="sidebar-nav motion-element">
+                <li class="sidebar-nav-toc">
+                  Table of Contents
+                </li>
+                <li class="sidebar-nav-overview">
+                  Overview
+                </li>
+              </ul>
+
+              <!--noindex-->
+              <div class="post-toc-wrap sidebar-panel">
+              </div>
+              <!--/noindex-->
+
+              <div class="site-overview-wrap sidebar-panel">
+                <<<<<<< HEAD <div class="site-author motion-element" itemprop="author" itemscope
+                  itemtype="http://schema.org/Person">
+                  <img class="site-author-image" itemprop="image" alt="Yuri" src="/images/avatar_memo.png">
+                  <p class="site-author-name" itemprop="name">Yuri</p>
+                  <div class="site-description" itemprop="description">後端IT工程師，Go經歷一年 & 正在學習 React。 喜歡貓狗．<br>
+                    持續紀錄自學筆記，如有誤還請您不吝指出與指教＾＾</div>
+              </div>
+              <div class="site-state-wrap motion-element">
+                <nav class="site-state">
+                  <div class="site-state-item site-state-posts">
+                    <a href="/archives">
+                      <span class="site-state-item-count">27</span>
+                      <span class="site-state-item-name">posts</span>
+                    </a>
+                  </div>
+                  <div class="site-state-item site-state-categories">
+                    <a href="/categories/">
+
+                      <span class="site-state-item-count">14</span>
+                      <span class="site-state-item-name">categories</span></a>
+                  </div>
+                  <div class="site-state-item site-state-tags">
+                    <a href="/tags/">
+
+                      <span class="site-state-item-count">26</span>
+                      <span class="site-state-item-name">tags</span></a>
+                  </div>
+                </nav>
+              </div>
+              <div class="links-of-author motion-element">
+                <span class="links-of-author-item">
+                  <a href="https://github.com/minilabmemo"
+                    title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;minilabmemo" rel="noopener" target="_blank"><i
+                      class="fab fa-github fa-fw"></i>GitHub</a>
+                </span>
+                <span class="links-of-author-item">
+                  <a href="mailto:minilabmemo@gmail.com" title="E-Mail → mailto:minilabmemo@gmail.com" rel="noopener"
+                    target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+                </span>
+              </div>
+
+
+              =======
+              <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <img class="site-author-image" itemprop="image" alt="Yuri" src="/images/avatar_memo.png">
+                <p class="site-author-name" itemprop="name">Yuri</p>
+                <div class="site-description" itemprop="description">後端IT工程師，Go經歷一年 & 正在學習 React。 喜歡貓狗．<br>
+                  持續紀錄自學筆記，如有誤還請您不吝指出與指教＾＾</div>
+              </div>
+              <div class="site-state-wrap motion-element">
+                <nav class="site-state">
+                  <div class="site-state-item site-state-posts">
+                    <a href="/archives">
+                      <span class="site-state-item-count">29</span>
+                      <span class="site-state-item-name">posts</span>
+                    </a>
+                  </div>
+                  <div class="site-state-item site-state-categories">
+                    <a href="/categories/">
+
+                      <span class="site-state-item-count">15</span>
+                      <span class="site-state-item-name">categories</span></a>
+                  </div>
+                  <div class="site-state-item site-state-tags">
+                    <a href="/tags/">
+
+                      <span class="site-state-item-count">28</span>
+                      <span class="site-state-item-name">tags</span></a>
+                  </div>
+                </nav>
+              </div>
+              <div class="links-of-author motion-element">
+                <span class="links-of-author-item">
+                  <a href="https://github.com/minilabmemo"
+                    title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;minilabmemo" rel="noopener" target="_blank"><i
+                      class="fab fa-github fa-fw"></i>GitHub</a>
+                </span>
+                <span class="links-of-author-item">
+                  <a href="mailto:minilabmemo@gmail.com" title="E-Mail → mailto:minilabmemo@gmail.com" rel="noopener"
+                    target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+                </span>
+              </div>
+
+
+              >>>>>>> 2047a790375a9d727a119bcdd0b39700e5ed4c14
+
+            </div>
+
+            <script type="text/javascript" charset="utf-8" src="/js/tagcloud.js"></script>
+            <script type="text/javascript" charset="utf-8" src="/js/tagcanvas.js"></script>
+            <div class="widget-wrap">
+              <div id="myCanvasContainer" class="widget tagcloud">
+                <canvas width="220" height="250" id="resCanvas" style="width=100%">
+                  <<<<<<< HEAD <ul class="tag-list" itemprop="keywords">
+                    <li class="tag-list-item"><a class="tag-list-link" href="/tags/GitHub/" rel="tag">GitHub</a><span
+                        class="tag-list-count">1</span></li>
+                    <li class="tag-list-item"><a class="tag-list-link" href="/tags/IDE/" rel="tag">IDE</a><span
+                        class="tag-list-count">1</span></li>
+                    <li class="tag-list-item"><a class="tag-list-link" href="/tags/IDEA/" rel="tag">IDEA</a><span
+                        class="tag-list-count">1</span></li>
+                    <li class="tag-list-item"><a class="tag-list-link" href="/tags/Kubernetes/"
+                        rel="tag">Kubernetes</a><span class="tag-list-count">1</span></li>
+                    <li class="tag-list-item"><a class="tag-list-link" href="/tags/Material-ui/"
+                        rel="tag">Material-ui</a><span class="tag-list-count">1</span></li>
+                    <li class="tag-list-item"><a class="tag-list-link" href="/tags/Memory/" rel="tag">Memory</a><span
+                        class="tag-list-count">1</span></li>
+                    <li class="tag-list-item"><a class="tag-list-link" href="/tags/blog/" rel="tag">blog</a><span
+                        class="tag-list-count">1</span></li>
+                    <li class="tag-list-item"><a class="tag-list-link" href="/tags/cleanCode/"
+                        rel="tag">cleanCode</a><span class="tag-list-count">1</span></li>
+                    <li class="tag-list-item"><a class="tag-list-link" href="/tags/css/" rel="tag">css</a><span
+                        class="tag-list-count">2</span></li>
+                    <li class="tag-list-item"><a class="tag-list-link" href="/tags/css-in-js/"
+                        rel="tag">css-in-js</a><span class="tag-list-count">1</span></li>
+                    <li class="tag-list-item"><a class="tag-list-link" href="/tags/docker/" rel="tag">docker</a><span
+                        class="tag-list-count">3</span></li>
+                    <li class="tag-list-item"><a class="tag-list-link" href="/tags/golang/" rel="tag">golang</a><span
+                        class="tag-list-count">7</span></li>
+                    <li class="tag-list-item"><a class="tag-list-link" href="/tags/heroku/" rel="tag">heroku</a><span
+                        class="tag-list-count">1</span></li>
+                    <li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/" rel="tag">hexo</a><span
+                        class="tag-list-count">1</span></li>
+                    <li class="tag-list-item"><a class="tag-list-link" href="/tags/hugo/" rel="tag">hugo</a><span
+                        class="tag-list-count">1</span></li>
+                    <li class="tag-list-item"><a class="tag-list-link" href="/tags/ing/" rel="tag">ing</a><span
+                        class="tag-list-count">5</span></li>
+                    <li class="tag-list-item"><a class="tag-list-link" href="/tags/java/" rel="tag">java</a><span
+                        class="tag-list-count">2</span></li>
+                    <li class="tag-list-item"><a class="tag-list-link" href="/tags/map/" rel="tag">map</a><span
+                        class="tag-list-count">1</span></li>
+                    <li class="tag-list-item"><a class="tag-list-link" href="/tags/mongo/" rel="tag">mongo</a><span
+                        class="tag-list-count">1</span></li>
+                    <li class="tag-list-item"><a class="tag-list-link" href="/tags/note/" rel="tag">note</a><span
+                        class="tag-list-count">2</span></li>
+                    <li class="tag-list-item"><a class="tag-list-link" href="/tags/ramda/" rel="tag">ramda</a><span
+                        class="tag-list-count">1</span></li>
+                    <li class="tag-list-item"><a class="tag-list-link" href="/tags/react/" rel="tag">react</a><span
+                        class="tag-list-count">7</span></li>
+                    <li class="tag-list-item"><a class="tag-list-link" href="/tags/recharts/"
+                        rel="tag">recharts</a><span class="tag-list-count">1</span></li>
+                    <li class="tag-list-item"><a class="tag-list-link" href="/tags/spring/" rel="tag">spring</a><span
+                        class="tag-list-count">1</span></li>
+                    <li class="tag-list-item"><a class="tag-list-link" href="/tags/test/" rel="tag">test</a><span
+                        class="tag-list-count">2</span></li>
+                    <li class="tag-list-item"><a class="tag-list-link" href="/tags/vscode/" rel="tag">vscode</a><span
+                        class="tag-list-count">3</span></li>
+                    </ul>
+                    =======
+                    <ul class="tag-list" itemprop="keywords">
+                      <li class="tag-list-item"><a class="tag-list-link" href="/tags/GitHub/" rel="tag">GitHub</a><span
+                          class="tag-list-count">1</span></li>
+                      <li class="tag-list-item"><a class="tag-list-link" href="/tags/IDE/" rel="tag">IDE</a><span
+                          class="tag-list-count">1</span></li>
+                      <li class="tag-list-item"><a class="tag-list-link" href="/tags/IDEA/" rel="tag">IDEA</a><span
+                          class="tag-list-count">1</span></li>
+                      <li class="tag-list-item"><a class="tag-list-link" href="/tags/Kubernetes/"
+                          rel="tag">Kubernetes</a><span class="tag-list-count">1</span></li>
+                      <li class="tag-list-item"><a class="tag-list-link" href="/tags/Material-ui/"
+                          rel="tag">Material-ui</a><span class="tag-list-count">1</span></li>
+                      <li class="tag-list-item"><a class="tag-list-link" href="/tags/Memory/" rel="tag">Memory</a><span
+                          class="tag-list-count">1</span></li>
+                      <li class="tag-list-item"><a class="tag-list-link" href="/tags/blog/" rel="tag">blog</a><span
+                          class="tag-list-count">1</span></li>
+                      <li class="tag-list-item"><a class="tag-list-link" href="/tags/call-by-sharing/" rel="tag">call by
+                          sharing</a><span class="tag-list-count">1</span></li>
+                      <li class="tag-list-item"><a class="tag-list-link" href="/tags/cleanCode/"
+                          rel="tag">cleanCode</a><span class="tag-list-count">1</span></li>
+                      <li class="tag-list-item"><a class="tag-list-link" href="/tags/css/" rel="tag">css</a><span
+                          class="tag-list-count">2</span></li>
+                      <li class="tag-list-item"><a class="tag-list-link" href="/tags/css-in-js/"
+                          rel="tag">css-in-js</a><span class="tag-list-count">1</span></li>
+                      <li class="tag-list-item"><a class="tag-list-link" href="/tags/docker/" rel="tag">docker</a><span
+                          class="tag-list-count">3</span></li>
+                      <li class="tag-list-item"><a class="tag-list-link" href="/tags/golang/" rel="tag">golang</a><span
+                          class="tag-list-count">8</span></li>
+                      <li class="tag-list-item"><a class="tag-list-link" href="/tags/heroku/" rel="tag">heroku</a><span
+                          class="tag-list-count">1</span></li>
+                      <li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/" rel="tag">hexo</a><span
+                          class="tag-list-count">1</span></li>
+                      <li class="tag-list-item"><a class="tag-list-link" href="/tags/hugo/" rel="tag">hugo</a><span
+                          class="tag-list-count">1</span></li>
+                      <li class="tag-list-item"><a class="tag-list-link" href="/tags/ing/" rel="tag">ing</a><span
+                          class="tag-list-count">5</span></li>
+                      <li class="tag-list-item"><a class="tag-list-link" href="/tags/java/" rel="tag">java</a><span
+                          class="tag-list-count">2</span></li>
+                      <li class="tag-list-item"><a class="tag-list-link" href="/tags/map/" rel="tag">map</a><span
+                          class="tag-list-count">1</span></li>
+                      <li class="tag-list-item"><a class="tag-list-link" href="/tags/mongo/" rel="tag">mongo</a><span
+                          class="tag-list-count">1</span></li>
+                      <li class="tag-list-item"><a class="tag-list-link" href="/tags/note/" rel="tag">note</a><span
+                          class="tag-list-count">2</span></li>
+                      <li class="tag-list-item"><a class="tag-list-link" href="/tags/python/" rel="tag">python</a><span
+                          class="tag-list-count">1</span></li>
+                      <li class="tag-list-item"><a class="tag-list-link" href="/tags/ramda/" rel="tag">ramda</a><span
+                          class="tag-list-count">1</span></li>
+                      <li class="tag-list-item"><a class="tag-list-link" href="/tags/react/" rel="tag">react</a><span
+                          class="tag-list-count">7</span></li>
+                      <li class="tag-list-item"><a class="tag-list-link" href="/tags/recharts/"
+                          rel="tag">recharts</a><span class="tag-list-count">1</span></li>
+                      <li class="tag-list-item"><a class="tag-list-link" href="/tags/spring/" rel="tag">spring</a><span
+                          class="tag-list-count">1</span></li>
+                      <li class="tag-list-item"><a class="tag-list-link" href="/tags/test/" rel="tag">test</a><span
+                          class="tag-list-count">2</span></li>
+                      <li class="tag-list-item"><a class="tag-list-link" href="/tags/vscode/" rel="tag">vscode</a><span
+                          class="tag-list-count">3</span></li>
+                    </ul>
+                    >>>>>>> 2047a790375a9d727a119bcdd0b39700e5ed4c14
+                </canvas>
+              </div>
+            </div>
+
+      </div>
+      </aside>
+      <div id="sidebar-dimmer"></div>
+      <<<<<<< HEAD=======>>>>>>> 2047a790375a9d727a119bcdd0b39700e5ed4c14
+
+        </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+
+
+        <<<<<<< HEAD <div class="copyright">
+
+          &copy;
+          <span itemprop="copyrightYear">2021</span>
+          <span class="with-love">
+            <i class="fa fa-heart"></i>
+          </span>
+          <span class="author" itemprop="copyrightHolder">Yuri</span>
+      </div>
+      <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener"
+          target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener"
+          target="_blank">NexT.Pisces</a>
+      </div>
+      =======
+
+
+      <div class="copyright">
+
+        &copy;
+        <span itemprop="copyrightYear">2021</span>
+        <span class="with-love">
+          <i class="fa fa-heart"></i>
+        </span>
+        <span class="author" itemprop="copyrightHolder">Yuri</span>
+      </div>
+      <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener"
+          target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener"
+          target="_blank">NexT.Pisces</a>
+      </div>
+      >>>>>>> 2047a790375a9d727a119bcdd0b39700e5ed4c14
+
+
+      <div class="busuanzi-count">
+        <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+        <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+          <span class="post-meta-item-icon">
+            <i class="fa fa-user"></i>
+          </span>
+          <span class="site-uv" title="Total Visitors">
+            <span id="busuanzi_value_site_uv"></span>
+          </span>
+        </span>
+        <span class="post-meta-divider">|</span>
+        <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+          <span class="post-meta-item-icon">
+            <i class="fa fa-eye"></i>
+          </span>
+          <span class="site-pv" title="Total Views">
+            <span id="busuanzi_value_site_pv"></span>
+          </span>
+        </span>
+      </div>
+      <<<<<<< HEAD=======>>>>>>> 2047a790375a9d727a119bcdd0b39700e5ed4c14
+
+        </div>
+    </footer>
+    </div>
+
+
+    <script src="/lib/anime.min.js"></script>
+    <script src="/lib/velocity/velocity.min.js"></script>
+    <script src="/lib/velocity/velocity.ui.min.js"></script>
+    <<<<<<< HEAD <script src="/js/utils.js">
+      </script>
+
+      <script src="/js/motion.js"></script>
+
+
+      <script src="/js/schemes/pisces.js"></script>
+
+
+      <script src="/js/next-boot.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      =======
+
+      <script src="/js/utils.js"></script>
+
+      <script src="/js/motion.js"></script>
+
+
+      <script src="/js/schemes/pisces.js"></script>
+
+
+      <script src="/js/next-boot.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      >>>>>>> 2047a790375a9d727a119bcdd0b39700e5ed4c14
+
+
+
+
+
+</body>
+
+</html>
