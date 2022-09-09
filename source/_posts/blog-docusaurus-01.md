@@ -34,15 +34,15 @@ npx @docusaurus/init@latest init my-website classic
 cd my-website
 npx docusaurus start
 ```
-Ex 我的配置流程，我用的命名為my-note(你可以使用自訂的命名)：
+Ex 我的配置流程，我用的命名為note-blog(你可以使用自訂的命名)：
 ```javascript
-blog npx @docusaurus/init@latest init my-note classic
+blog npx @docusaurus/init@latest init note-blog classic
 
 npx: 40 安裝成功，花費 6.139 秒
 
 Creating new Docusaurus project ...
 
-Success! Created my-note
+Success! Created note-blog
 Inside that directory, you can run several commands:
 
   npm start
@@ -56,15 +56,15 @@ Inside that directory, you can run several commands:
 
 We suggest that you begin by typing:
 
-  cd my-note
+  cd note-blog
   npm start
 ```
 這邊最後一步啟動介紹寫的有點不同，但是都可以啟動
 
 一些基本的畫面就出來了☼☼☼
-http://localhost:3000/my-note/
+http://localhost:3000/note-blog/
 
-<img src="/images/post/my-note-ui.png" width="500px"/>
+<img src="/images/post/note-blog-ui.png" width="500px"/>
 
 接著我先不改內容，先部署到網路上拿到正式網址．
 
@@ -76,7 +76,7 @@ http://localhost:3000/my-note/
 
 個人使用gh-pages工具流程記錄如下．
 
-1. 先到github新增專案名為“”my-note
+1. 先到github新增專案名為“”note-blog
 2. 先把剛剛的專案上傳到GIT
 ```Bash 基本上照gutbuh建立完的提示輸入就好
 git remote add origin XXX
@@ -88,8 +88,8 @@ npm install --save gh-pages
 ```
 3. 在專案的 package.json 中加入 homepage與scripts
 ```diff
-"name": "my-note",
-+ "homepage": "https://minilabmemo.github.io/my-note",
+"name": "note-blog",
++ "homepage": "https://minilabmemo.github.io/note-blog",
 scripts": {
 +   "predeploy": "npm run build",
 +    "deploy": "gh-pages -d build",
@@ -107,7 +107,7 @@ npm run deploy
 Success! Generated static files in build.
 
 Use `npm run serve` to test your build locally.
-> my-note@0.0.0 deploy /xxxx
+> note-blog@0.0.0 deploy /xxxx
 > gh-pages -d build
 
 Published
@@ -116,11 +116,11 @@ Published
 
 6. 接著打開頁面，結果發現馬上跳[錯誤畫面](https://docusaurus.io/docs/docusaurus.config.js#baseurlissuebanner)，但有指示要更改docusaurus.config.js檔案內的
 ```
-baseUrl: '/my-note/',
+baseUrl: '/note-blog/',
 ```
 
 7. 再開一次頁面會成功了！！
-https://minilabmemo.github.io/my-note/
+https://minilabmemo.github.io/note-blog/
 
 
 （到這邊大約就五分鐘差不多，但為了看懂它的編輯設定還是花了我一點時間．）
@@ -128,7 +128,7 @@ https://minilabmemo.github.io/my-note/
 ---
 
 ## 開始編輯網站
-建立完後基本畫面上就有教學了，而且覺得比官網上的說明還要清楚，可以直接查看這邊就好，我也保留了這些教學文件（->[點我](https://minilabmemo.github.io/my-note/docs/docusaurus/tutorial-basics/create-a-page)）
+建立完後基本畫面上就有教學了，而且覺得比官網上的說明還要清楚，可以直接查看這邊就好，我也保留了這些教學文件（->[點我](https://minilabmemo.github.io/note-blog/docs/docusaurus/tutorial-basics/create-a-page)）
 
 ---
 
@@ -153,8 +153,8 @@ ex
 /src/pages/foo/index.js → <baseUrl>/foo/
 ```
 - 看看效果：
-my-note/src/pages/markdown-page.md
- →https://minilabmemo.github.io/my-note/markdown-page/
+note-blog/src/pages/markdown-page.md
+ →https://minilabmemo.github.io/note-blog/markdown-page/
 
 #### 建立文件 Document
 可以直接把文章放到docs資料夾裡，並在前言編輯位置與標題就會出現在側邊欄了．

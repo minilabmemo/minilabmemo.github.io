@@ -13,8 +13,8 @@ menu:
   categories: categories 分類
   tags: tags 標籤
   about: about me 關於我
-  my-note: My Note (隨筆)
-  my-golang-tour : Golang 學習 
+  note-blog: My Note (隨筆)
+  my-golang-memo : Golang 學習 
   search: Search
   schedule: Schedule
   sitemap: Sitemap

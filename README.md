@@ -1,14 +1,9 @@
 ---
 title:  HEXO BLOG
 
-
 這是一個使用 HEXO 主題架設的部落格，方便快速建立文章及部屬在 github 上。
 
-- github repo:
-  https://github.com/minilabmemo/minilabmemo.github.io
 
-- blog web IRL:
-  https://minilabmemo.github.io/
 
 ## Quick Start
 - node.js
@@ -71,7 +66,7 @@ $ hexo generate
 ```bash
 $ hexo deploy
 略
-Branch 'master' set up to track remote branch 'master' from 'https://github.com/minilabmemo/minilabmemo.github.io.git'.
+Branch 'master' set up to track remote branch 'master' from 'https://github.com/yumememooo/yumememooo.github.io.git'.
 INFO  Deploy done: git
 ```
 

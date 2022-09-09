@@ -27,14 +27,14 @@
 <meta property="og:site_name" content="MiniLab × Memo">
 <meta property="og:description" content="雖然說現在用的hexo技術建立的部落格就是為了寫筆記，但有時候只是為了真的純快速紀錄，之後待查或待看，但要整理成新的文章往往要一段時間，且很多不同的速記比較很難一下找出來，這時看到有另一種風格的部落格蠻適合當這樣的記錄的，適合作文檔的站點．                          1.Docusaurus will help you ship a beautif">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://minilabmemo.github.io/images/post/my-note-ui.png">
+<meta property="og:image" content="https://minilabmemo.github.io/images/post/note-blog-ui.png">
 <meta property="article:published_time" content="2021-05-21T10:39:33.000Z">
-<meta property="article:modified_time" content="2022-09-09T03:11:26.136Z">
-<meta property="article:author" content="Mira">
+<meta property="article:modified_time" content="2022-09-09T03:58:38.575Z">
+<meta property="article:author" content="mina">
 <meta property="article:tag" content="blog">
 <meta property="article:tag" content="docusaurus">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://minilabmemo.github.io/images/post/my-note-ui.png">
+<meta name="twitter:image" content="https://minilabmemo.github.io/images/post/note-blog-ui.png">
 
 <link rel="canonical" href="https://minilabmemo.github.io/2021/05/21/blog-docusaurus-01/">
 
@@ -151,14 +151,14 @@
     <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>about me 關於我</a>
 
   </li>
-        <li class="menu-item menu-item-my-note">
+        <li class="menu-item menu-item-note-blog">
 
-    <a href="/my-note/" rel="section"><i class="fa fa-book fa-fw"></i>My Note (隨筆)</a>
+    <a href="/note-blog/" rel="section"><i class="fa fa-book fa-fw"></i>My Note (隨筆)</a>
 
   </li>
-        <li class="menu-item menu-item-my-golang-tour">
+        <li class="menu-item menu-item-my-golang-memo">
 
-    <a href="https://minilabmemo.gitbook.io/golang-tour/" rel="noopener" target="_blank"><i class="fa fa-book fa-fw"></i>Golang 學習</a>
+    <a href="https://minilabmemo.gitbook.io/golang-memo/" rel="noopener" target="_blank"><i class="fa fa-book fa-fw"></i>Golang 學習</a>
 
   </li>
   </ul>
@@ -195,7 +195,7 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/web/avatar_memo.png">
-      <meta itemprop="name" content="Mira">
+      <meta itemprop="name" content="mina">
       <meta itemprop="description" content="後端IT工程師，Go經歷兩年 & 正在自學 React。 喜歡貓狗．<br> 持續紀錄自學筆記，如有誤還請您不吝指出與指教＾＾">
     </span>
 
@@ -221,7 +221,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2022-09-09 11:11:26" itemprop="dateModified" datetime="2022-09-09T11:11:26+08:00">2022-09-09</time>
+                <time title="Modified: 2022-09-09 11:58:38" itemprop="dateModified" datetime="2022-09-09T11:58:38+08:00">2022-09-09</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -278,37 +278,37 @@
 
 <h2 id="建立Docusaurus"><a href="#建立Docusaurus" class="headerlink" title="建立Docusaurus"></a>建立Docusaurus</h2><p>馬上就進入<a target="_blank" rel="noopener" href="https://docusaurus.io/docs">官網</a> 看 get started 說明流程只要三個指令：</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">npx @docusaurus/init@latest init my-website classic</span><br><span class="line">cd my-website</span><br><span class="line">npx docusaurus start</span><br></pre></td></tr></table></figure>
-<p>Ex 我的配置流程，我用的命名為my-note(你可以使用自訂的命名)：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">blog npx @docusaurus/init@latest init my-note classic</span><br><span class="line"></span><br><span class="line">npx: <span class="number">40</span> 安裝成功，花費 <span class="number">6.139</span> 秒</span><br><span class="line"></span><br><span class="line">Creating <span class="keyword">new</span> Docusaurus project ...</span><br><span class="line"></span><br><span class="line">Success! Created my-note</span><br><span class="line">Inside that directory, you can run several commands:</span><br><span class="line"></span><br><span class="line">  npm start</span><br><span class="line">    Starts the development server.</span><br><span class="line"></span><br><span class="line">  npm run build</span><br><span class="line">    Bundles the app into <span class="keyword">static</span> files <span class="keyword">for</span> production.</span><br><span class="line"></span><br><span class="line">  npm deploy</span><br><span class="line">    Publish website to GitHub pages.</span><br><span class="line"></span><br><span class="line">We suggest that you begin by typing:</span><br><span class="line"></span><br><span class="line">  cd my-note</span><br><span class="line">  npm start</span><br></pre></td></tr></table></figure>
+<p>Ex 我的配置流程，我用的命名為note-blog(你可以使用自訂的命名)：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">blog npx @docusaurus/init@latest init note-blog classic</span><br><span class="line"></span><br><span class="line">npx: <span class="number">40</span> 安裝成功，花費 <span class="number">6.139</span> 秒</span><br><span class="line"></span><br><span class="line">Creating <span class="keyword">new</span> Docusaurus project ...</span><br><span class="line"></span><br><span class="line">Success! Created note-blog</span><br><span class="line">Inside that directory, you can run several commands:</span><br><span class="line"></span><br><span class="line">  npm start</span><br><span class="line">    Starts the development server.</span><br><span class="line"></span><br><span class="line">  npm run build</span><br><span class="line">    Bundles the app into <span class="keyword">static</span> files <span class="keyword">for</span> production.</span><br><span class="line"></span><br><span class="line">  npm deploy</span><br><span class="line">    Publish website to GitHub pages.</span><br><span class="line"></span><br><span class="line">We suggest that you begin by typing:</span><br><span class="line"></span><br><span class="line">  cd note-blog</span><br><span class="line">  npm start</span><br></pre></td></tr></table></figure>
 <p>這邊最後一步啟動介紹寫的有點不同，但是都可以啟動</p>
-<p>一些基本的畫面就出來了☼☼☼<br><a target="_blank" rel="noopener" href="http://localhost:3000/my-note/">http://localhost:3000/my-note/</a></p>
-<img src="/images/post/my-note-ui.png" width="500px"/>
+<p>一些基本的畫面就出來了☼☼☼<br><a target="_blank" rel="noopener" href="http://localhost:3000/note-blog/">http://localhost:3000/note-blog/</a></p>
+<img src="/images/post/note-blog-ui.png" width="500px"/>
 
 <p>接著我先不改內容，先部署到網路上拿到正式網址．</p>
 <hr>
 <h2 id="上傳到github"><a href="#上傳到github" class="headerlink" title="上傳到github"></a>上傳到github</h2><p>這邊我用的方式是用gh-pages工具的做法，跟<a target="_blank" rel="noopener" href="https://docusaurus.io/docs/deployment">官網deployment介紹</a>的有點不同，（個人覺得官網寫的覺得有點難懂，但流程可能比較正式，有興趣的人可以試著做做看）</p>
 <p>個人使用gh-pages工具流程記錄如下．</p>
 <ol>
-<li><p>先到github新增專案名為“”my-note</p>
+<li><p>先到github新增專案名為“”note-blog</p>
 </li>
 <li><p>先把剛剛的專案上傳到GIT</p>
 <figure class="highlight bash"><figcaption><span>基本上照gutbuh建立完的提示輸入就好</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git remote add origin XXX</span><br><span class="line">git push -u origin master</span><br></pre></td></tr></table></figure></li>
 <li><p>安裝gh-pages工具</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install --save gh-pages</span><br></pre></td></tr></table></figure></li>
 <li><p>在專案的 package.json 中加入 homepage與scripts</p>
-<figure class="highlight diff"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&quot;name&quot;: &quot;my-note&quot;,</span><br><span class="line"><span class="addition">+ &quot;homepage&quot;: &quot;https://minilabmemo.github.io/my-note&quot;,</span></span><br><span class="line">scripts&quot;: &#123;</span><br><span class="line"><span class="addition">+   &quot;predeploy&quot;: &quot;npm run build&quot;,</span></span><br><span class="line"><span class="addition">+    &quot;deploy&quot;: &quot;gh-pages -d build&quot;,</span></span><br><span class="line">     &quot;docusaurus&quot;: &quot;docusaurus&quot;,</span><br><span class="line">    &quot;start&quot;: &quot;docusaurus start&quot;,</span><br><span class="line">    &quot;build&quot;: &quot;docusaurus build&quot;,</span><br><span class="line">    &quot;swizzle&quot;: &quot;docusaurus swizzle&quot;,</span><br><span class="line"><span class="deletion">-    &quot;deploy&quot;: &quot;docusaurus deploy&quot;,</span></span><br></pre></td></tr></table></figure></li>
+<figure class="highlight diff"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&quot;name&quot;: &quot;note-blog&quot;,</span><br><span class="line"><span class="addition">+ &quot;homepage&quot;: &quot;https://minilabmemo.github.io/note-blog&quot;,</span></span><br><span class="line">scripts&quot;: &#123;</span><br><span class="line"><span class="addition">+   &quot;predeploy&quot;: &quot;npm run build&quot;,</span></span><br><span class="line"><span class="addition">+    &quot;deploy&quot;: &quot;gh-pages -d build&quot;,</span></span><br><span class="line">     &quot;docusaurus&quot;: &quot;docusaurus&quot;,</span><br><span class="line">    &quot;start&quot;: &quot;docusaurus start&quot;,</span><br><span class="line">    &quot;build&quot;: &quot;docusaurus build&quot;,</span><br><span class="line">    &quot;swizzle&quot;: &quot;docusaurus swizzle&quot;,</span><br><span class="line"><span class="deletion">-    &quot;deploy&quot;: &quot;docusaurus deploy&quot;,</span></span><br></pre></td></tr></table></figure></li>
 <li><p>接著gh-page 就可以用下列指令上傳啦</p>
-<figure class="highlight shell"><figcaption><span>console</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">npm run deploy</span><br><span class="line"></span><br><span class="line">略</span><br><span class="line">Success! Generated static files in build.</span><br><span class="line"></span><br><span class="line">Use `npm run serve` to test your build locally.</span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> my-note@0.0.0 deploy /xxxx</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> gh-pages -d build</span></span><br><span class="line"></span><br><span class="line">Published</span><br></pre></td></tr></table></figure></li>
+<figure class="highlight shell"><figcaption><span>console</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">npm run deploy</span><br><span class="line"></span><br><span class="line">略</span><br><span class="line">Success! Generated static files in build.</span><br><span class="line"></span><br><span class="line">Use `npm run serve` to test your build locally.</span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> note-blog@0.0.0 deploy /xxxx</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> gh-pages -d build</span></span><br><span class="line"></span><br><span class="line">Published</span><br></pre></td></tr></table></figure></li>
 <li><p>成功部署到 Github 上後，會發現多了一個名為 gh-pages 的分支，教學文中說設定頁-&gt;GitHub Pages-&gt;Source要把頁面指到 gh-pages 這個分支（但我查看預設就是了）</p>
 </li>
 <li><p>接著打開頁面，結果發現馬上跳<a target="_blank" rel="noopener" href="https://docusaurus.io/docs/docusaurus.config.js#baseurlissuebanner">錯誤畫面</a>，但有指示要更改docusaurus.config.js檔案內的</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">baseUrl: &#39;&#x2F;my-note&#x2F;&#39;,</span><br></pre></td></tr></table></figure></li>
-<li><p>再開一次頁面會成功了！！<br><a href="https://minilabmemo.github.io/my-note/">https://minilabmemo.github.io/my-note/</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">baseUrl: &#39;&#x2F;note-blog&#x2F;&#39;,</span><br></pre></td></tr></table></figure></li>
+<li><p>再開一次頁面會成功了！！<br><a href="https://minilabmemo.github.io/note-blog/">https://minilabmemo.github.io/note-blog/</a></p>
 </li>
 </ol>
 <p>（到這邊大約就五分鐘差不多，但為了看懂它的編輯設定還是花了我一點時間．）</p>
 <hr>
-<h2 id="開始編輯網站"><a href="#開始編輯網站" class="headerlink" title="開始編輯網站"></a>開始編輯網站</h2><p>建立完後基本畫面上就有教學了，而且覺得比官網上的說明還要清楚，可以直接查看這邊就好，我也保留了這些教學文件（-&gt;<a href="https://minilabmemo.github.io/my-note/docs/docusaurus/tutorial-basics/create-a-page">點我</a>）</p>
+<h2 id="開始編輯網站"><a href="#開始編輯網站" class="headerlink" title="開始編輯網站"></a>開始編輯網站</h2><p>建立完後基本畫面上就有教學了，而且覺得比官網上的說明還要清楚，可以直接查看這邊就好，我也保留了這些教學文件（-&gt;<a href="https://minilabmemo.github.io/note-blog/docs/docusaurus/tutorial-basics/create-a-page">點我</a>）</p>
 <hr>
 <p>以下就簡單紀錄使用用法:</p>
 <h3 id="更改設定檔-docusaurus-config-js"><a href="#更改設定檔-docusaurus-config-js" class="headerlink" title="更改設定檔 docusaurus.config.js"></a>更改設定檔 docusaurus.config.js</h3><p>這邊可以更改網站標題與logo，看欄位一一修改應該沒什麼困難,但也有更多可以新增的欄位設定:</p>
@@ -327,7 +327,7 @@
 <h4 id="新增頁面-page"><a href="#新增頁面-page" class="headerlink" title="新增頁面 page"></a>新增頁面 page</h4><p>可以新增一個頁面，然後對應的網址就會出現對應內容了，這通常是獨立頁面，需要另外用超連結指到這個位置．</p>
 <ul>
 <li>須注意對應的網址會在 baseUrl底下喔<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ex</span><br><span class="line">&#x2F;src&#x2F;pages&#x2F;foo&#x2F;index.js → &lt;baseUrl&gt;&#x2F;foo&#x2F;</span><br></pre></td></tr></table></figure></li>
-<li>看看效果：<br>my-note/src/pages/markdown-page.md<br>→<a href="https://minilabmemo.github.io/my-note/markdown-page/">https://minilabmemo.github.io/my-note/markdown-page/</a></li>
+<li>看看效果：<br>note-blog/src/pages/markdown-page.md<br>→<a href="https://minilabmemo.github.io/note-blog/markdown-page/">https://minilabmemo.github.io/note-blog/markdown-page/</a></li>
 </ul>
 <h4 id="建立文件-Document"><a href="#建立文件-Document" class="headerlink" title="建立文件 Document"></a>建立文件 Document</h4><p>可以直接把文章放到docs資料夾裡，並在前言編輯位置與標題就會出現在側邊欄了．</p>
 <figure class="highlight markdown"><figcaption><span>/docs/intro.md</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">+</span> ---</span><br><span class="line"><span class="bullet">+</span> sidebar<span class="emphasis">_label: &quot;Hi!&quot;  </span></span><br><span class="line"><span class="emphasis">+ sidebar_</span>position: 3</span><br><span class="line"><span class="bullet">+</span> ---</span><br><span class="line"></span><br><span class="line"><span class="section"># Hello 這邊就是文章內容</span></span><br><span class="line"></span><br><span class="line">This is my <span class="strong">**first Docusaurus document**</span>!</span><br></pre></td></tr></table></figure>
@@ -440,16 +440,16 @@
 
       <div class="site-overview-wrap sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <img class="site-author-image" itemprop="image" alt="Mira"
+    <img class="site-author-image" itemprop="image" alt="mina"
       src="/images/web/avatar_memo.png">
-  <p class="site-author-name" itemprop="name">Mira</p>
+  <p class="site-author-name" itemprop="name">mina</p>
   <div class="site-description" itemprop="description">後端IT工程師，Go經歷兩年 & 正在自學 React。 喜歡貓狗．<br> 持續紀錄自學筆記，如有誤還請您不吝指出與指教＾＾</div>
 </div>
 <div class="site-state-wrap motion-element">
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">42</span>
+          <span class="site-state-item-count">43</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -462,7 +462,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">60</span>
+        <span class="site-state-item-count">61</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -501,7 +501,7 @@
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">Mira</span>
+  <span class="author" itemprop="copyrightHolder">mina</span>
 </div>
   <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a>
   </div>

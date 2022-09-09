@@ -119,8 +119,8 @@ menu:
   categories: /categories/ || fa fa-th
   tags: /tags/ || fa fa-tags
   about: /about/ || fa fa-user
-  my-note: /my-note/ || fa fa-book
-  my-golang-tour: https://minilabmemo.gitbook.io/golang-tour/ || fa fa-book
+  note-blog: /note-blog/ || fa fa-book
+  my-golang-memo: https://minilabmemo.gitbook.io/golang-memo/ || fa fa-book
   #schedule: /schedule/ || fa fa-calendar
   #sitemap: /sitemap.xml || fa fa-sitemap
   #commonweal: /404/ || fa fa-heartbeat
