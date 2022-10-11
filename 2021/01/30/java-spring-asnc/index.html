@@ -267,7 +267,7 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">@Configuration</span><br><span class="line">@EnableAsync</span><br><span class="line">public class XxxConfig &#123;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>2.找到想要執行非同步的方法上方加上 @Async</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">@Component</span><br><span class="line">public class MyComponent &#123;</span><br><span class="line">    @Async</span><br><span class="line">    void doSomething() &#123;</span><br><span class="line">        &#x2F;&#x2F; this will be executed asynchronously</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>如果想要拿到回傳的地方可以在 Future<XXX>拿到結果。</p>
+<p>如果想要拿到回傳的地方可以在 Future<XXX>拿到結果。</XXX></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">@Component</span><br><span class="line">public class MyComponent &#123;</span><br><span class="line">    @Async</span><br><span class="line">    Future&lt;String&gt; doSomething(String s, int i, long l, Object o) &#123;</span><br><span class="line">        &#x2F;&#x2F; this will be executed asynchronously</span><br><span class="line">        return new AsyncResult&lt;&gt;(&quot;result&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>3.異常處理 TBD<br>這塊自己是用 restTamplate 發出訊息，但無奈可以 catch 到錯誤，卻無法做錯誤輸出整理。<br>留下文章待做研究。</p>
 <hr>
@@ -391,7 +391,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">61</span>
+        <span class="site-state-item-count">62</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
