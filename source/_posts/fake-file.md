@@ -3,6 +3,7 @@ title: "[command]使用內建指令快速產生大黨"
 tags:
   - CLI
   - file
+  - command
 categories:
   - [Tech., Mac]
   - [Tech., Windows]

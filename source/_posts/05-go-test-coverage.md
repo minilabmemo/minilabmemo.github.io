@@ -3,6 +3,7 @@ title: "[Go 06] 寫測試並產出一目瞭然的網頁版覆蓋率報告 再也
 tags:
   - test
   - golang
+	- vscode
 categories:
   - Tech.
   - back-end
@@ -120,7 +121,8 @@ go tool cover -html=coverage.out
 其實後來發現vscode在跑完package test 後，右邊側欄就會跑出覆蓋的條線了
 如果只是要在測試時查看可以直接用ＩＤＥ的便利性即可．
 {% endnote %}
-![](/images/post/test_coverage_vscode.png)
+
+![vscode](/images/post/test_coverage_vscode.png)
 
 
 當然寫測試還有很多判斷的條件等等，是否等於，是否不等於，各種輸出可能．
