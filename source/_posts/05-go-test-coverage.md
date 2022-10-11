@@ -23,7 +23,7 @@ date: 2020-05-09T00:02:42+08:00
 //測試打GET /api/v1/user 去跑User() 會拿到“ＯＫ”
 func TestUser(t *testing.T) {
 	engine := gin.New()
-	initRoutes(engine)
+	initRoutes(engine)//你的路由邏輯
 	uri := "/api/v1/user"
 
 	body := Get(uri, engine)
@@ -36,7 +36,7 @@ func TestUser(t *testing.T) {
 //同理測試 Post 去跑PostName() 會拿到回復的名字等於打的內容（body）
 func TestPostName(t *testing.T) {
 	engine := gin.New()
-	initRoutes(engine)
+	initRoutes(engine) 
 	uri := "/api/v1/user"
 	user := structs.User{Name: "user", Age: 18}
 	body := PostUser(uri, user, engine)
@@ -102,9 +102,6 @@ ok      command-line-arguments  0.297s  coverage: 57.1% of statements
 ----
 #### 產生測試覆蓋(coverage)報表-gotest
 
-{% note warning %} 20210702 補充 :
-其實後來發現vscode在跑完package test 後，右邊側欄就會跑出覆蓋的條線了，比以下方法更方便呢！！{% endnote %}
-（（有機會再補上圖片）
 
 ```bash
 go test -coverprofile=coverage.out ./...
@@ -118,6 +115,13 @@ go tool cover -html=coverage.out
 ![](/images/post/test_coverage.png)
 
 ---
+
+{% note warning %} 20210702 補充 :
+其實後來發現vscode在跑完package test 後，右邊側欄就會跑出覆蓋的條線了
+如果只是要在測試時查看可以直接用ＩＤＥ的便利性即可．
+{% endnote %}
+![](/images/post/test_coverage_vscode.png)
+
 
 當然寫測試還有很多判斷的條件等等，是否等於，是否不等於，各種輸出可能．
 

@@ -22,7 +22,7 @@ date: 2020-05-18T23:51:23+08:00
 
 直接上實作完之程式碼
 
-```
+```go
 package logger
 
 import (

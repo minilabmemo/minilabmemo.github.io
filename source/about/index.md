@@ -19,11 +19,11 @@ date: 2020-09-06 13:53:06
 
 - 📫 How to reach me **minilabmemo@gmail.com**
 
-#### 學習技能:
+#### 經歷與技能:
 
-- 後端 golang 開發經歷一年
+- 後端 golang 開發經歷兩年
 - 熟悉開發 Restful Web API
-- 基礎 HTML,CSS,JS,JQUERY 概念，正在學習前端技能:React
+- 基礎網頁 HTML,CSS,JS,JQUERY 概念，正在學習前端技能:React
 - 其他 Transfer Protocol : WebSocket、MQTT 開發經歷
 - 資料庫 RDBMS SQL & NoSQL(Mongo) 操作與使用經驗
 - 版本控制: 基礎 Git 操作，對 Git flow 有概念

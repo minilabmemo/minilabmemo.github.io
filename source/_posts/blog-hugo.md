@@ -18,6 +18,8 @@ categories:
 
 - 建立部落格前可以先分別上 hexo/hugo 官網查看主題效果，看自己喜歡哪一種再建立．
 - hexo 教學文請看： [使用Ｈ exo 撰寫部落格](https://minilabmemo.github.io/2020/08/31/hexo-hello-world/)
+- gohugo作者Steve Francia
+
 
 <!--more-->
 
