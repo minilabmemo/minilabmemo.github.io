@@ -11,7 +11,7 @@ categories:
 date: 2020-12-31 11:53:14
 ---
 
-{% note info %} 學習 Kubernetes 與基本操作紀錄 {% endnote %}
+>學習 Kubernetes 與基本操作紀錄 
 
 
 <!--more-->

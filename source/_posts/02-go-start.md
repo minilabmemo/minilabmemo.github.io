@@ -12,7 +12,7 @@ date: 2020-05-01 21:16:32
 
 <!--more-->
 
-{% note info %}藍色區塊{% endnote %}
+>note info %}藍色區塊
 
 
 ## 開始寫GO

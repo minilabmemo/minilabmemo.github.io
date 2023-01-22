@@ -1,4 +1,4 @@
-{% macro render(display_toc) %}
+>macro render(display_toc) %}
   <div class="toggle sidebar-toggle">
     <span class="toggle-line toggle-line-first"></span>
     <span class="toggle-line toggle-line-middle"></span>
@@ -47,4 +47,4 @@
     </div>
   </aside>
   <div id="sidebar-dimmer"></div>
-{% endmacro %}
+>endmacro %}

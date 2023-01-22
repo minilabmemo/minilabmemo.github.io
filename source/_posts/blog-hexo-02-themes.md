@@ -46,7 +46,7 @@ language: zh-TW
 
 - 本部落格採用 Next，它是一個相當熱門的主題,且有很多中文文檔說明，我也是看了範例網站，真的太喜歡才決定架 hexo 的，紀錄操作步驟如下．
 
-- (`嘗試1:啟動失敗`){% label danger@失敗 %} 更換主題
+- (`嘗試1:啟動失敗`)>label danger@失敗 %} 更換主題
 
   1. git clone https://github.com/iissnan/hexo-theme-next themes/next:
 
@@ -64,7 +64,7 @@ WARN   It's rebase to v6.0.0 and future maintenance will resume there
 
 原因應該是找到的文章教學，clone 來源太舊了？改參考官方更新步驟[从 NexT v5.1.x 更新](https://github.com/theme-next/hexo-theme-next/blob/master/docs/zh-CN/UPDATE-FROM-5.1.X.md "从 NexT v5.1.x 更新")
 
-- （`嘗試2:啟動成功 但曾經部署網站成功後來失敗`){% label danger@失敗 %} 試著更換主題
+- （`嘗試2:啟動成功 但曾經部署網站成功後來失敗`)>label danger@失敗 %} 試著更換主題
 
 1. Clone v7.8.0 最新的倉庫（如放在 next-reloaded）：
    $ git clone https://github.com/theme-next/hexo-theme-next themes/next-reloaded
@@ -73,7 +73,7 @@ WARN   It's rebase to v6.0.0 and future maintenance will resume there
    theme: next-reloaded
 3. 重新開啟就正常了
 
-- `嘗試3:成功`) {% label success@現況Ｖ %} 2022 04 發現部署後 網站一直沒有更新，部署上傳後會跑部署流程，正常會有綠色勾勾，但某次之後都是紅色勾勾，點擊發現一直沒有辦法找到submoudule themes/next-reloaded
+- `嘗試3:成功`) >label success@現況Ｖ %} 2022 04 發現部署後 網站一直沒有更新，部署上傳後會跑部署流程，正常會有綠色勾勾，但某次之後都是紅色勾勾，點擊發現一直沒有辦法找到submoudule themes/next-reloaded
  - 排查過程：蠻奇怪的，不太懂沒有用到submoudule，不知道是不是殘留，部署的源碼也有看到theme/next-reloaded的連接．
   1. 決定用fork方式一份自己的主題[my-hexo-theme-next)](https://github.com/minilabmemo/my-hexo-theme-next)，並用submoudule加入
  ```
@@ -82,7 +82,7 @@ WARN   It's rebase to v6.0.0 and future maintenance will resume there
   2. 然後砍掉其他不要的主題，另外發現.deploy_git裡面有殘留theme/next-reloaded...等東西，就直接把.deploy_git資料夾整個砍掉，重新跑就部署成功了． （這時會發現.deploy_git跟上傳的檔案裡面都沒有theme中奇怪的next-reloaded的連接）
 
 
-{% note info %} 之後想更換別的主題也是這樣喔{% endnote %}
+>之後想更換別的主題也是這樣喔
 
 
 ### 主題設定
@@ -188,9 +188,9 @@ menu:
 ```
 有分號的上下引言，兩種皆可
 <!-- 标签 方式，要求版本在0.4.5或以上 -->
-{% centerquote %}blah blah blah{% endcenterquote %}
+>centerquote %}blah blah blah>endcenterquote %}
 <!-- 标签别名 -->
-{% cq %} blah blah blah {% endcq %}
+blah blah blah
 
 單純的置中引言
 <!-- HTML方式: 直接在 Markdown 文件中编写 HTML 来调用 -->
@@ -220,9 +220,9 @@ menu:
 ##### 標籤外掛（Tag Plugins）
 ```go
 依序為 語言 左上標題 右上網址 網址名稱
-{% codeblock lang:go terminal https://minilabmemo.github.io/ 完整程式碼 %}
+>codeblock lang:go terminal https://minilabmemo.github.io/ 完整程式碼 %}
 go xxx
-{% endcodeblock %}
+>endcodeblock %}
 
 \\ Backtick Code Block
 ```go  terminal https://minilabmemo.github.io/ 完整程式碼
@@ -231,9 +231,9 @@ go xxx
 + 
 ```
 - codeblock效果
-{% codeblock lang:go terminal https://minilabmemo.github.io/ 完整程式碼 %}
+>codeblock lang:go terminal https://minilabmemo.github.io/ 完整程式碼 %}
 go xxx
-{% endcodeblock %}
+>endcodeblock %}
 
 - Backtick Code Block效果
 ```golang terminal https://minilabmemo.github.io/ 完整程式碼
@@ -248,23 +248,23 @@ go xxx
 #### 文章開頭標記
 
 ```
-{% note class_name %} Content (md partial supported) {% endnote %}
+>note class_name %} Content (md partial supported) 
 其中class_name可不設或是改成下方關鍵字
 ```
 
-{% note class_name %} Content (不設定) 淡灰色 {% endnote %}
+>note class_name %} Content (不設定) 淡灰色 
 
-{% note default %} 灰色 default {% endnote %}
+>note default %} 灰色 default 
 
-{% note primary %} 紫色 primary {% endnote %}
+>note primary %} 紫色 primary 
 
-{% note success %} 綠色 success {% endnote %}
+>note success %} 綠色 success 
 
-{% note info %} 藍色 info {% endnote %}
+>藍色 info 
 
-{% note warning %} 黃色 warning {% endnote %}
+>note warning %} 黃色 warning 
 
-{% note danger %} 紅色 danger {% endnote %}
+>note danger %} 紅色 danger 
 
 主題\_config 文件配置关键字：note，可修改成想要的風格
 
@@ -283,13 +283,13 @@ note:
 ```
 
 #### 標籤標注
-{% label info@標示藍色底色 %}
-{% label warning@標示黃色底色 %}
-{% label danger@標示danger底色 %}
+>label info@標示藍色底色 %}
+>label warning@標示黃色底色 %}
+>label danger@標示danger底色 %}
 ```
-{% label info@標示藍色底色 %}
-{% label warning@標示黃色底色 %}
-{% label danger@標示danger底色 %}
+>label info@標示藍色底色 %}
+>label warning@標示黃色底色 %}
+>label danger@標示danger底色 %}
 ```
 
 #### 文章中貼上圖片

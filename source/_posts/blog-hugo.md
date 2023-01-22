@@ -124,7 +124,7 @@ website-hugo 上述的 site 名稱
 
 開啟https://xxx.github.io/ 等個幾分鐘會看到結果
 
-{% note class_name %} #### 參考文章 {% endnote %}
+>note class_name %} #### 參考文章 
 
 - [ＨＵＧＯ官網](https://gohugo.io/getting-started/quick-start/)
 - [在-github-部署-hugo-靜態網站](https://medium.com/@chswei/%E5%9C%A8-github-%E9%83%A8%E7%BD%B2-hugo-%E9%9D%9C%E6%85%8B%E7%B6%B2%E7%AB%99-9c40682dfe40)

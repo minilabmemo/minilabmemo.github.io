@@ -37,4 +37,4 @@ JSON.stringify(temp1)
 [Javascript / Chrome - How to copy an object from the webkit inspector as code
 ](https://stackoverflow.com/questions/10305365/javascript-chrome-how-to-copy-an-object-from-the-webkit-inspector-as-code)
 
-{% note class_name %} # 網路參考文章 {% endnote %}
+>note class_name %} # 網路參考文章 

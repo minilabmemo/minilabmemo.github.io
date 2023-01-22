@@ -10,7 +10,7 @@ categories:
 date: 2021-02-13 15:18:37
 ---
 
-{% note info %} 初學 python 筆記 {% endnote %}
+>初學 python 筆記 
 
 
 <!--more-->

@@ -16,7 +16,7 @@
 
     {%- if post.header !== false %}
       <header class="post-header">
-        <{%- if is_index %}h2{% else %}h1{%- endif %} class="post-title{%- if post.direction and post.direction.toLowerCase() === 'rtl' %} rtl{%- endif %}" itemprop="name headline">
+        <{%- if is_index %}h2>else %}h1{%- endif %} class="post-title{%- if post.direction and post.direction.toLowerCase() === 'rtl' %} rtl{%- endif %}" itemprop="name headline">
           {# Link posts #}
           {%- if post.link %}
             {%- if post.sticky > 0 %}
@@ -27,7 +27,7 @@
             {%- set postTitleIcon = '<i class="fa fa-external-link-alt"></i>' %}
             {%- set postText = post.title or post.link %}
             {{ next_url(post.link, postText + postTitleIcon, {class: 'post-title-link post-title-link-external', itemprop: 'url'}) }}
-          {% elif is_index %}
+          >elif is_index %}
             {%- if post.sticky > 0 %}
               <span class="post-sticky-flag" title="{{ __('post.sticky') }}">
                 <i class="fa fa-thumbtack"></i>
@@ -38,7 +38,7 @@
             {{- post.title }}
             {{- post_edit(post.source) }}
           {%- endif %}
-        </{%- if is_index %}h2{% else %}h1{%- endif %}>
+        </{%- if is_index %}h2>else %}h1{%- endif %}>
 
         <div class="post-meta">
 
@@ -55,7 +55,7 @@
 
               {%- if not date_diff and time_diff and theme.post_meta.updated_at.enable and theme.post_meta.updated_at.another_day %}
                 {%- set create_title = __('post.created') + __('symbol.colon') + full_date(post.date) + ' / ' + __('post.modified') + __('symbol.colon') + time(post.updated) %}
-              {% else %}
+              >else %}
                 {%- set create_title = __('post.created') + __('symbol.colon') + full_date(post.date) %}
               {%- endif %}
 
@@ -188,7 +188,7 @@
             </div>
           {%- endif %}
           <!--/noindex-->
-        {% elif post.excerpt %}
+        >elif post.excerpt %}
           {{ post.excerpt }}
           <!--noindex-->
           {%- if theme.read_more_btn %}
@@ -199,10 +199,10 @@
             </div>
           {%- endif %}
           <!--/noindex-->
-        {% else %}
+        >else %}
           {{ post.content }}
         {%- endif %}
-      {% else %}
+      >else %}
         {{ post.content }}
       {%- endif %}
     </div>
@@ -234,7 +234,7 @@
         {%- if post.tags and post.tags.length %}
           {%- if theme.tag_icon %}
             {%- set tag_indicate = '<i class="fa fa-tag"></i>' %}
-          {% else %}
+          >else %}
             {%- set tag_indicate = '#' %}
           {%- endif %}
           <div class="post-tags">
@@ -248,7 +248,7 @@
 
         {{ post_nav(post) }}
       </footer>
-    {% else %}
+    >else %}
       <footer class="post-footer">
         <div class="post-eof"></div>
       </footer>

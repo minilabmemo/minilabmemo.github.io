@@ -10,7 +10,7 @@ categories:
 date: 2020-12-27 10:37:58
 ---
 
-{% note info %} 紀錄在linux環境下使用command line如何下指令操作 {% endnote %}
+>紀錄在linux環境下使用command line如何下指令操作 
 
 
 

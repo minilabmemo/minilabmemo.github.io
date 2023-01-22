@@ -13,7 +13,7 @@ categories:
 date: 2021-02-20 11:33:18
 ---
 
-{% note info %} 本章由[MDN-JavaScript](https://developer.mozilla.org/zh-CN/docs/Learn/JavaScript)開始著手練習，並筆記學習概念．  {% endnote %}
+>本章由[MDN-JavaScript](https://developer.mozilla.org/zh-CN/docs/Learn/JavaScript)開始著手練習，並筆記學習概念．  
 
 
 <!--more-->
@@ -60,7 +60,7 @@ console.log(123 == "123");true
 - 部分開發者認為最好別用一般相等。嚴格比較更容易預測，且因為不必轉型，因此效率更好。
 
 ##### 同值相等
-{% label info@ES6%}  提出同值相等演算法，用來解決這個問題。Object.is就是部署這個演算法的新方法。同值相等解決了最後一個情況：比較兩個值是否功能相同 。
+>label info@ES6%}  提出同值相等演算法，用來解決這個問題。Object.is就是部署這個演算法的新方法。同值相等解決了最後一個情況：比較兩個值是否功能相同 。
 Object.is 會和嚴格相等做同樣的事，但會將 NaN、-0 和 +0 獨立處理，因此這三個不會相等
 
 
@@ -92,7 +92,7 @@ const b = 26900 || 24900;
 
 ```
 
-#### {% label info@ES6%} - 展開語法（spread syntax）& 其餘語法（rest syntax）
+#### >label info@ES6%} - 展開語法（spread syntax）& 其餘語法（rest syntax）
 展開運算子(...) 允許可迭代的陣列或字串展開成０到多個參數
 
 
@@ -123,7 +123,7 @@ ref:[JavaScript中的字符串](https://developer.mozilla.org/zh-CN/docs/Learn/J
 
 
 #### [樣板字面值](https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Reference/Template_literals)
-{% label info@ES6%} 樣板字面值（Template literals）是允許嵌入運算式的字串字面值（string literals）。
+>label info@ES6%} 樣板字面值（Template literals）是允許嵌入運算式的字串字面值（string literals）。
 - 被反引號（back-tick，重音符號` ` )字元封閉，代替了雙或單引號。
 - 可以包含由錢字元及花括號所構成（${expression}）的佔位符（placeholders）
 ```js
@@ -136,14 +136,14 @@ tag `string text ${expression} string text`
 
 ```
 
-- 標籤樣板字面值是一種更高級的樣板字面值形式，允許你透過{% label warning@自訂命名標籤函數 %}操作樣板字面值的輸出。
+- 標籤樣板字面值是一種更高級的樣板字面值形式，允許你透過>label warning@自訂命名標籤函數 %}操作樣板字面值的輸出。
 - 巢狀的樣板字面值的應用[Javascript 進階 10-3 巢狀結構](https://ithelp.ithome.com.tw/articles/10231520)
 
 #### 物件屬性名稱縮寫（Shorthand property names）
 - Key 與 Value 名稱相同，可進行縮寫
 - 物件內可直接省略 function 關鍵字進行縮寫
 
-#### {% label info@ES6%}  - 解構賦值 Destructuring assignment
+#### >label info@ES6%}  - 解構賦值 Destructuring assignment
 可以把陣列或物件中的資料解開擷取成為獨立變數
 詳細請見:[MDN-解構賦值](https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)
 
@@ -172,7 +172,7 @@ console.log(bar); // true
   - 可用函式宣告（Function Declaration）（ES5）
   - 函式運算式(表達式)（Function Expressions）（ES5）
     - 宣告一個函數，或匿名函數 (anonymous function / function literal) 當作值指定給一個變數
-  - 箭頭函式運算式（arrow function expression）（{% label success@ES6 %}）
+  - 箭頭函式運算式（arrow function expression）（>label success@ES6 %}）
     - 它沒有自己的 this、arguments、super、new.target 等語法。
 
 
@@ -331,14 +331,14 @@ https://developer.cdn.mozilla.net/zh-TW/docs/Web/JavaScript/Reference/Functions/
  ref:[JavaScript Hoisting (提升)](https://shubo.io/javascript-hoisting/#javascript-hoisting-%E6%8F%90%E5%8D%87)
 
 
-### {% label info@ES6%}  - 使用module分檔 (import & export)
+### >label info@ES6%}  - 使用module分檔 (import & export)
 
 ### 閉包（Closure）
 閉包是函式以及該函式被宣告時所在的作用域環境的組合。
 - 閉包的好處能把變數隱藏在裡面讓外部存取不到
 - 閉包在 callback 上的應用尤其常見
 - 在迴圈建立閉包：一個常見錯誤
-在 ECMAScript 2015 ({% label info@ES6%} )導入 let 前，迴圈內建立的閉包，常會發生問題。
+在 ECMAScript 2015 (>label info@ES6%} )導入 let 前，迴圈內建立的閉包，常會發生問題。
 範例請見： [simple_js_demo-closure](https://github.com/minilabmemo/simple_js_demo/blob/master/04_js_closure/closure.html)
 
 Ref:
@@ -446,7 +446,7 @@ TBD:
 https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Inheritance_and_the_prototype_chain
 
 
-### {% label info@ES6%}  類別 (class) 
+### >label info@ES6%}  類別 (class) 
 ECMAScript 6 中引入了類別 (class) 作為 JavaScript 現有原型程式(prototype-based)繼承的語法糖。類別語法並不是要引入新的物件導向繼承模型到 JavaScript 中，而是提供一個更簡潔的語法來建立物件和處理繼承。
 
 ref:[Classes](https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Reference/Classes)
@@ -463,8 +463,8 @@ class Polygon {
  var p = new Polygon(); 
 ```
 - 相較函數宣告有Hoisting，類別宣告則否。 你需要先宣告類別，然後存取它，否則就會丟出 ReferenceError:
-{% note danger %}  var p = new Polygon(); // ReferenceError
-class Polygon {} {% endnote %}
+>note danger %}  var p = new Polygon(); // ReferenceError
+class Polygon {} 
 
 #### 類別敘述(class expressions)
 - 類別敘述是定義類別的另一種方法。類別敘述可以有名稱或是無名稱。賦予一個有名稱類別敘述的名稱只在類別主體(class's body)中有作用。（✍ 其實跟之前提到的Function Expressions一樣概念）
@@ -524,7 +524,7 @@ JSLint 幫你檢查未定義的變數、函數、陳述式結尾有沒有加分�
 
 ### ESLint
 包括格式檢驗及質量效驗（未使用變量、三等號、全局變量聲明等問题）
-自由選擇要使用哪些規則，對 {% label info@ES6%}  還有 JSX 的支援度跟其他 linter 相較之下也是最高的
+自由選擇要使用哪些規則，對 >label info@ES6%}  還有 JSX 的支援度跟其他 linter 相較之下也是最高的
 
 註： prettier 只是格式的檢驗（空格 格式化），不会對代码质量进行校验。但有些檢驗，ESLint沒有，所以可以ESLint＋prettier一起使用，也可以視使用情況不使用 Prettier。
 

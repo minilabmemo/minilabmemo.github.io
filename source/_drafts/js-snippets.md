@@ -13,7 +13,7 @@ categories:
 date: 2021-04-04 11:31:01
 ---
 
-{% note info %} 藍色簡單區塊 {% endnote %}
+>藍色簡單區塊 
 
 
 <!--more-->

@@ -10,7 +10,7 @@ categories:
 date: 2021-02-27 20:40:59
 ---
 
-{% note info %} 整理react學習“個人筆記” {% endnote %}
+>整理react學習“個人筆記” 
 
 本文內容：
 - React component (組件)語法

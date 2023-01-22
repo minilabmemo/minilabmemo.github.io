@@ -149,7 +149,7 @@ $ heroku git:remote -a testmemooo
 
 
 
-{% note class_name %} ## 網路參考文章 {% endnote %}
+>note class_name %} ## 網路參考文章 
 
 - [Deploying create-react-app project isn't uglifying my code](https://stackoverflow.com/questions/58359500/deploying-create-react-app-project-isnt-uglifying-my-code)
 - [React Create Script 2.0 減少維護環境配置](https://linyencheng.github.io/2019/02/27/react-create-script-2/)

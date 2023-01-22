@@ -11,8 +11,8 @@
 {%- endif %}
 
 <div class="copyright">
-  {% set copyright_year = date(null, 'YYYY') %}
-  &copy; {% if theme.footer.since and theme.footer.since != copyright_year %}{{ theme.footer.since }} – {% endif %}
+  >set copyright_year = date(null, 'YYYY') %}
+  &copy; >if theme.footer.since and theme.footer.since != copyright_year %}{{ theme.footer.since }} – >endif %}
   <span itemprop="copyrightYear">{{ copyright_year }}</span>
   <span class="with-love">
     <i class="{{ theme.footer.icon.name }}"></i>

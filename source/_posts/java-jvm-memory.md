@@ -12,7 +12,7 @@ date: 2020-11-14 19:31:51
 ---
 
 
-{% note info %}有關java之OutOfMemory檢測等相關問題文章整理{% endnote %}
+>note info %}有關java之OutOfMemory檢測等相關問題文章整理
 
 
 <!--more-->

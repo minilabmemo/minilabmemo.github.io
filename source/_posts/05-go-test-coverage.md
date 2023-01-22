@@ -117,10 +117,10 @@ go tool cover -html=coverage.out
 
 ---
 
-{% note warning %} 20210702 補充 :
+>note warning %} 20210702 補充 :
 其實後來發現vscode在跑完package test 後，右邊側欄就會跑出覆蓋的條線了
 如果只是要在測試時查看可以直接用ＩＤＥ的便利性即可．
-{% endnote %}
+
 
 ![vscode](/images/post/test_coverage_vscode.png)
 

@@ -1,4 +1,4 @@
-{% include 'vendors.swig' %}
+>include 'vendors.swig' %}
 
 {{- next_js('utils.js') }}
 {%- if theme.motion.enable %}
@@ -6,13 +6,13 @@
 {%- endif %}
 
 {%- set scheme_script = 'schemes/' + theme.scheme | lower + '.swig' %}
-{% include scheme_script %}
+>include scheme_script %}
 
 {{- next_js('next-boot.js') }}
 {%- if theme.bookmark.enable %}
   {{- next_js('bookmark.js') }}
 {%- endif %}
 {%- if theme.pjax %}
-  {% include 'pjax.swig' %}
+  >include 'pjax.swig' %}
 {%- endif %}
-{% include 'three.swig' %}
+>include 'three.swig' %}

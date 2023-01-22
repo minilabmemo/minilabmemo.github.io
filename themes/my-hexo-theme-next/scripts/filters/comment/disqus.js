@@ -3,7 +3,7 @@
 'use strict';
 
 const path = require('path');
-const { iconText } = require('./common');
+const {iconText} = require('./common');
 
 // Add comment
 hexo.extend.filter.register('theme_inject', injects => {
@@ -28,14 +28,14 @@ hexo.extend.filter.register('theme_inject', injects => {
   if (!theme.disqus.enable || !theme.disqus.shortname || !theme.disqus.count) return;
 
   injects.postMeta.raw('disqus', `
-  {% if post.comments %}
+  >if post.comments %}
   <span class="post-meta-item">
     ${iconText('far fa-comment', 'disqus')}
     <a title="disqus" href="{{ url_for(post.path) }}#disqus_thread" itemprop="discussionUrl">
       <span class="post-comments-count disqus-comment-count" data-disqus-identifier="{{ post.path }}" itemprop="commentCount"></span>
     </a>
   </span>
-  {% endif %}
+  >endif %}
   `, {}, {}, theme.disqus.post_meta_order);
 
 });

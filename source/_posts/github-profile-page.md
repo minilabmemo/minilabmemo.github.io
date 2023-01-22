@@ -9,7 +9,7 @@ categories:
 
 ---
 
-{% note info %} GitHub創立完帳號之後 其實可以產生profile 個人頁面，就可以在自己的首頁加上更多介紹！ {% endnote %}
+>GitHub創立完帳號之後 其實可以產生profile 個人頁面，就可以在自己的首頁加上更多介紹！ 
 
 如何建立自己的 GitHub 個人頁面：
 

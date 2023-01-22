@@ -1,4 +1,4 @@
-{% import 'menu-item.swig' as menu_item with context %}
+>import 'menu-item.swig' as menu_item with context %}
 
 <nav class="site-nav">
 {%- if theme.menu %}
@@ -15,7 +15,7 @@
             {{ menu_item.render(name, itemName, respath) }}
           {%- endif %}
         {%- endfor %}
-      {% else %}
+      >else %}
         {# Main Menu (standard menu items) #}
         {%- set itemName = name | lower %}
         {{- menu_item.render(name, itemName, respath) | trim }}

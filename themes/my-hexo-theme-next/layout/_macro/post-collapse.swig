@@ -1,4 +1,4 @@
-{% macro render(posts) %}
+>macro render(posts) %}
 {%- set current_year = '1970' %}
 {%- for post in posts.toArray() %}
 
@@ -27,7 +27,7 @@
           {%- set postTitleIcon = '<i class="fa fa-external-link-alt"></i>' %}
           {%- set postText = post.title or post.link %}
           {{ next_url(post.link, postText + postTitleIcon, {class: 'post-title-link post-title-link-external', itemprop: 'url'}) }}
-        {% else %}
+        >else %}
           <a class="post-title-link" href="{{ url_for(post.path) }}" itemprop="url">
             <span itemprop="name">{{ post.title or __('post.untitled') }}</span>
           </a>
@@ -38,4 +38,4 @@
   </article>
 
 {%- endfor %}
-{% endmacro %}
+>endmacro %}

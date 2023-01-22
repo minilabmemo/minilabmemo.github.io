@@ -79,7 +79,7 @@ Array.prototype.map()map() 方法會建立一個新的陣列，其內容為原�
      sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
    ></iframe>
 
-{% note class_name %} ## 網路參考文章 {% endnote %}
+>note class_name %} ## 網路參考文章 
 
 [官方文檔](https://ramdajs.com/)
 [中文官方文黨](https://ramda.cn/)

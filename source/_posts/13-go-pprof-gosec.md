@@ -100,7 +100,7 @@ gosec -fmt=html -out=results.html ./...<br>
 
 
 
-{% note class_name %}  ## 延伸文章 {% endnote %}
+>note class_name %}  ## 延伸文章 
 
 |  來源 |  摘要 |
 | ------------ | ------------ |

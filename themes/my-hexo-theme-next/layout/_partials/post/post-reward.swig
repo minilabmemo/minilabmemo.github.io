@@ -9,7 +9,7 @@
       {%- set builtin = ['wechatpay', 'alipay', 'paypal', 'bitcoin'] %}
       {%- if builtin.includes(name) %}
         {%- set translation = __('reward.' + name) %}
-      {% else %}
+      >else %}
         {%- set translation = name %}
       {%- endif %}
       <div style="display: inline-block;">

@@ -10,7 +10,7 @@ categories:
 date: 2021-04-24 10:06:20
 ---
 
-{% note info %} 本章介紹使用elasticSearch儲存資料與kibana呈現使用 {% endnote %}
+>本章介紹使用elasticSearch儲存資料與kibana呈現使用 
 
 
 ### 本文內容：
@@ -275,8 +275,8 @@ GET /event/_search
 
 
 ###  網路參考文章
-{% note warning %} <span style="font-size: 9px;">
+>note warning %} <span style="font-size: 9px;">
 學習路上感謝網路大神們，如果你發現了我，可以查看參考文章了解更多概念👇👇👇
-</span>{% endnote %}
+</span>
 - [elastic-組合查詢 中文](https://www.elastic.co/guide/cn/elasticsearch/guide/current/bool-query.html "elastic-組合查詢 中文")
 

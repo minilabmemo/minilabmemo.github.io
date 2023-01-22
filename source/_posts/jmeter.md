@@ -12,7 +12,7 @@ date: 2022-07-01 21:32:36
 ---
 
 # 什麼是 JMeter 
-{% note info %} The **Apache JMeter™** application is open source software, a 100% pure Java application designed to load test functional behavior and measure performance. It was originally designed for testing Web Applications but has since expanded to other test functions.g {% endnote %}
+>The **Apache JMeter™** application is open source software, a 100% pure Java application designed to load test functional behavior and measure performance. It was originally designed for testing Web Applications but has since expanded to other test functions.g 
 
 # 使用時機
 
@@ -138,7 +138,7 @@ throw ex;
 
 
 ###  網路參考文章
-{% note warning %} <span style="font-size: 9px;">
-學習路上感謝網路大神們，如果你發現了我，可以查看以下參考文章了解更多概念👇👇👇</span>{% endnote %}
+>note warning %} <span style="font-size: 9px;">
+學習路上感謝網路大神們，如果你發現了我，可以查看以下參考文章了解更多概念👇👇👇</span>
 * [Jmeter断言中判断请求失败的响应代码问题](https://www.cnblogs.com/fengsiyi/p/6904041.html) 找不到斷言，但有驗證回復
 * [Meter - JSON variable in a ForEach Controller](https://www.codeproject.com/Tips/5323656/JMeter-JSON-variable-in-a-ForEach-Controller)

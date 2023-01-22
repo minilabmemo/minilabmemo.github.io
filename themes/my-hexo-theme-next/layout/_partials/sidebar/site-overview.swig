@@ -14,7 +14,7 @@
       <div class="site-state-item site-state-posts">
         {%- if theme.menu.archives %}
           <a href="{{ url_for(theme.menu.archives.split('||')[0] | trim) }}">
-        {% else %}
+        >else %}
           <a href="{{ url_for(config.archive_dir) }}">
         {%- endif %}
           <span class="site-state-item-count">{{ site.posts.length }}</span>
@@ -30,7 +30,7 @@
         {%- if hasCategoriesPage %}
           {%- if theme.menu.categories %}
             <a href="{{ url_for(theme.menu.categories.split('||')[0] | trim) }}">
-          {% else %}
+          >else %}
             <a href="{{ url_for(config.category_dir) + '/' }}">
           {%- endif %}
         {%- endif %}
@@ -47,7 +47,7 @@
         {%- if hasTagsPage %}
           {%- if theme.menu.tags %}
             <a href="{{ url_for(theme.menu.tags.split('||')[0] | trim) }}">
-          {% else %}
+          >else %}
             <a href="{{ url_for(config.tag_dir) + '/' }}">
           {%- endif %}
         {%- endif %}

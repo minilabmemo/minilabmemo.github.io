@@ -10,7 +10,7 @@ categories:
 date: 2021-01-30 18:00:42
 ---
 
-{% note info %} spring 加上 Fire and forget，非同步處理，發出處理後就不用等待回復繼續做其他事情 {% endnote %}
+>spring 加上 Fire and forget，非同步處理，發出處理後就不用等待回復繼續做其他事情 
 
 <!--more-->
 
@@ -54,7 +54,7 @@ public class MyComponent {
 
 ---
 
-{% note class_name %} 網路參考文章 {% endnote %}
+>note class_name %} 網路參考文章 
 
 - [spring-background-fire-and-forget-processing](https://stackoverflow.com/questions/33243255/spring-background-fire-and-forget-processing)
 - [Spring Boot(5) @Async 非同步執行緒池詳解](https://www.mdeditor.tw/pl/pIYL/zh-tw)

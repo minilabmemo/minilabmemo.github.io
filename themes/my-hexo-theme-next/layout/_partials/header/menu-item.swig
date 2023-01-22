@@ -1,4 +1,4 @@
-{% macro render(name, itemName, value) %}
+>macro render(name, itemName, value) %}
 
   {%- set itemURL = value.split('||')[0] | trim %}
   {%- if not itemURL.startsWith('http') %}
@@ -31,4 +31,4 @@
 
   </li>
 
-{% endmacro %}
+>endmacro %}

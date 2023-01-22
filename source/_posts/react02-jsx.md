@@ -12,7 +12,7 @@ categories:
 date: 2020-05-30T18:32:15+08:00
 ---
 
-{% note info %} 上一篇已建立一個基本專案，開始可以對index.js做一些改寫練習，並使用JSX語法 {% endnote %}
+>上一篇已建立一個基本專案，開始可以對index.js做一些改寫練習，並使用JSX語法 
 
 
 <!--more-->
@@ -143,8 +143,8 @@ export default function App() {
 
 
 # 網路參考文章
-{% note warning %} <span style="font-size: 9px;">
+>note warning %} <span style="font-size: 9px;">
 學習路上感謝網路大神們，如果你發現了我，可以查看參考文章了解更多概念👇👇👇
-</span>{% endnote %}
+</span>
 - [【React.js入門 - 06】 JSX](https://ithelp.ithome.com.tw/articles/10216468)
 - [React篇: JSX語法撰寫指引](https://eyesofkids.gitbooks.io/react-basic-zh-tw/content/day18_deeper_jsx/ "React篇: JSX語法撰寫指引")

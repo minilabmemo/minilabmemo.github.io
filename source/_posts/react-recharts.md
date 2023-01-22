@@ -11,7 +11,7 @@ categories:
 date: 2020-11-14 22:17:59
 ---
 
-{% note info %}練習 Reactc 畫圖套件 recharts{% endnote %}
+>note info %}練習 Reactc 畫圖套件 recharts
 
 <!--more-->
 
@@ -49,6 +49,6 @@ function RenderLineChart() {
 <RenderLineChart />
 ```
 
-{% note class_name %} ## 網路參考文章 {% endnote %}
+>note class_name %} ## 網路參考文章 
 
 [recharts](https://recharts.org/en-US)

@@ -11,7 +11,7 @@ categories:
 date: 2021-04-28 20:20:29
 ---
 
-{% note info %} 使用Prometheus+Grafana監控效能 {% endnote %}
+>使用Prometheus+Grafana監控效能 
 
 
 
@@ -159,8 +159,8 @@ metrics available for this monitor [prometheus-go](https://docs.signalfx.com/en/
 
 
 ##  網路參考文章
-{% note warning %} <span style="font-size: 9px;">
-學習路上感謝網路大神們，如果你發現了我，可以查看以下參考文章了解更多概念👇👇👇</span>{% endnote %}
+>note warning %} <span style="font-size: 9px;">
+學習路上感謝網路大神們，如果你發現了我，可以查看以下參考文章了解更多概念👇👇👇</span>
 - [Prometheus（二）：Prometheus 監控Windows機器](https://www.mdeditor.tw/pl/pghx/zh-tw)
 - [Promethus叢集部署筆記：（四）安裝並配置windows_exporter
 ](https://www.mdeditor.tw/pl/gmMw/zh-tw)

@@ -14,7 +14,7 @@ categories:
 date: 2021-02-20 11:33:18
 ---
 
-{% note info %} 延續學習ＪＳ的同步與非同步概念 {% endnote %}
+>延續學習ＪＳ的同步與非同步概念 
 
 ☝☝本記錄為個人學習整理，如有誤還請您不吝指教，也有引用文章位置，如有問題也請告知．
 
@@ -37,7 +37,7 @@ date: 2021-02-20 11:33:18
 
 - 很多網頁API都使用異步代码，特别是從外部的設備來或許資源，譬如，抓取網路上文件，訪問DB，獲取影片流等等，在瀏覽器端只有一個使用者，但事件或網路要求(AJAX)要求不能阻塞其他程式的進行，通常需要等待一段時間後才會返回，所以需要讓使用者可以繼續進行目前的畫面操作．
 - JS有分為同步及異步callback，setTimeout與setinterval是種異步函數。
-- {% label warning@而所有的同步回調函式都執行完成了，才會開始依順序執行異步的回調函式  %}。
+- >label warning@而所有的同步回調函式都執行完成了，才會開始依順序執行異步的回調函式  %}。
 
 ### 異步 callbacks
 異步callback(回調)其实就是函数，只不過是作為參數傳遞给那些後台执行的其他函数. 讓會造成阻塞的程式組成一個異步回調函式，先丟往一個任務佇列(task queue)先丟，當某個時間後台運行的代碼结束，就调用callbacks函数，通知你工作已经完成，
@@ -112,8 +112,8 @@ async function myFetch() {
 
 
 ## 網路參考文章
-{% note warning %} <span style="font-size: 9px;">
-學習路上感謝網路大神們，如果你發現了我，可以查看以下參考文章了解更多概念👇👇👇</span>{% endnote %}
+>note warning %} <span style="font-size: 9px;">
+學習路上感謝網路大神們，如果你發現了我，可以查看以下參考文章了解更多概念👇👇👇</span>
   - [MDN-异步JavaScript简介](https://developer.mozilla.org/zh-CN/docs/Learn/JavaScript/Asynchronous/Introducing)
   - [你懂 JavaScript 嗎？#23 Callback](https://cythilya.github.io/2018/10/30/callback/)
   - [MDN-async和await:让异步编程更简单](https://developer.mozilla.org/zh-CN/docs/Learn/JavaScript/Asynchronous/Async_await)

@@ -1,4 +1,4 @@
-{% import '_partials/header/menu-item.swig' as menu_item with context %}
+>import '_partials/header/menu-item.swig' as menu_item with context %}
 
 {%- if theme.menu and is_page() %}
   {# Submenu & Submenu-2 #}
@@ -18,15 +18,15 @@
             {%- set itemName = subname | lower %}
             {%- if itemName == 'default' %}
               {%- set parentValue = subvalue.split('||')[0] | trim %}
-            {% else %}
+            >else %}
               {%- if subvalue.startsWith('http') %}
                 {%- set respath = subvalue %}
-              {% else %}
+              >else %}
                 {%- set respath = parentValue + subvalue %}
               {%- endif %}
               {{ menu_item.render(subname, itemName, respath) }}
             {%- endif %}
-          {% else %}
+          >else %}
             {# For 'default' submenu item in main submenu #}
             {%- set itemName = subname | lower %}
             {%- for subname2, subvalue2 in subvalue %}
@@ -64,10 +64,10 @@
                       {%- set itemName = subname2 | lower %}
                       {%- if itemName == 'default' %}
                         {%- set parentSubValue = subvalue2.split('||')[0] | trim %}
-                      {% else %}
+                      >else %}
                         {%- if subvalue2.startsWith('http') %}
                           {%- set respath2 = subvalue2 %}
-                        {% else %}
+                        >else %}
                           {%- set respath2 = parentValue + parentSubValue + subvalue2 %}
                         {%- endif %}
                         {{ menu_item.render(subname2, itemName, respath2) }}

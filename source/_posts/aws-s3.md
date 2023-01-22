@@ -13,7 +13,7 @@ date: 2021-04-28 19:26:23
 ---
 
 
-{% note info %} 簡單紀錄雲端儲存服務MinIO與Amazon S3與使用GO SDK開發筆記" {% endnote %}
+>簡單紀錄雲端儲存服務MinIO與Amazon S3與使用GO SDK開發筆記" 
 
 
 <!--more-->
@@ -185,6 +185,6 @@ Default output format [None]:
 
 
 ## 網路參考文章
-{% note warning %} <span style="font-size: 9px;">
-學習路上感謝網路大神們，如果你發現了我，可以查看以下參考文章了解更多概念👇👇👇</span>{% endnote %}
+>note warning %} <span style="font-size: 9px;">
+學習路上感謝網路大神們，如果你發現了我，可以查看以下參考文章了解更多概念👇👇👇</span>
 - [amazon-s3開發是否有免費帳號](https://stackoverflow.com/questions/1375285/amazon-s3-developer-free-account-for-testing-purposes)

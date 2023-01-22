@@ -1,7 +1,7 @@
-{% extends '_layout.swig' %}
-{% import '_macro/sidebar.swig' as sidebar_template with context %}
+>extends '_layout.swig' %}
+>import '_macro/sidebar.swig' as sidebar_template with context %}
 
-{% block title %}
+>block title %}
   {%- set page_title_suffix = ' | ' + title %}
 
   {%- if page.type === 'categories' and not page.title %}
@@ -13,17 +13,17 @@
   {%- else %}
     {{- page.title + page_title_suffix }}
   {%- endif %}
-{% endblock %}
+>endblock %}
 
-{% block class %}page posts-expand{% endblock %}
+>block class %}page posts-expand>endblock %}
 
-{% block content %}
+>block content %}
 
     {##################}
     {### PAGE BLOCK ###}
     {##################}
     <div class="post-block" lang="{{ page.lang or config.language }}">
-      {% include '_partials/page/page-header.swig' %}
+      >include '_partials/page/page-header.swig' %}
       {#################}
       {### PAGE BODY ###}
       {#################}
@@ -44,7 +44,7 @@
               }}
             </div>
           </div>
-        {% elif page.type === 'categories' %}
+        >elif page.type === 'categories' %}
           <div class="category-all-page">
             <div class="category-all-title">
               {{ _p('counter.categories', site.categories.length) }}
@@ -53,11 +53,11 @@
               {{ list_categories() }}
             </div>
           </div>
-        {% elif page.type === 'schedule' %}
+        >elif page.type === 'schedule' %}
           <div class="event-list">
           </div>
-          {% include '_scripts/pages/schedule.swig' %}
-        {% else %}
+          >include '_scripts/pages/schedule.swig' %}
+        >else %}
           {{ page.content }}
         {%- endif %}
       </div>
@@ -65,13 +65,13 @@
       {### END PAGE BODY ###}
       {#####################}
     </div>
-    {% include '_partials/page/breadcrumb.swig' %}
+    >include '_partials/page/breadcrumb.swig' %}
     {######################}
     {### END PAGE BLOCK ###}
     {######################}
 
-{% endblock %}
+>endblock %}
 
-{% block sidebar %}
+>block sidebar %}
   {{ sidebar_template.render(true) }}
-{% endblock %}
+>endblock %}

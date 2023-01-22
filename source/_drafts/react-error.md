@@ -11,7 +11,7 @@ date: 2021-04-01 20:19:29
 ---
 
 
-{% note info %} 紀錄前端開發時會遇到的錯誤狀況 {% endnote %}
+>紀錄前端開發時會遇到的錯誤狀況 
 
 
 <!--more-->
@@ -35,9 +35,9 @@ return (
   );
  ```
  Failed to compile
-{% note danger %}
+>note danger %}
  SyntaxError: xxx/src/App.js: Adjacent JSX elements must be wrapped in an enclosing tag. Did you want a JSX fragment <>...</>? (13:4)
-  {% endnote %}
+  
   
 #### 錯誤修改const
 ```
@@ -48,10 +48,10 @@ const count = 0;
         ....
 ```
 
-{% note warning %}
+>note warning %}
  _readOnlyError
 node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/readOnlyError.js
- {% endnote %}
+ 
 
 #### hook應該寫進function component裡
 ```
@@ -59,13 +59,13 @@ node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/read
   47 | export default function Counter() {
 ```
 執行後畫面會出現警語
-{% note warning %}
+>note warning %}
 Error: Invalid hook call. Hooks can only be called inside of the body of a function component. This could happen for one of the following reasons:
 1. You might have mismatching versions of React and the renderer (such as React DOM)
 2. You might be breaking the Rules of Hooks
 3. You might have more than one copy of React in the same app
 See https://reactjs.org/link/invalid-hook-call for tips about how to debug and fix this problem.
- {% endnote %}
+ 
 
 #### 不小心寫出無限迴圈re-render
 
@@ -76,9 +76,9 @@ See https://reactjs.org/link/invalid-hook-call for tips about how to debug and f
 正確寫法要把函示加上（）＝>包在裡面
 <ActionBlock onClick={() => handelAction(SubtractAct)}
 ```
-{% note warning %}
+>note warning %}
 Error: Too many re-renders. React limits the number of renders to prevent an infinite loop.
- {% endnote %}
+ 
 
 
 #### ReferenceError: dis is not defined

@@ -9,9 +9,9 @@ categories:
 date: 2020-09-12 10:46:53
 ---
 
-{% cq %} 
+
 # 什麼是mongo
- {% endcq %}
+
  <blockquote class="blockquote-center">
  MongoDB是NoSQL的資料庫，以文件儲存資料，一般資料庫開Table須定義欄位(大小、型別、名稱等)，但是Collection完全不事先定義欄位，每筆document可以有不等數量的欄位</blockquote>
 

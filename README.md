@@ -80,25 +80,25 @@ branch - master (only web files)
 
 ## post
 ```
-{% note class_name %} Content (不設定) 淡灰色 {% endnote %}
-{% note default %} 灰色 default {% endnote %}
-{% note primary %} 紫色 primary {% endnote %}
-{% note success %} 綠色 success {% endnote %}
-{% note info %} 藍色 info {% endnote %}
-{% note warning %} 黃色 warning {% endnote %}
-{% note danger %} 紅色 danger {% endnote %}
+>note class_name %} Content (不設定) 淡灰色 
+>note default %} 灰色 default 
+>note primary %} 紫色 primary 
+>note success %} 綠色 success 
+>藍色 info 
+>note warning %} 黃色 warning 
+>note danger %} 紅色 danger 
 ```
 ## 重點標籤
 ```
-{% label default@標示灰色底色 %}
-{% label primary@標示紫色底色 %}
-{% label success@標示綠色底色 %}
-{% label info@標示藍色底色 %}
-{% label warning@標示黃色底色 %}
-{% label danger@標示danger底色 %}
+>label default@標示灰色底色 %}
+>label primary@標示紫色底色 %}
+>label success@標示綠色底色 %}
+>label info@標示藍色底色 %}
+>label warning@標示黃色底色 %}
+>label danger@標示danger底色 %}
 ```
 
-{% label info@ES6%}
+>label info@ES6%}
 
 ## image
 - reminder:hexo g

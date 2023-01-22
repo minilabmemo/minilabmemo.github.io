@@ -9,7 +9,7 @@ categories:
 date: 2020-05-09T00:00:05+08:00
 ---
 
-{% note info %} 如何用 Gin 框架快速建立 HTTP [ GET/POST 等方法] {% endnote %}
+>如何用 Gin 框架快速建立 HTTP [ GET/POST 等方法] 
 
 <!--more-->
 

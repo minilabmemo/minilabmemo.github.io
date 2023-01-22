@@ -30,7 +30,7 @@
 {%- if theme.canvas_nest.enable %}
   {%- if theme.canvas_nest.onmobile %}
     {%- set canvas_nest_uri = theme.vendors.canvas_nest or next_vendors('canvas-nest/canvas-nest.min.js') %}
-  {% else %}
+  >else %}
     {%- set canvas_nest_uri = theme.vendors.canvas_nest_nomobile or next_vendors('canvas-nest/canvas-nest-nomobile.min.js') %}
   {%- endif %}
   <script color='{{ theme.canvas_nest.color }}' opacity='{{ theme.canvas_nest.opacity }}' zIndex='{{ theme.canvas_nest.zIndex }}' count='{{ theme.canvas_nest.count }}' src="{{ canvas_nest_uri }}"></script>

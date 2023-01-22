@@ -9,11 +9,11 @@ categories:
 date: 2020-09-18 18:37:37
 ---
 
-{% cq %}
+>cq %}
 
 # 什麼是 vscode
 
-{% endcq %}
+>endcq %}
 
  <blockquote class="blockquote-center">
  Visual Studio Code（簡稱vscode）是一個由微軟開發，同時支援Windows 、 Linux和macOS等操作系統的免費程式碼編輯器，它支援測試，並內建了Git 版本控制功能，同時也具有開發環境功能，例如代碼補全、代碼片段和代碼重構等。 （維基百科）</blockquote>
@@ -222,7 +222,7 @@ React Hooks Snippets - React Hooks程式碼區段快速產生
 結束是否加分號
 ```
 
-{% note class_name %} ## 網路參考文章 {% endnote %}
+>note class_name %} ## 網路參考文章 
 
 | 連結 | 摘要 |
 | ----------- | --------|

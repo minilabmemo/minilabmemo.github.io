@@ -9,7 +9,7 @@ categories:
 date: 2021-02-13 15:09:47
 ---
 
-{% note info %} Go 包管理與模組相關 {% endnote %}
+>Go 包管理與模組相關 
 
 
 

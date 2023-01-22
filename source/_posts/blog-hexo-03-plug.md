@@ -42,7 +42,7 @@ tag_cloud:
    以 NexT 主题為例修改 layout/\_macro/sidevar.swig 文件中在 sidebar-inner 新增
 
 ```
-{% if site.tags.length > 1 %}
+>if site.tags.length > 1 %}
 <script type="text/javascript" charset="utf-8" src="{{ url_for('/js/tagcloud.js') }}"></script>
 <script type="text/javascript" charset="utf-8" src="{{ url_for('/js/tagcanvas.js') }}"></script>
 <div class="widget-wrap">
@@ -52,7 +52,7 @@ tag_cloud:
     </canvas>
     </div>
 </div>
-{% endif %}
+>endif %}
 
 ```
 

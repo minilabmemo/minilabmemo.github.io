@@ -9,15 +9,15 @@
       {%- if path != 'index.html' %}
         {%- if current == count - 1 and paths[count - 1] == 'index.html' %}
           <li>{{ path | upper }}</li>
-        {% else %}
+        >else %}
           {%- if link == '' %}
             {%- set link = '/' + path %}
-          {% else %}
+          >else %}
             {%- set link = link + '/' + path %}
           {%- endif %}
           {%- if path.includes('.html') %}
             <li>{{ path | replace('.html', '') | upper }}</li>
-          {% else %}
+          >else %}
             <li><a href="{{ url_for(link) }}/">{{ path | upper }}</a></li>
           {%- endif %}
         {%- endif %}

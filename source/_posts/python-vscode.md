@@ -10,7 +10,7 @@ categories:
 date: 2021-02-10 16:42:58
 ---
 
-{% note info %} 純紀錄python與在vscode快速執行python {% endnote %}
+>純紀錄python與在vscode快速執行python 
 
 
 <!--more-->

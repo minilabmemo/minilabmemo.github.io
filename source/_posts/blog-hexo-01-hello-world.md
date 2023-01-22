@@ -10,11 +10,11 @@ categories:
 date: 2021-01-31 10:06:20
 ---
 
-{% cq %}
+>cq %}
 
 # hexo 是什麼？
 
-{% endcq %}
+>endcq %}
 
  <blockquote class="blockquote-center">
  
@@ -170,15 +170,15 @@ $ hexo clean
 清除快取檔案 (db.json) 和已產生的靜態檔案 (public)
 ```
 
-{% label warning@下一篇會介紹如何更換主題及內文撰寫%}
+>label warning@下一篇會介紹如何更換主題及內文撰寫%}
 
 
 ---
 
 ## 參考文章
-{% note warning %} <span style="font-size: 9px;">
+>note warning %} <span style="font-size: 9px;">
 學習路上感謝網路大神們，如果你發現了我，可以查看參考文章了解更多概念👇👇👇
-</span>{% endnote %}
+</span>
 - Quick Start
   Welcome to [Hexo](https://hexo.io/)! Check [documentation](https://hexo.io/docs/) for more info. If you get any problems when using Hexo, you can find the answer in [troubleshooting](https://hexo.io/docs/troubleshooting.html) or you can ask me on [GitHub](https://github.com/hexojs/hexo/issues)
 
