@@ -4,9 +4,7 @@ tags:
   - linux
   - CLI
 categories:
-  - Tech.
-  - back-end
-  - linux
+  - [尚未分類]
 date: 2020-12-27 10:37:58
 ---
 

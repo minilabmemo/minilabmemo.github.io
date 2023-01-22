@@ -5,10 +5,7 @@ tags:
   - JSX
   - Babel
 categories:
-  - Tech.
-  - Web
-  - front-end
-  - react
+  - [Frontend,react]
 date: 2020-05-30T18:32:15+08:00
 ---
 

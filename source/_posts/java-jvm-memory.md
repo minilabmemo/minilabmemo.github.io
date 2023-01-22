@@ -5,9 +5,7 @@ tags:
   - Memory
   - IDEA
 categories:
-  - Tech.
-  - back-end
-  - java
+  - [Backend,java]
 date: 2020-11-14 19:31:51
 ---
 

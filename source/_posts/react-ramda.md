@@ -6,10 +6,7 @@ tags:
   - map
   - ing
 categories:
-  - Tech.
-  - Web
-  - front-end
-  - react
+  - [Frontend,react]
 date: 2020-10-01 16:20:06
 ---
 

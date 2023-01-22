@@ -5,9 +5,7 @@ tags:
   - jmeter
   - qa
 categories:
-  - Tech.
-  - back-end
-  - test
+  - [尚未分類]
 date: 2022-07-01 21:32:36
 ---
 

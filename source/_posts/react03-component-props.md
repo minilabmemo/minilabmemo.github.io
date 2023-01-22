@@ -3,10 +3,7 @@ title: "[React 03] React 組件、函式與生命週期"
 tags:
   - react
 categories:
-  - Tech.
-  - Web
-  - front-end
-  - react
+  - [Frontend,react]
 date: 2021-02-27 20:40:59
 ---
 

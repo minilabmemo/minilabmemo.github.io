@@ -3,9 +3,7 @@ title: "[Go 08] 認識時間格式與golang的時區轉換寫法"
 tags:
   - golang
 categories:
-  - Tech.
-  - back-end
-  - golang
+  - [Backend,golang]
 date: 2021-05-30 10:22:20
 ---
 

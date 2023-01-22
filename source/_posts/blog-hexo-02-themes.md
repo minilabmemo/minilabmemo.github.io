@@ -4,9 +4,7 @@ tags:
   - hexo
   - blog
 categories:
-  - Tech.
-  - Web
-  - blog
+  - [開發相關,blog]
 date: 2022-05-01 10:06:30
 ---
 

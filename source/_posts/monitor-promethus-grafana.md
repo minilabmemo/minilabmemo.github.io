@@ -5,9 +5,7 @@ tags:
   - Grafana
   - monitor
 categories:
-  - Tech.
-  - back-end
-  - monitor
+  - [開發相關,效能]
 date: 2021-04-28 20:20:29
 ---
 

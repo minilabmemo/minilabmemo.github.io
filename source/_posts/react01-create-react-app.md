@@ -6,10 +6,7 @@ tags:
   - lint
   - npm
 categories:
-  - Tech.
-  - Web
-  - front-end
-  - react
+  - [Frontend,react]
 date: 2020-05-16T15:42:53+08:00
 ---
 

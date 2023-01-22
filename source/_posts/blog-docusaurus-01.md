@@ -4,9 +4,7 @@ tags:
   - blog
   - docusaurus
 categories:
-  - Tech.
-  - Web
-  - blog
+  - [開發相關,blog]
 date: 2021-05-21 18:39:33
 ---
 

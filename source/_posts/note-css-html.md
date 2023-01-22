@@ -6,8 +6,7 @@ tags:
   - html
   - ing
 categories:
-  - [Tech., Web,front-end,html]
-  - [Tech., Web,front-end,css]
+  - [Frontend,css/html]
 
 date: 2020-09-15 20:27:29
 ---

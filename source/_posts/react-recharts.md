@@ -4,10 +4,7 @@ tags:
   - react
   - recharts
 categories:
-  - Tech.
-  - Web
-  - front-end
-  - react
+  - [Frontend,react]
 date: 2020-11-14 22:17:59
 ---
 

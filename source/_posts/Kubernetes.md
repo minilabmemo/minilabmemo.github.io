@@ -4,9 +4,7 @@ tags:
   - Kubernetes
   - CLI
 categories:
-  - Tech.
-  - deploy
-  - Kubernetes
+- [開發相關,devOps]
 
 date: 2020-12-31 11:53:14
 ---

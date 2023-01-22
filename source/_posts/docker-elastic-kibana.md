@@ -5,8 +5,8 @@ tags:
   - elasticSearch
   - kibana
 categories:
-  - [Tech., deploy, docker]
-  - [Tech., back-end,elasticSearch]
+  - [尚未分類]
+ 
 date: 2021-04-24 10:06:20
 ---
 

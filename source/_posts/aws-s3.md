@@ -6,9 +6,7 @@ tags:
   - aws-s3
   - MinIO
 categories:
-  - Tech.
-  - cloud
-  - storage
+  - [尚未分類]
 date: 2021-04-28 19:26:23
 ---
 

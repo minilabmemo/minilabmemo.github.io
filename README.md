@@ -43,7 +43,7 @@ unicode: 13.0
 ```
 
 
-### Create a new post
+### Create a new post 新增文章
 
 ```bash
 $ hexo new "My New Post"
@@ -78,28 +78,6 @@ themes-bk/_config.yml will backup to upload
 branch - master (only web files)
 
 
-## post
-```
->note class_name %} Content (不設定) 淡灰色 
->note default %} 灰色 default 
->note primary %} 紫色 primary 
->note success %} 綠色 success 
->藍色 info 
->note warning %} 黃色 warning 
->note danger %} 紅色 danger 
-```
-## 重點標籤
-```
->label default@標示灰色底色 %}
->label primary@標示紫色底色 %}
->label success@標示綠色底色 %}
->label info@標示藍色底色 %}
->label warning@標示黃色底色 %}
->label danger@標示danger底色 %}
-```
-
->label info@ES6%}
-
 ## image
 - reminder:hexo g
 ```
@@ -108,4 +86,21 @@ branch - master (only web files)
 <img src="/images/avatar_memo.png" width="150px" />
 ```
 
-test
+
+##
+```
+categories:
+  - [Backend,golang]
+  - [Backend,java]
+  - [Backend,python]
+  - [Frontend,css/html]
+  - [Frontend,js]
+  - [Frontend,react]
+  - [Frontend,tips]
+  - [開發相關,devOps]
+  - [開發相關,blog]
+  - [尚未分類]
+  - [開發相關,效能]
+  - [開發相關,Tips]
+
+```

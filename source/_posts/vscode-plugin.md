@@ -4,8 +4,7 @@ tags:
   - vscode
   - IDE
 categories:
-  - Tech.
-  - tool
+  - [開發相關,Tips]
 date: 2020-09-18 18:37:37
 ---
 

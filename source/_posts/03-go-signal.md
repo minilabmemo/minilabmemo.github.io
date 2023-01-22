@@ -3,9 +3,7 @@ title: "[Go 04] 信號處理和退出程式"
 tags:
   - golang
 categories:
-  - Tech.
-  - back-end
-  - golang
+  - [Backend,golang]
 date: 2020-05-01 22:08:34
 ---
 

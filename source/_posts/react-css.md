@@ -7,10 +7,7 @@ tags:
   - ing
 
 categories:
-  - Tech.
-  - Web
-  - front-end
-  - react
+  - [Frontend,react]
 date: 2021-04-18 21:21:19
 ---
 [✍練習ing]

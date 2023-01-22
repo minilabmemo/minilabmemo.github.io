@@ -1,6 +1,6 @@
 version: 5.1.0
 variant: default
-logo: /img/avatar_memo.png
+logo: /img/favicon-32x32-Memo.png
 head:
     favicon: /img/favicon-32x32-Memo.png
     manifest:
@@ -117,17 +117,17 @@ widgets:
     -
         position: left
         type: profile
-        author: Your name
-        author_title: Your title
-        location: Your location
-        avatar: 
+        author: Mina
+        author_title: Mini Lab Memo 小研筆記 前後端開發筆記
+        location:  Taiwan
+        avatar: /img/avatar_memo.png
         avatar_rounded: false
         gravatar: 
-        follow_link: https://github.com/ppoffice
+        follow_link: https://github.com/minilabmemo
         social_links:
             Github:
                 icon: fab fa-github
-                url: https://github.com/ppoffice
+                url: https://github.com/minilabmemo
             Facebook:
                 icon: fab fa-facebook
                 url: https://facebook.com
@@ -150,6 +150,7 @@ widgets:
         position: left
         type: links
         links:
+            Golang: https://minilabmemo.gitbook.io/golang-memo/ 
             Hexo: https://hexo.io
             Bulma: https://bulma.io
     -

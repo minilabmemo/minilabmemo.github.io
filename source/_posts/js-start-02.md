@@ -7,10 +7,8 @@ tags:
   - Promises
   - aync/await
 categories:
-  - Tech.
-  - Web
-  - front-end
-  - js
+  - [Frontend,js]
+
 date: 2021-02-20 11:33:18
 ---
 

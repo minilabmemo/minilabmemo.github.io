@@ -3,9 +3,7 @@ title: "[Go 05] 使用 Gin 框架快速建立 http 服務"
 tags:
   - golang
 categories:
-  - Tech.
-  - back-end
-  - golang
+  - [Backend,golang]
 date: 2020-05-09T00:00:05+08:00
 ---
 

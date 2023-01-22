@@ -5,10 +5,7 @@ tags:
   - Material-ui
   - 作品集範例
 categories:
-  - Tech.
-  - Web
-  - front-end
-  - react
+  - [Frontend,react]
 date: 2020-10-02 23:26:02
 ---
 

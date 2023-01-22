@@ -6,9 +6,7 @@ tags:
   - GUI
 
 categories:
-  - Tech.
-  - deploy
-  - heroku
+  - [開發相關,devOps]
 date: 2020-09-18 10:46:22
 ---
 

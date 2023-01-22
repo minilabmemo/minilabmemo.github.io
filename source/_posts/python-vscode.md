@@ -4,9 +4,7 @@ tags:
   - python
   - vscode
 categories:
-  - Tech.
-  - back-end
-  - python
+  - [Backend,python]
 date: 2021-02-10 16:42:58
 ---
 

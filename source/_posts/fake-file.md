@@ -5,8 +5,7 @@ tags:
   - file
   - command
 categories:
-  - [Tech., Mac]
-  - [Tech., Windows]
+  - [尚未分類]
 date: 2021-04-20 18:33:30
 ---
 

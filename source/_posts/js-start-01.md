@@ -6,10 +6,7 @@ tags:
   - 閉包
   - 解構賦值
 categories:
-  - Tech.
-  - Web
-  - front-end
-  - js
+  - [Frontend,js]
 date: 2021-02-20 11:33:18
 ---
 

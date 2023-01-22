@@ -4,9 +4,7 @@ tags:
   - java
   - spring
 categories:
-  - Tech.
-  - back-end
-  - java
+  - [Backend,java]
 date: 2021-01-30 18:00:42
 ---
 

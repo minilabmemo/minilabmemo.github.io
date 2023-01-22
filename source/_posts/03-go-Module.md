@@ -3,9 +3,7 @@ title: "[Go 03] 包管理與模組(Module)相關"
 tags:
   - golang
 categories:
-  - Tech.
-  - back-end
-  - golang
+  - [Backend,golang]
 date: 2021-02-13 15:09:47
 ---
 

@@ -1,13 +1,10 @@
 ---
 title: "[Go 06] 寫測試並產出一目瞭然的網頁版覆蓋率報告 再也不用怕遺漏"
 tags:
-  - test
   - golang
 	- vscode
 categories:
-  - Tech.
-  - back-end
-  - golang
+  - [Backend,golang]
 date: 2020-05-09T00:02:42+08:00
 ---
 

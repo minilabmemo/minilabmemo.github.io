@@ -4,8 +4,8 @@ tags:
   - docker
   - mongo
 categories:
-  - [Tech.,deploy, docker]
-  - [Tech., back-end,db]
+  - [開發相關,devOps]
+
 date: 2020-09-12 10:46:53
 ---
 

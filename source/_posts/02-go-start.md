@@ -3,9 +3,7 @@ title: "[Go 02] GO 新手上路與概念筆記"
 tags:
   - golang
 categories:
-  - Tech.
-  - back-end
-  - golang
+  - [Backend,golang]
 date: 2020-05-01 21:16:32
 ---
 

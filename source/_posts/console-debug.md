@@ -4,10 +4,7 @@ tags:
   - debug
   - ing
 categories:
-  - Tech.
-  - Web
-  - front-end
-  - tool
+  - [Frontend,tips]
 date: 2020-10-01 15:53:50
 ---
 

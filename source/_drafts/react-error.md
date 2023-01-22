@@ -3,7 +3,7 @@ title: react-error
 tags:
   - error
 categories:
-  - Tech.
+  - 開發相關
   - Web
   - front-end
   - react

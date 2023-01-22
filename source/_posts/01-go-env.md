@@ -5,9 +5,7 @@ tags:
   - golang
   - vscode
 categories:
-  - Tech.
-  - back-end
-  - golang
+  - [Backend,golang]
 ---
 
 

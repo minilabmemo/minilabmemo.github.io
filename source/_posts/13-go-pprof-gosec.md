@@ -5,9 +5,7 @@ tags:
   - golang
   - cleanCode
 categories:
-  - Tech.
-  - back-end
-  - golang
+  - [Backend,golang]
 date: 2020-09-18 15:03:37
 ---
 

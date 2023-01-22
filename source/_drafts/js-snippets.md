@@ -3,11 +3,11 @@ title: js--snippets
 tags:
   - test
 categories:
-  - Tech.
+  - 開發相關
   - Web
   - front-end
   - react
-  - Tech.
+  - 開發相關
   - back-end
   - golang
 date: 2021-04-04 11:31:01

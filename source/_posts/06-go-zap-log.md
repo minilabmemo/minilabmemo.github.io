@@ -3,9 +3,7 @@ title: "[Go 07] 使用 zap 框架印出 log"
 tags:
   - golang
 categories:
-  - Tech.
-  - back-end
-  - golang
+  - [Backend,golang]
 date: 2020-05-18T23:51:23+08:00
 ---
 

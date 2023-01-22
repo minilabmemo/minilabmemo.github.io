@@ -4,9 +4,7 @@ tags:
   - python
   - call by sharing
 categories:
-  - Tech.
-  - back-end
-  - python
+  - [Backend,python]
 date: 2021-02-13 15:18:37
 ---
 
