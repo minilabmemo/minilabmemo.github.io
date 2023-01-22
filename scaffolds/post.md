@@ -3,6 +3,7 @@ title: {{ title }}
 date: {{ date }}
 tags:
   - test
+toc: true
 categories:
   - [Backend,golang]
   - [Frontend,css/html]

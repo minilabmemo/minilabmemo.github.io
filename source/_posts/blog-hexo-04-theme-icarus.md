@@ -3,6 +3,7 @@ title: "[Blog] 使用 Hexo 撰寫部落格 2023 更換ICARUS主題"
 cover: /img/posts/dariusz-sankowski-3OiYMgDKJ6k-unsplash.jpg
 tags:
   - blog
+toc: true
 categories:
   - [開發相關,blog]
 date: 2023-01-22 16:31:36
@@ -29,27 +30,43 @@ $ hexo config theme icarus
 > 因此我把文章中的找到`{% note info %} `與`{% endnote %}`。移除．
 > 其實很喜歡這些主題的顏色標籤，有點不忍心．
 
+
 - 再次啟動還是爆錯
 ```
 const { Component } = require('inferno'); const classname = require('hexo-component-inferno/lib/util/classname'); const Head = require('./common/head'); const Navbar = require('./common/navbar'); const Widgets = require('./common/widgets'); const Footer = require('./common/footer'); const Scripts = require('./common/scripts'); const Search = require('./common/search'); module.exports = class extends Component { render() { const { site, config, page, helper, body } = this.props; const language = page.lang || page.language || config.language; const columnCount = Widgets.getColumnCount(config.widgets); return ; } };
 ```
+
 - 找到比較細部的安裝說明，如下
 ```
 npm install -S hexo-theme-icarus hexo-renderer-inferno
 然後執行hexo s 就可以了
 ```
+
 - 成功啟動後的初始畫面
-![theme](img/posts/new-theme.png)
+![theme](/img/posts/new_theme.png)
+
+![my](/img/posts/new_heme.png)
+![my](/imgages/post/new-theme.png)
+或是用html寫法，可以控制大小
+<img src="/img/posts/new-theme.png" width="150px" />
 
 ## 替換配置
 基本教學手冊[Icarus用户指南 - 主题配置](http://ppoffice.github.io/hexo-theme-icarus/Configuration/icarus%E7%94%A8%E6%88%B7%E6%8C%87%E5%8D%97-%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE/#%E9%A1%B5%E8%84%9A)
 
-- 修正檔案
+### 修正檔案
 
 ```
 hhh
 
 ```
+
+### 文章的Front-Matter设置
+
+```
+
+```
+
+>Tip: 默認文章都是不開啟
 
 ## 網路參考文章
 > - []()
