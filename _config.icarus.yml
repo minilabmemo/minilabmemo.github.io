@@ -1,8 +1,8 @@
 version: 5.1.0
 variant: default
-logo: /img/logo.svg
+logo: /img/avatar_memo.png
 head:
-    favicon: /img/favicon.svg
+    favicon: /img/favicon-32x32-Memo.png
     manifest:
         name: 
         short_name: 
@@ -156,10 +156,10 @@ widgets:
         position: left
         type: categories
     -
-        position: left
+        position: right
         type: recent_posts
     -
-        position: left
+        position: right
         type: archives
     -
         position: left
