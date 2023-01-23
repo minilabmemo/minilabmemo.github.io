@@ -4,7 +4,7 @@ tags:
   - docker
   - CLI
 categories:
-  - [開發相關,devOps]
+  - [技術工具,devOps]
 date: 2020-10-31 10:41:31
 ---
 

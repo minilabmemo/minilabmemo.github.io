@@ -6,7 +6,7 @@ tags:
   - GUI
 
 categories:
-  - [開發相關,devOps]
+  - [技術工具,devOps]
 date: 2020-09-18 10:46:22
 ---
 

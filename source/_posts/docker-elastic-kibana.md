@@ -5,7 +5,7 @@ tags:
   - elasticSearch
   - kibana
 categories:
-  - [尚未分類]
+  - [技術工具,未分類]
  
 date: 2021-04-24 10:06:20
 ---

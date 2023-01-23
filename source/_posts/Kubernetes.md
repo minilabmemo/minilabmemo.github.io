@@ -4,7 +4,7 @@ tags:
   - Kubernetes
   - CLI
 categories:
-- [開發相關,devOps]
+- [技術工具,devOps]
 
 date: 2020-12-31 11:53:14
 ---

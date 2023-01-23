@@ -4,13 +4,13 @@ date: {{ date }}
 tags:
   - test
 categories:
-  - 開發相關
+  - 技術工具
   - Web
   - front-end
   - react
 
 
-  - 開發相關
+  - 技術工具
   - back-end
   - golang
 ---

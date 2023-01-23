@@ -5,7 +5,7 @@ tags:
   - blog
 toc: true
 categories:
-  - [開發相關,blog]
+  - [技術工具,blog]
 date: 2022-05-01 10:06:30
 ---
 

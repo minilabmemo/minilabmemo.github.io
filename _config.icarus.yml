@@ -47,10 +47,8 @@ navbar:
         Categories: /categories
         Tags: /tags
         About: /about
+            
     links:
-         GitHub:
-            icon: fab fa-github
-            url: https://github.com/minilabmemo
          Golang Memo:
             icon: fa fa-book
             url: https://minilabmemo.gitbook.io/golang-memo/ 
@@ -64,9 +62,6 @@ footer:
         Attribution 4.0 International:
             icon: fab fa-creative-commons-by
             url: https://creativecommons.org/licenses/by/4.0/
-        GitHub:
-            icon: fab fa-github
-            url: https://github.com/ppoffice/hexo-theme-icarus
 article:
     highlight:
         theme: atom-one-dark
@@ -123,7 +118,7 @@ widgets:
         position: left
         type: profile
         author: Mina
-        author_title: Mini Lab Memo 小研筆記 前後端開發筆記
+        author_title: Mini Lab Memo 程式ｘ生活ｘ筆記
         location:  Taiwan
         avatar: /img/avatar_memo.png
         avatar_rounded: true
@@ -134,9 +129,12 @@ widgets:
                 icon: fab fa-github
                 url: https://github.com/minilabmemo
             Medium:
-                icon: fa-solid fa-m
+                icon: fa-brands fa-medium
                 url: https://medium.com/@mini.lab.memo/about
-       
+            Facebook:
+                icon: fab fa-facebook
+                url: https://www.facebook.com/minilabmemo/
+    
     -
         position: left
         type: links

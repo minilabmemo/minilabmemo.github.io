@@ -3,7 +3,7 @@ title: "[Docker]快速啟動可用VNC進去連線之ubuntu"
 tags:
   - docker
 categories:
-  - [開發相關,devOps]
+  - [技術工具,devOps]
 date: 2020-09-14 22:22:35
 ---
 

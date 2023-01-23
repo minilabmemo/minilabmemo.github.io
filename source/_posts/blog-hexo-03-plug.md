@@ -5,7 +5,7 @@ tags:
   - blog
   - google_analytics
 categories:
-  - [開發相關,blog]
+  - [技術工具,blog]
 date: 2022-02-03 10:06:30
 ---
 

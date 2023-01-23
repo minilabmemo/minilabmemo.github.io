@@ -7,7 +7,7 @@ tags:
   - hexo
 toc: true
 categories:
-  - [開發相關,blog]
+  - [技術工具,blog]
 date: 2023-01-22 16:31:36
 ---
 
@@ -352,11 +352,12 @@ providers:
     iconcdn: fontawesome
 ```
 
-- highlight 
-  - 代碼區塊我改成深色主題atom-one-dark，從它們提供的 [styles 檔案位置](https://github.com/highlightjs/highlight.js/tree/9.18.1/src/styles) 中找到的，預覽可以從[highlight.js demo](https://highlightjs.org/static/demo/) 看到效果．
-- sidebar:
-  - left/right.sticky: true 這設定可以固定左右側邊欄，閱讀時到下方時才會不會看不到
-- toc 這個是文章目錄，需配合文章開啟Front-Matter才能用，預設是顯示三層，我習慣改成四層
+#### highlight 
+  代碼區塊我改成深色主題atom-one-dark，從它們提供的 [styles 檔案位置](https://github.com/highlightjs/highlight.js/tree/9.18.1/src/styles) 中找到的，預覽可以從[highlight.js demo](https://highlightjs.org/static/demo/) 看到效果．
+#### sidebar
+  left/right.sticky: true 這設定可以固定左右側邊欄，閱讀時到下方時才會不會看不到
+#### toc 
+   這個是文章目錄，需配合文章開啟Front-Matter才能用，預設是顯示三層，我習慣改成四層
 
 ### 新增文章
 #### 文章的 Front-Matter设置
@@ -379,7 +380,7 @@ tags:
   - blog
 + // 文章目錄
 categories:
-  - [開發相關,blog]
+  - [技術工具,blog]
 date: 2023-01-22 16:31:36
 
 + 更改某篇文章的代码高亮主题
@@ -393,7 +394,11 @@ Post content...
 Post content...
 ```
 
->Tip: 默認文章都是不開啟toc的，要手動添加在文章開頭，但網路上有教學使之預設開啟．
+
+{% raw %}<div class="notification is-warning">{% endraw %}
+Tip: 默認文章都是不開啟toc的，要手動添加在文章開頭，但網路上有教學使之預設開啟．或者你也可以加入到文章模板中．
+
+{% raw %}</div>{% endraw %}
 
 
 
@@ -476,15 +481,18 @@ update link as:-->/.io//icarus_init.png
 但是發現無法找到資料，推判可能是我的插件有什麼插件無法對應到日期 待查
 
 ```
-
+- highlight 
+  不知道為什麼除了atom-one-dark，換成別的都沒有效果．
 - 未完待續 待研究中...
 ```
 多語言
+多階層
 看板娘
 留言區
 buymecoffee
+Open Graph
 Icarus用户指南 - 主题配置 Google Structured Data 你可以在head配置中设置Google Structured Data。 你应该在配置文件中将绝大部分配置留空。 仅在需要的时候在文章的front-matter中为这些设置赋值。
-
+https://ppoffice.github.io/hexo-theme-icarus/Widgets/icarus%E7%94%A8%E6%88%B7%E6%8C%87%E5%8D%97-%E6%8C%82%E4%BB%B6/
 
 ```
 

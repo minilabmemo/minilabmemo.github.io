@@ -4,25 +4,27 @@ date: {{ date }}
 tags:
   - test
 toc: true
+
+---
+
 categories:
   - [Backend,golang]
   - [Frontend,css/html]
   - [Frontend,js]
   - [Frontend,react]
-  - [開發相關,devOps]
-  - [開發相關,blog]
-  - [尚未分類]
----
+  - [技術工具,devOps]
+  - [技術工具,blog]
+  - [技術工具,未分類]
 
 
->藍色簡單區塊 
-
-# 本文將會知道：
-  1. 
-  2. 
+{% raw %}<div class="notification is-info">{% endraw %}
+開頭
+{% raw %}</div>{% endraw %}
 
 <!--more-->
 
-#### 網路參考文章
->note warning %} <span style="font-size: 9px;">
-學習路上感謝網路大神們，如果你發現了我，可以查看以下參考文章了解更多概念👇👇👇</span>
+## 網路參考文章
+
+{% raw %}<div class="notification is-warning">{% endraw %}
+本篇文章內容參考如下
+{% raw %}</div>{% endraw %}

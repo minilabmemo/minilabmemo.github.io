@@ -87,7 +87,7 @@ branch - master (only web files)
 ```
 
 
-##
+## categories
 ```
 categories:
   - [Backend,golang]
@@ -97,10 +97,19 @@ categories:
   - [Frontend,js]
   - [Frontend,react]
   - [Frontend,tips]
-  - [開發相關,devOps]
-  - [開發相關,blog]
-  - [尚未分類]
-  - [開發相關,效能]
-  - [開發相關,Tips]
+  - [技術工具,devOps]
+  - [技術工具,blog]
+  - [技術工具,未分類]
+  - [技術工具,效能]
+  - [技術工具,Tips]
+  - [技術工具,IDE]
+  - [技術工具,Linux/Mac]
 
+```
+
+## 引言色彩
+```
+{% raw %}<div class="notification is-info">{% endraw %}
+[Icarus](https://blog.zhangruipeng.me/hexo-theme-icarus/) 主题以白色的简洁为主，但有时候我们希望在文章中用**特别的样式**注明一些内容，*markdown* 语法就不够用了，所以在此分享一下我的高级玩法。
+{% raw %}</div>{% endraw %}
 ```

@@ -4,7 +4,7 @@ tags:
   - docker
   - mongo
 categories:
-  - [開發相關,devOps]
+  - [技術工具,devOps]
 
 date: 2020-09-12 10:46:53
 ---

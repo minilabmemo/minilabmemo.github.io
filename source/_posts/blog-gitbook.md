@@ -4,7 +4,7 @@ tags:
   - blog
   - gitbook 
 categories:
-  - [開發相關,blog]
+  - [技術工具,blog]
 date: 2022-09-09 12:50:07
 ---
 
@@ -25,8 +25,8 @@ date: 2022-09-09 12:50:07
 2. 開始新增文章，於線上編輯
 3. 點擊發布！！就可以拿到網址了
 4. 還可以與github sync 做備份
-使用gitbook一切就是這麼簡單！！！ 因為太簡單就不附圖了ＸＤ
+使用gitbook一切就是這麼簡單！！！ 
 
->note success %} 看看長怎樣 ：<a href="https://minilabmemo.gitbook.io/golang-memo/">點我「golang 學習區」</a>
->label warning@也可以直接點本部落個側邊欄進入 %}
+>看看長怎樣 ：<a href="https://minilabmemo.gitbook.io/golang-memo/">點我「golang 學習區」</a>
+
  

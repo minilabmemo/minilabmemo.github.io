@@ -4,7 +4,7 @@ tags:
   - linux
   - CLI
 categories:
-  - [尚未分類]
+  - [技術工具,Linux/Mac]
 date: 2020-12-27 10:37:58
 ---
 

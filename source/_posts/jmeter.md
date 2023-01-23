@@ -5,7 +5,7 @@ tags:
   - jmeter
   - qa
 categories:
-  - [尚未分類]
+  - [技術工具,未分類]
 date: 2022-07-01 21:32:36
 ---
 

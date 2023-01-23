@@ -5,7 +5,7 @@ tags:
   - hugo
   - blog
 categories:
-  - [開發相關,blog]
+  - [技術工具,blog]
 ---
 
 > 本章介紹如何在套用 hugo 做好一個自己的部落格網站．並上傳 github

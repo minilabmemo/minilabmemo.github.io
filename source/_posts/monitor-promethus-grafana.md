@@ -5,7 +5,7 @@ tags:
   - Grafana
   - monitor
 categories:
-  - [開發相關,效能]
+  - [技術工具,效能]
 date: 2021-04-28 20:20:29
 ---
 
