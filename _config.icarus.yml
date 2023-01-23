@@ -48,9 +48,14 @@ navbar:
         Tags: /tags
         About: /about
     links:
-        Download on GitHub:
+         GitHub:
             icon: fab fa-github
+            url: https://github.com/minilabmemo
+         Golang Memo:
+            icon: fa fa-book
             url: https://minilabmemo.gitbook.io/golang-memo/ 
+
+  
 footer:
     links:
         Creative Commons:
@@ -59,12 +64,12 @@ footer:
         Attribution 4.0 International:
             icon: fab fa-creative-commons-by
             url: https://creativecommons.org/licenses/by/4.0/
-        Download on GitHub:
+        GitHub:
             icon: fab fa-github
             url: https://github.com/ppoffice/hexo-theme-icarus
 article:
     highlight:
-        theme: atom-one-light
+        theme: atom-one-dark
         clipboard: true
         fold: unfolded
     readtime: true
@@ -128,6 +133,10 @@ widgets:
             Github:
                 icon: fab fa-github
                 url: https://github.com/minilabmemo
+            Medium:
+                icon: fa-solid fa-m
+                url: https://medium.com/@mini.lab.memo/about
+       
     -
         position: left
         type: links
@@ -141,7 +150,7 @@ widgets:
         type: toc
         index: true
         collapsed: true
-        depth: 3
+        depth: 5
 
     -
         position: left

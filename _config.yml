@@ -4,7 +4,7 @@ description: 後端IT工程師，Go經歷兩年 & 正在自學 React。 喜歡�
 keywords: coder
 author: mina
 language: zh-TW
-timezone: ''
+timezone: 'Asia/Taipei'
 url: 'https://minilabmemo.github.io/'
 root: /
 permalink: ':year/:month/:day/:title/'
