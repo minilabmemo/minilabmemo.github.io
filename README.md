@@ -5,7 +5,7 @@ title:  HEXO BLOG
 
 
 
-## Quick Start
+## 安裝工具
 - node.js
 - install hexo-cli
 ```
@@ -17,7 +17,7 @@ title:  HEXO BLOG
  npm install
 ```
 
-### hexo -v
+### 版本資訊
 ```
 $ hexo -v
 INFO  Validating config
@@ -58,6 +58,7 @@ $ hexo server
 ### Generate static files
 
 ```bash
+$ hexo clean
 $ hexo generate
 ```
 
@@ -73,13 +74,12 @@ INFO  Deploy done: git
 ## upload
 
 branch - src (have all files)
-themes/next-reloaded will not upload
-themes-bk/_config.yml will backup to upload
 branch - master (only web files)
+----
 
-
-## image
-- reminder:hexo g
+### image
+要把圖片放到source/images裏面
+> reminder:hexo g
 ```
 ![my](/images/avatar_memo.png)
 或是用html寫法，可以控制大小
@@ -87,7 +87,7 @@ branch - master (only web files)
 ```
 
 
-## categories
+### 個人分類清單
 ```
 categories:
   - [Backend,golang]
@@ -107,7 +107,7 @@ categories:
 
 ```
 
-## 引言色彩
+###  引言色彩
 ```
 {% raw %}<div class="notification is-info">{% endraw %}
 [Icarus](https://blog.zhangruipeng.me/hexo-theme-icarus/) 主题以白色的简洁为主，但有时候我们希望在文章中用**特别的样式**注明一些内容，*markdown* 语法就不够用了，所以在此分享一下我的高级玩法。
