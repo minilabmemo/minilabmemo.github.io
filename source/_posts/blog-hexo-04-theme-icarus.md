@@ -93,14 +93,27 @@ unicode: 13.0
 
 ## 更換主題
 
-
-- 執行安裝指令 
-有兩種方式，我用的是ＮＰＭ安裝 see [Getting Started with Icarus](https://ppoffice.github.io/hexo-theme-icarus/uncategorized/getting-started-with-icarus/)
+### 執行安裝指令 - 安裝位置
+安裝時有兩種安裝方式  see [Getting Started with Icarus](https://ppoffice.github.io/hexo-theme-icarus/uncategorized/getting-started-with-icarus/)
+1. install from source
 ```
-$ npm install -S hexo-theme-icarus hexo-renderer-inferno
+git clone https://github.com/ppoffice/hexo-theme-icarus.git themes/icarus --depth 1
+
+```
+1. install from NPM
+```
+npm install -S hexo-theme-icarus hexo-renderer-inferno
+```
+{% raw %}<div class="notification is-warning">{% endraw %}
+Note:一開始我是用第二種安裝方式就裝起來了，不過看起來hexo-theme-icarus會出現在node_modules裡，不是在自己的themes/icarus
+兩種方式都可以正確套用到主題效果，不過考慮到之後可能自己會想魔改主題效果，後來改用第一種方式安裝．
+{% raw %}</div>{% endraw %}
+
+
+- 執行
+```
 $ hexo config theme icarus
 然後執行hexo s 就可以了
-> 這種安裝方式自己的目錄中不會出現/themes/xxx 這樣的資料夾，設定也都出現在外層喔
 ```
 
 - 成功啟動後的初始畫面
@@ -437,7 +450,7 @@ update link as:-->/.io//icarus_init.png
 
 ---------
 ## [後記] 過程中處理問題
-- 安裝啟動錯誤
+###  安裝啟動錯誤
 
 ```
 註：因為我是從NextT轉換過來的，才發現有些特殊標籤在這邊啟動會爆錯
@@ -456,7 +469,7 @@ const { Component } = require('inferno'); const classname = require('hexo-compon
 ```
 
 
-- 刪除舊的NextT主題預設產生位置
+###  刪除舊的NextT主題預設產生位置
 如果下hexo clean hexo g 會發現文章會產生在public資料夾裡，以前舊的主題先刪除
 
 ```diff >folded
@@ -470,7 +483,7 @@ const { Component } = require('inferno'); const classname = require('hexo-compon
 
 ```
 
-- 插入圖片時不知道為什麼不能用與文章放置一起的設定
+###   插入圖片時不知道為什麼不能用與文章放置一起的設定(尚未解)
 ```
 // 第一種方法 hexo new xxx 時會有一個獨立資料夾可以放圖片
 不知道為什麼我這邊是開啟
@@ -481,14 +494,18 @@ update link as:-->/.io//icarus_init.png
 但是發現無法找到資料，推判可能是我的插件有什麼插件無法對應到日期 待查
 
 ```
-- highlight 
+###   highlight 主題部分無效果
   不知道為什麼除了atom-one-dark，換成別的都沒有效果．
-- 未完待續 待研究中...
+
+
+
+### 未完待續 待研究中...
 ```
 多語言
 多階層
 看板娘
 留言區
+魔改SEO
 buymecoffee
 Open Graph
 Icarus用户指南 - 主题配置 Google Structured Data 你可以在head配置中设置Google Structured Data。 你应该在配置文件中将绝大部分配置留空。 仅在需要的时候在文章的front-matter中为这些设置赋值。
