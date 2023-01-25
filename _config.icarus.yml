@@ -2,7 +2,7 @@ version: 5.1.0
 variant: default
 logo: /img/mini_header.png
 head:
-    favicon: /img/favicon-32x32-Memo.png  
+    favicon: /img/bookmark.png
     manifest:
         name: 
         short_name: 

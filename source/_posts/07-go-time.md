@@ -122,8 +122,7 @@ case4: Timezone at Taipei: 2021-04-22T17:27:44
 
 
 ## 網路參考文章
->note warning %} <span style="font-size: 9px;">
-學習路上感謝網路大神們，如果你發現了我，可以查看以下參考文章了解更多概念👇👇👇</span>
+
 - [数据库存时间戳的好处](https://blog.csdn.net/qq_34908844/article/details/78817420)
 - [time-unix examples](https://www.geeksforgeeks.org/time-unix-function-in-golang-with-examples/)
 - [1milli->1000000 nano sec](https://www.translatorscafe.com/unit-converter/zh-CN/time/2-4/millisecond-nanosecond/)

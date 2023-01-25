@@ -183,6 +183,5 @@ Default output format [None]:
 
 
 ## 網路參考文章
->note warning %} <span style="font-size: 9px;">
-學習路上感謝網路大神們，如果你發現了我，可以查看以下參考文章了解更多概念👇👇👇</span>
+
 - [amazon-s3開發是否有免費帳號](https://stackoverflow.com/questions/1375285/amazon-s3-developer-free-account-for-testing-purposes)

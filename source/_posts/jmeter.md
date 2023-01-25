@@ -1,25 +1,29 @@
 ---
-title: jmeter 測試工具初體驗
+title: 整合測試工具 jmeter 初體驗
 tags:
   - test
   - jmeter
   - qa
 categories:
-  - [技術工具,未分類]
+  - [技術工具,測試]
 date: 2022-07-01 21:32:36
+toc: true
 ---
 
 # 什麼是 JMeter 
->The **Apache JMeter™** application is open source software, a 100% pure Java application designed to load test functional behavior and measure performance. It was originally designed for testing Web Applications but has since expanded to other test functions.g 
+{% raw %}<div class="notification is-info">{% endraw %}
+**Apache JMeter™** 是開源軟件，是一個 100% 純 Java 應用程序，旨在加載測試功能行為和測量性能，
+{% raw %}</div>{% endraw %}
+
 
 # 使用時機
 
-當需要對API做整合測試並驗證回覆時使用．
+當需要對 API 做整合測試並驗證回覆時使用．
 
 # 本文將會知道：
-  1. 使用測試工具JMeter做一連串API測試
+  1. 使用測試工具 JMeter 做一連串 API 測試
   2. 解析回覆json與驗證
-  3. `（未完待續）` 壓力測試
+
 
 <!--more-->
 
@@ -38,7 +42,7 @@ date: 2022-07-01 21:32:36
 
 ### Get APIs
 
-以下這個範例是根據詢問一個Http \[list]，再根據回覆去一個個問另一支API．
+以下這個範例是根據詢問一個Http \[list]，再根據回覆去一個個問另一支API，最終希望檢視結果 API 都回覆 200 OK．
 
 * 請依序新增對應設定，可以右鍵disable/enable該群組
 * 按下執行就可以從檢視結果樹看到結果
@@ -64,7 +68,7 @@ date: 2022-07-01 21:32:36
 
 * 這個測試檔案：[sample.jmx](https://github.com/minilabmemo/working-helper-record/blob/main/sample.jmx)
 
-## 更多細節：
+## 處理器細節：
 
 ### 自訂變數/引用變數
 
@@ -74,7 +78,7 @@ date: 2022-07-01 21:32:36
 這是一個API 會直接回覆 arrays 如下：
 
 ```
-[
+
 [
    {
       "id":"1",
@@ -133,10 +137,9 @@ throw ex;
 可以查看過程中變數內容
 
 
+## `（未完待續）` 壓力測試
 
+##  網路參考文章
 
-###  網路參考文章
->note warning %} <span style="font-size: 9px;">
-學習路上感謝網路大神們，如果你發現了我，可以查看以下參考文章了解更多概念👇👇👇</span>
 * [Jmeter断言中判断请求失败的响应代码问题](https://www.cnblogs.com/fengsiyi/p/6904041.html) 找不到斷言，但有驗證回復
 * [Meter - JSON variable in a ForEach Controller](https://www.codeproject.com/Tips/5323656/JMeter-JSON-variable-in-a-ForEach-Controller)

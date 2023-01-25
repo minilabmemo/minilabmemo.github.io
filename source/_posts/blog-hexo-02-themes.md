@@ -263,7 +263,7 @@ go xxx
 
 >note primary %} 紫色 primary 
 
->note success %} 綠色 success 
+> 綠色 success 
 
 >藍色 info 
 

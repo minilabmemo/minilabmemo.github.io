@@ -22,7 +22,7 @@ date: 2023-01-22 16:31:36
 ## hexo 版本 與相依設定
 使用 hexo version 可以查詢版本
 ```diff “點我查看hexo version ” >folded 
-+ $ hexo version
++ $ hexo -v
 INFO  Validating config
 Inferno is in development mode.
 INFO  =======================================
@@ -36,9 +36,9 @@ INFO  =======================================
 INFO  === Checking package dependencies ===
 INFO  === Checking theme configurations ===
 INFO  === Registering Hexo extensions ===
-hexo: 5.4.2
+hexo: 6.3.0
 hexo-cli: 4.3.0
-os: darwin 22.1.0 13.0.1
+os: darwin 22.2.0 13.1
 
 node: 14.17.0
 v8: 8.4.371.23-node.63
@@ -69,26 +69,31 @@ unicode: 13.0
     "server": "hexo server"
   },
   "hexo": {
-    "version": "5.4.2"
+    "version": "6.3.0"
   },
   "dependencies": {
-    "hexo": "^5.4.2",
+    "bulma-stylus": "^0.8.0",
+    "hexo": "^6.3.0",
     "hexo-asset-image": "^1.0.0",
+    "hexo-component-inferno": "^2.0.2",
     "hexo-deployer-git": "^2.1.0",
     "hexo-generator-archive": "^1.0.0",
     "hexo-generator-category": "^1.0.0",
     "hexo-generator-index": "^2.0.0",
     "hexo-generator-tag": "^1.0.0",
+    "hexo-log": "^3.2.0",
+    "hexo-pagination": "^2.0.0",
     "hexo-renderer-ejs": "^1.0.0",
     "hexo-renderer-inferno": "^0.1.3",
     "hexo-renderer-marked": "^3.0.0",
     "hexo-renderer-stylus": "^2.0.0",
     "hexo-server": "^2.0.0",
     "hexo-tag-cloud": "^2.1.2",
-    "hexo-theme-icarus": "^5.1.1",
     "hexo-theme-landscape": "^0.0.3"
-  }
+  },
+  "devDependencies": {}
 }
+
 ```
 
 ## 更換主題
@@ -106,7 +111,7 @@ npm install -S hexo-theme-icarus hexo-renderer-inferno
 ```
 {% raw %}<div class="notification is-warning">{% endraw %}
 Note:一開始我是用第二種安裝方式就裝起來了，不過看起來hexo-theme-icarus會出現在node_modules裡，不是在自己的themes/icarus
-兩種方式都可以正確套用到主題效果，不過考慮到之後可能自己會想魔改主題效果，後來改用第一種方式安裝．
+兩種方式都可以正確套用到主題效果，不過考慮到之後可能自己會想改主題底層效果當作自己的部分，後來改用第一種方式安裝．
 {% raw %}</div>{% endraw %}
 
 
@@ -448,6 +453,16 @@ update link as:-->/.io//icarus_init.png
 //可以指定是否折疊,沒指定就照預設黨
 ```
 
+
+### 魔改 theme 主題樣式
+有時候套用主題，可能會有些地方格式想要調整，就要去更改底層主題的檔案，另外，這邊的更改發布之後，可能會需要清除 cache 才能看到效果．
+#### 更改 header logo 高度
+- 因為自己的logo 內容較多，上傳時發現會被自動縮小，為了清楚顯示，所以我把高度調高了，
+``` themes/icarus/include/style/base.styl
+$logo-height ?= 5rem
+```
+
+
 ---------
 ## [後記] 過程中處理問題
 ###  安裝啟動錯誤
@@ -498,6 +513,12 @@ update link as:-->/.io//icarus_init.png
   不知道為什麼除了atom-one-dark，換成別的都沒有效果．
 
 
+### hexo 版本升級
+一開始用的hexo版本是5.4.2，但是啟動時噴ERRROR 提示要升至hexo: 6，還有其他錯誤...，於是就一步步照著指令安裝就啟動成功了．
+
+
+### 主題備份
+自己有開了一個 src 分支用來記錄所有原生檔案，因為上傳只會紀錄 public 檔案，但是theme這個資料夾裡面是 git clone 別人的（theme作者），所以其實是不會出現在自己分支內的，如果有魔改theme的要記得自己在備份一下．我自己是開了一個icarus_fix_record來記錄，雖然有點麻煩，但以後要更新比較方便（或許會更新ＸＤ），如果改得太多可以考慮解除git綁定上傳整個theme．
 
 ### 未完待續 待研究中...
 ```

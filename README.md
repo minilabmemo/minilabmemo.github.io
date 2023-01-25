@@ -104,12 +104,13 @@ categories:
   - [技術工具,Tips]
   - [技術工具,IDE]
   - [技術工具,Linux/Mac]
+  - [技術工具,測試]
 
 ```
 
 ###  引言色彩
 ```
 {% raw %}<div class="notification is-info">{% endraw %}
-[Icarus](https://blog.zhangruipeng.me/hexo-theme-icarus/) 主题以白色的简洁为主，但有时候我们希望在文章中用**特别的样式**注明一些内容，*markdown* 语法就不够用了，所以在此分享一下我的高级玩法。
+**粗體** ...
 {% raw %}</div>{% endraw %}
 ```
