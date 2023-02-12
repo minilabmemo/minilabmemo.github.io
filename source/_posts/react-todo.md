@@ -1,9 +1,8 @@
 ---
-title: "[React][✍作品集範例][🚧進行中]做to-do list頁面"
+title: "[React][🚧進行中]做to-do list頁面"
 tags:
   - react
   - Material-ui
-  - 作品集範例
 categories:
   - [Frontend,react]
 date: 2020-10-02 23:26:02

@@ -1,9 +1,12 @@
 ---
-title: "[監控]使用Prometheus+Grafana監控效能"
+title: "[監控]使用Prometheus+Grafana監控電腦與程式效能"
+cover: /images/grafanaWin.png
+thumbnail: /images/grafanaWin.png
 tags:
   - Prometheus
   - Grafana
   - monitor
+	- golang
 categories:
   - [技術工具,效能]
 date: 2021-04-28 20:20:29
@@ -83,7 +86,7 @@ docker run -d --name=grafana -p 3000:3000 grafana/grafana
 - [Windows Node (fixed for v0.13.0+)](https://grafana.com/grafana/dashboards/12422)
 就可以監控了
 
-<img src="/images/post/grafanaWin.png" width="500px"/>
+<img src="/images/grafanaWin.png" width="500px"/>
 
 ---
 
@@ -151,6 +154,7 @@ metrics available for this monitor [prometheus-go](https://docs.signalfx.com/en/
 於[grafana的網站上搜尋做好的圖表](https://grafana.com/grafana/dashboards)
 - 例如可以套入這個[Go Metrics](https://grafana.com/grafana/dashboards/10826) 範例
 
+<img src="https://grafana.com/api/dashboards/10826/images/6819/image" width="500px"/>
 
 
 -------------------

@@ -95,14 +95,14 @@ https://km.nicetypo.com/doc/ead903b94bb8bf01974d3ccdb91a117b)
 - 然後margin是占空間但不可視的地方。
 
 
-<img src="/images/post/content-box.png" width="500px" />
+<img src="/images/content-box.png" width="500px" />
 
 - 可以改變屬性 box-sizing: border-box;
 - 就會幫你把整體物件大小設定為width+height
 - 但這樣表示content內容只有width/height-padding-border(看左右/上下設定多少)
 - 然後margin還是占空間但不可視的地方。
 
-<img src="/images/post/border-box.png" width="500px" />
+<img src="/images/border-box.png" width="500px" />
 
 
 

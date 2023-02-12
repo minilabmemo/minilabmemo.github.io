@@ -86,7 +86,7 @@ gosec -fmt=html -out=results.html ./...<br>
 注意是*三個點
 ```
 - 然後打開ＨＴＭＬ檔案就可以看到程式品質分析報告了
-<img src="/images/post/gosec.png" width="500px" />
+<img src="/images/gosec.png" width="500px" />
 
 - 像是以上這條處理檔案位置時，path應該清理處理過以避免輸入異常
 

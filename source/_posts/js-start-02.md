@@ -22,7 +22,7 @@ date: 2021-02-20 11:33:18
 
 ## 同步 vs 非同步
 
-<img src="/images/post/sync_async.png" width="350px"/>
+<img src="/images/sync_async.png" width="350px"/>
 
 
 

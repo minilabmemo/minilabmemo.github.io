@@ -113,4 +113,7 @@ categories:
 {% raw %}<div class="notification is-info">{% endraw %}
 **粗體** ...
 {% raw %}</div>{% endraw %}
+success
+warning
+danger
 ```

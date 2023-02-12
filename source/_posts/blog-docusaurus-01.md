@@ -62,7 +62,7 @@ We suggest that you begin by typing:
 一些基本的畫面就出來了☼☼☼
 http://localhost:3000/note-blog/
 
-<img src="/images/post/note-blog-ui.png" width="500px"/>
+<img src="/images/note-blog-ui.png" width="500px"/>
 
 接著我先不改內容，先部署到網路上拿到正式網址．
 

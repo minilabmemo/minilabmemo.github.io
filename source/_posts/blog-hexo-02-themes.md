@@ -11,7 +11,7 @@ date: 2022-05-01 10:06:30
 
 > 上一篇已經建立好基本網站架構了，這篇收集本站所有更改主題為NextT及更換的個人化設定．
 
-#### 效果
+#### 主題呈現效果
 <img src="/images/next-home.png" width="200px" />
 <img src="/images/next_post.png" width="200px" />
 <img src="/images/next_tags.png" width="200px" />
