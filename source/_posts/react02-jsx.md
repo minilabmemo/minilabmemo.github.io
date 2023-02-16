@@ -1,5 +1,5 @@
 ---
-title: "[React 02] react JSX 基本語法"
+title: "[React筆記 02] react JSX 基本語法"
 tags:
   - react
   - JSX

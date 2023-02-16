@@ -1,5 +1,5 @@
 ---
-title: "[JS 01] javascript 新手上路與概念筆記"
+title: "[JS 筆記 01] javascript 新手上路與概念"
 tags:
   - javascript
   - ES6

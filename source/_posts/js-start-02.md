@@ -1,5 +1,5 @@
 ---
-title: "[JS 02] 同步與非同步"
+title: "[JS 筆記 02] 同步與非同步"
 tags:
   - javascript
   - ES6
