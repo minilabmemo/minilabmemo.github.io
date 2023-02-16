@@ -8,7 +8,7 @@ categories:
 date: 2020-11-14 22:17:59
 ---
 
->note info %}練習 Reactc 畫圖套件 recharts
+>練習 Reactc 畫圖套件 recharts
 
 <!--more-->
 

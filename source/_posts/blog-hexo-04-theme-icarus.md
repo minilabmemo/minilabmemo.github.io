@@ -344,7 +344,7 @@ plugins:
         tracking_id: 
     bing_webmaster:
         tracking_id: 
-    busuanzi: false
++    busuanzi: true
     cnzz:
         id: 
         web_id: 
@@ -380,6 +380,8 @@ providers:
   left/right.sticky: true 這設定可以固定左右側邊欄，閱讀時到下方時才會不會看不到
 #### toc 
    這個是文章目錄，需配合文章開啟Front-Matter才能用，預設是顯示三層，我習慣改成四層
+#### plugins
+      busuanzi: true 這是開啟網站底部及和每篇文章頭部，顯示共多少訪客的開關，上線後數字才會正常．
 
 ### 新增文章
 #### 文章的 Front-Matter设置
@@ -469,12 +471,16 @@ $logo-height ?= 5rem
 
 ---------
 ## [後記] 過程中處理問題
+
+{% raw %}<div class="notification is-warning">{% endraw %}
+這個段落是用來記錄過程中遇到的問題，如果你沒有遇上問題可以直接跳過這個章節．
+{% raw %}</div>{% endraw %}
 ###  安裝啟動錯誤
 
 ```
 註：因為我是從NextT轉換過來的，才發現有些特殊標籤在這邊啟動會爆錯
 > ：``` Error [Nunjucks Error]: about/index.md [Line 7, Column 4] unknown block tag: note```
-> 因此我把文章中的找到`{% note info %} `與`{% endnote %}`。移除．
+> 因此我把文章中的找到`{%  `與`{% endnote %}`。移除．
 ```
 
 
@@ -547,4 +553,6 @@ https://ppoffice.github.io/hexo-theme-icarus/Widgets/icarus%E7%94%A8%E6%88%B7%E6
 - [Hexo-Icarus主题配置建议](https://blog.andycen.com/2020/03/07/Hexo-Icarus%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE%E5%BB%BA%E8%AE%AE/)
 
 - [活用 Bulma 美化 Icarus 文章](https://www.imaegoo.com/2020/icarus-with-bulma)
+- [Hexo博客指南|第十二篇:Icarus配置 - 网站分析插件](https://ji2xpro.github.io/88bd6454/)
+    - 不蒜子网页计数器 及其他統計插件
 - 圖片來源：https://unsplash.com/
