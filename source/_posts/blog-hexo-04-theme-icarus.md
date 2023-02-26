@@ -19,9 +19,15 @@ date: 2023-01-22 16:31:36
 
 
 <!--more-->
+
+
 {% raw %}<div class="notification is-warning">{% endraw %}
 更換主題注意事項：原本有一些主題特殊的標籤或是插件及文章內容有可能會發生失效或排版混亂，更換後需要再花時間修正過去的功能．
 {% raw %}</div>{% endraw %}
+
+
+## 目錄
+<!-- toc -->
 
 ## hexo 版本 與相依設定
 使用 hexo version 可以查詢版本
@@ -379,7 +385,7 @@ providers:
 #### sidebar
   left/right.sticky: true 這設定可以固定左右側邊欄，閱讀時到下方時才會不會看不到
 #### toc 
-   這個是文章目錄，需配合文章開啟Front-Matter才能用，預設是顯示三層，我習慣改成四層
+   這個是設定出現在部落格側邊的文章目錄，需配合文章開啟Front-Matter才能用，預設是顯示三層，我習慣改成四層．
 #### plugins
       busuanzi: true 這是開啟網站底部及和每篇文章頭部，顯示共多少訪客的開關，上線後數字才會正常．
 
@@ -460,14 +466,35 @@ update link as:-->/.io//icarus_init.png
 ```
 
 
-### 魔改 theme 主題樣式
+
+
+## 魔改 theme 主題樣式
 有時候套用主題，可能會有些地方格式想要調整，就要去更改底層主題的檔案，另外，這邊的更改發布之後，可能會需要清除 cache 才能看到效果．
-#### 更改 header logo 高度
+### 更改 header logo 高度
 - 因為自己的logo 內容較多，上傳時發現會被自動縮小，為了清楚顯示，所以我把高度調高了，
 ``` themes/icarus/include/style/base.styl
 $logo-height ?= 5rem
 ```
 
+### 更改卡片懸浮效果
+這個教學是來自 [挂件卡片增加浮动效果](https://astrobear.top/2021/08/23/Hexo%E4%B8%BB%E9%A2%98Icarus%E7%9A%84%E8%87%AA%E5%AE%9A%E4%B9%89/#%E6%8C%82%E4%BB%B6%E5%8D%A1%E7%89%87%E5%A2%9E%E5%8A%A0%E6%B5%AE%E5%8A%A8%E6%95%88%E6%9E%9C)
+
+```diff include/style/card.styl 當滑鼠移到卡片上時添加陰影及上移效果
+.card
++    &:hover
++        box-shadow: 0 6px 15px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.1)
++        transform: translateY(-3px);
+```
+
+```diff source/js/animation.js 加上陰影漸變動畫效果
+.card
+-            element.style.transition = 'opacity 0.3s ease-out, transform 0.3s ease-out';
++            element.style.transition = 'opacity 0.3s ease-out, transform 0.3s ease-out, box-shadow 0.3s ease-in-out';
+         });
+-                    element.style.transition = 'opacity 0.3s ease-out, transform 0.3s ease-out';
++                    element.style.transition = 'opacity 0.3s ease-out, transform 0.3s ease-out, box-shadow 0.3s ease-in-out';
+                 }, i * 100);
+```
 
 ---------
 ## [後記] 過程中處理問題

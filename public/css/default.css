@@ -10775,6 +10775,10 @@ body > .section {
   border: none;
   margin-top: 0;
 }
+.card:hover {
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.1);
+  transform: translateY(-3px);
+}
 article.media {
   color: #7a7a7a;
 }
