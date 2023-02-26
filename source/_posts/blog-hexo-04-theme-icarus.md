@@ -557,6 +557,18 @@ update link as:-->/.io//icarus_init.png
 ### 主題備份
 自己有開了一個 src 分支用來記錄所有原生檔案，因為上傳只會紀錄 public 檔案，但是theme這個資料夾裡面是 git clone 別人的（theme作者），所以其實是不會出現在自己分支內的，如果有魔改theme的要記得自己在備份一下．我自己是開了一個icarus_fix_record來記錄，雖然有點麻煩，但以後要更新比較方便（或許會更新ＸＤ），如果改得太多可以考慮解除git綁定上傳整個theme．
 
+### 部署時卡住
+- 1.檢查token有沒有過期
+- 2.檢查上傳使用者是否錯誤
+```
+git config --global -l
+user.name=xxx
+user.email=xxx@gmail.com
+credential.username=xxx
+credential.helper=osxkeychain
+```
+
+
 ### 未完待續 待研究中...
 ```
 多語言

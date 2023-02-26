@@ -65,6 +65,7 @@ deploy:
   type: git
   repo: 'https://github.com/minilabmemo/minilabmemo.github.io.git'
   branch: master
+  user: 
 tag_cloud:
   textFont: 'Trebuchet MS, Helvetica'
   textColor: '#869ABF'
