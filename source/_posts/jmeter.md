@@ -11,10 +11,9 @@ toc: true
 ---
 
 # 什麼是 JMeter 
-{% raw %}<div class="notification is-info">{% endraw %}
+<article class="message is-info"><div class="message-body">
 **Apache JMeter™** 是開源軟件，是一個 100% 純 Java 應用程序，旨在加載測試功能行為和測量性能，
-{% raw %}</div>{% endraw %}
-
+/div></article>
 
 # 使用時機
 

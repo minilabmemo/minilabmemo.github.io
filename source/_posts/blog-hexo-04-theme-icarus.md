@@ -13,11 +13,10 @@ date: 2023-01-22 16:31:36
 
 
 
-{% raw %}<div class="notification is-info">{% endraw %}
-2023年新的一年，突然想要來幫部落格換個新主題🔆，這陣子看到 ICARUS 主題，覺得蠻喜歡它的版面配置的，於是就把主題換一下，目前的環境已經裝好hexo了，這篇就直接從更換主題開始～
-{% raw %}</div>{% endraw %}
 
-
+<article class="message is-info"><div class="message-body">
+2023年新的一年，突然想要來幫部落格換個新主題，這陣子看到 ICARUS 主題，覺得蠻喜歡它的版面配置的，於是就把主題換一下，目前的環境已經裝好hexo了，這篇就直接從更換主題開始～<
+</div></article>
 <!--more-->
 
 
@@ -496,6 +495,15 @@ $logo-height ?= 5rem
                  }, i * 100);
 ```
 
+## 調換文章開頭顯示順序
+原本分類是放在更新時間後面，我把它移到前面顯示．
+```/themes/icarus/layout/common/article.jsx
+{/* Categories */}
+{/* Creation Date */}
+{/* Last Update Date */}
+{/* author */}
+```
+
 ---------
 ## [後記] 過程中處理問題
 
@@ -573,6 +581,8 @@ credential.helper=osxkeychain
 ```
 多語言
 多階層
+Submenu
+https://github.com/ppoffice/hexo-theme-icarus/issues/527
 看板娘
 留言區
 魔改SEO
@@ -580,6 +590,8 @@ buymecoffee
 Open Graph
 Icarus用户指南 - 主题配置 Google Structured Data 你可以在head配置中设置Google Structured Data。 你应该在配置文件中将绝大部分配置留空。 仅在需要的时候在文章的front-matter中为这些设置赋值。
 https://ppoffice.github.io/hexo-theme-icarus/Widgets/icarus%E7%94%A8%E6%88%B7%E6%8C%87%E5%8D%97-%E6%8C%82%E4%BB%B6/
+
+
 
 ```
 

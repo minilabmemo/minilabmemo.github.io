@@ -1,5 +1,5 @@
 ---
-title: "[blog] hexo 在文章開頭加上內容目錄"
+title: "[Blog] hexo 在文章開頭加上內容目錄"
 cover: /img/posts/post-map-unsplash.jpg
 thumbnail: /img/posts/post-map-unsplash.jpg
 tags:
@@ -14,26 +14,25 @@ categories:
 
 
 
-{% raw %}<div class="notification is-info">{% endraw %}
-內容目錄"toc“ 是代表 table of contents 目錄，上一篇透過內建的toc雖然可以長出側邊欄，但如果想要在撰寫markdown時讓他出現文章開頭，就需要安裝額外的插件來做到，以下研究了兩種插件的方式並記錄下來．
-{% raw %}</div>{% endraw %}
 
+<article class="message is-info"><div class="message-body">
+內容目錄"toc“ 是代表 table of contents 目錄，上一篇透過內建的toc雖然可以長出側邊欄，但如果想要在撰寫markdown時讓他出現文章開頭，就需要安裝額外的插件來做到，以下研究了兩種插件的方式並記錄下來．
+</div></article>
 
 <!--more-->
 
-<div class="my-toc">
+
 
 ## 目錄 | Contents
 <!-- toc -->
-</div>
 
 
-## 內建的側邊欄 toc
+## intro.
 原本這個部落格的文章，就已經具有側邊欄toc了，只要在文章標頭放上`toc:true`即可，但我想要的效果是在文章開頭時就放上，這樣手機瀏覽時也能看到內容，這邊有找到安裝額外插件．
 
-## 方法一：hexo-toc
+## way1: use hexo-toc
 
-### 安裝hexo-toc
+### 安裝 hexo-toc
 
 - 安裝說明來自：https://github.com/bubkoo/hexo-toc
 ```
@@ -51,27 +50,57 @@ toc:
 
 ```
 
-- 記得 hexo clean & hexo g 然後啟動才會看到效果．
 
-<div class="notification is-success">
-這個插件的問題：
-但這樣做完之後，側邊欄的階層也跟著被影響了，我希望側邊欄可以多階層並隨著文章閱讀而擴展，而內文開頭就顯示第一層就好．找不到方法所以先卸載hexo-toc．
+
+<div class="notification is-warning">
+記得 hexo clean & hexo g 後啟動才會看到效果．
 </div>
 
-## 方法二：hexo-insert-toc
+<article class="message is-warning"><div class="message-body">
+這個插件的問題：這樣做完之後，側邊欄的階層也跟著被影響了，我希望側邊欄可以多階層並隨著文章閱讀而擴展，而內文開頭就顯示第一層就好．找不到方法所以先卸載hexo-toc．
+</div></article>
+
+## way2: use hexo-insert-toc
 
 ### 安裝hexo-insert-toc
 - 插件來自：https://github.com/bennycode/hexo-insert-toc
-```  
+```  shell
 npm i hexo-insert-toc
 ```
 - 更改階層
-```
+``` _config.yml
 hexo-insert-toc:
   maxdepth: 2
 ```
-- 但是這個插件產生出來的 toc 並不能客制class name，需要再自己加入．
 
+
+- 成功安裝完的 dependencies 版本
+```go “展開查看dependencies版本” json >folded
+  "dependencies": {
+    "bulma-stylus": "^0.8.0",
+    "hexo": "^6.3.0",
+    "hexo-asset-image": "^1.0.0",
+    "hexo-component-inferno": "^2.0.2",
+    "hexo-deployer-git": "^2.1.0",
+    "hexo-generator-archive": "^1.0.0",
+    "hexo-generator-category": "^1.0.0",
+    "hexo-generator-index": "^2.0.0",
+    "hexo-generator-tag": "^1.0.0",
+    "hexo-insert-toc": "^1.1.2",
+    "hexo-log": "^3.2.0",
+    "hexo-pagination": "^2.0.0",
+    "hexo-renderer-ejs": "^1.0.0",
+    "hexo-renderer-inferno": "^0.1.3",
+    "hexo-renderer-marked": "^3.0.0",
+    "hexo-renderer-stylus": "^2.0.0",
+    "hexo-server": "^2.0.0",
+    "hexo-theme-landscape": "^0.0.3",
+    "markdown-toc": "^1.2.0"
+  },
+```
+<article class="message is-warning"><div class="message-body">
+這個插件產生出來的 toc 並不能客制class name，需要再自己加入，而且中文連結會無法跳轉，英文是正常的「尚不知如何解決，只好先練練英文了（誤）」．
+</div></article>
 
 
 ## 網路參考文章

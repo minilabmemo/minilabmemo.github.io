@@ -17,9 +17,10 @@ categories:
   - [技術工具,未分類]
 
 
-{% raw %}<div class="notification is-info">{% endraw %}
-開頭
-{% raw %}</div>{% endraw %}
+
+<article class="message is-info"><div class="message-body">
+引言
+</div></article>
 
 <!--more-->
 ## 目錄 | Contents

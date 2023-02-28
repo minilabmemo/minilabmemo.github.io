@@ -89,6 +89,7 @@ branch - master (only web files)
 
 ### 個人分類清單
 ```
+Front-Matter
 categories:
   - [Backend,golang]
   - [Backend,java]
@@ -121,3 +122,23 @@ danger
 
 ### 程式碼區塊
 diff >folded
+diff “點我查看config.icarus.yml細節” >folded 
+
+
+### 引言樣式
+在我的文章裡面有沒有加raw都可以顯示 不知用意
+```
+//全底色彩
+{% raw %}<div class="notification is-info">{% endraw %}
+xxx
+{% raw %}</div>{% endraw %}
+//側邊
+<article class="message is-info"><div class="message-body">
+xxx
+/div></article>
+//header
+<article class="message is-info"><div class="message-header">title
+</div><div class="message-body">
+message
+</div></article>
+```

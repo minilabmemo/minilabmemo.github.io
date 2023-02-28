@@ -1,6 +1,6 @@
 title: MiniLab × Memo
 subtitle: Mini Lab Memo
-description: 程式設計師，Go經歷三年 & 正在自學 React。 喜歡貓狗．<br> 持續紀錄自學筆記
+description: 程式設計師| Go經歷三年 & 正在自學 React | 喜歡貓狗．<br> 持續紀錄自學筆記
 keywords: coder
 author: mina
 language: zh-TW
@@ -8,7 +8,7 @@ timezone: 'Asia/Taipei'
 url: 'https://minilabmemo.github.io/'
 root: /
 permalink: ':year/:month/:day/:title/'
-permalink_defaults: null
+permalink_defaults: ':year/:month/:day/:title/'
 pretty_urls:
   trailing_index: true
   trailing_html: true
@@ -66,12 +66,15 @@ deploy:
   repo: 'https://github.com/minilabmemo/minilabmemo.github.io.git'
   branch: master
   user: 
-tag_cloud:
-  textFont: 'Trebuchet MS, Helvetica'
-  textColor: '#869ABF'
-  textHeight: 12
-  outlineColor: '#FFCFAB'
-  maxSpeed: 0.05
-  pauseOnSelected: true
+toc:
+  maxdepth: 2
+  class: tocc
+  slugify: transliteration
+  decodeEntities: false
+  anchor:
+    position: after
+    symbol: '*'
+    style: header-anchor
+
 hexo-insert-toc:
   maxdepth: 2

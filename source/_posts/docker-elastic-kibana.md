@@ -1,11 +1,11 @@
 ---
-title: "[docker]建立elasticSearch儲存資料與kibana呈現使用"
+title: "[docker] 建立elasticSearch儲存資料與kibana呈現使用"
 tags:
   - docker
   - elasticSearch
   - kibana
 categories:
-  - [技術工具,未分類]
+  - [技術工具,devOps]
  
 date: 2021-04-24 10:06:20
 ---

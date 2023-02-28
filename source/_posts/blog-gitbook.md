@@ -9,14 +9,15 @@ date: 2022-09-09 12:50:07
 ---
 
 
->GitBook 幫助你創建一個方便瀏覽撰寫好用的文件協作分享．  
+<article class="message is-info"><div class="message-header">GitBook 幫助你創建一個方便瀏覽撰寫好用的文件協作分享． 
+</div><div class="message-body">
+
+最近嘗試用 gitbook 來記錄學習的線上備忘錄，發現還蠻好用的！所以建了一個golang memo的gitbook專區～把自己所學都整理往裡面放．
+</div></article>
 
 
 <!--more-->
 
-## 使用gitbook
-
-最近嘗試用 gitbook 來記錄學習的線上備忘錄，發現還蠻好用的！所以建了一個golang memo的gitbook專區～把自己所學都整理往裡面放．
 
 ## 優點
 - 線上編輯即所見
@@ -37,6 +38,9 @@ date: 2022-09-09 12:50:07
 ### 發布網址
 點這裡看我的 -> <a href="https://minilabmemo.gitbook.io/golang-memo/">golang 學習備忘錄</a>
 <img src="/images/gitbook.png" width="auto" />
+
+### 心得
+
 
 -----
 
