@@ -3,7 +3,13 @@ title: "關於我 About Me"
 date: 2020-09-06 13:53:06
 ---
 
-<img src="/images/avatar_memo.png" width="150px" />
+
+### 關於 小研究式
+小研究式｜Mini Lab / 小研備忘室|Mini Lab Memo
+<div class="has-background-warning-light">小研究式｜Mini Lab </div>
+
+### 關於我
+<img src="/img/avatar_memo.png" width="150px" />
 
 <h3 align="center">後端IT工程師，Go經歷兩年 & 正在學習 React。 喜歡貓狗．
 </h3>

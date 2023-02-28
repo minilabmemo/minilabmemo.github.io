@@ -13,7 +13,6 @@ date: 2023-01-22 16:31:36
 
 
 
-
 <article class="message is-info"><div class="message-body">
 2023年新的一年，突然想要來幫部落格換個新主題，這陣子看到 ICARUS 主題，覺得蠻喜歡它的版面配置的，於是就把主題換一下，目前的環境已經裝好hexo了，這篇就直接從更換主題開始～<
 </div></article>
@@ -378,7 +377,8 @@ providers:
     fontcdn: google
     iconcdn: fontawesome
 ```
-
+#### logo
+logo可以放置自己的圖片，svg檔案或png檔案都可以．
 #### highlight 
   代碼區塊我改成深色主題atom-one-dark，從它們提供的 [styles 檔案位置](https://github.com/highlightjs/highlight.js/tree/9.18.1/src/styles) 中找到的，預覽可以從[highlight.js demo](https://highlightjs.org/static/demo/) 看到效果．
 #### sidebar
@@ -424,12 +424,10 @@ Post content...
 ```
 
 
-{% raw %}<div class="notification is-warning">{% endraw %}
-Tip: 默認文章都是不開啟toc的，要手動添加在文章開頭，但網路上有教學使之預設開啟．或者你也可以加入到文章模板中．
-
-{% raw %}</div>{% endraw %}
-
-
+<article class="message is-success"><div class="message-header">Tip
+</div><div class="message-body">
+默認文章都是不開啟toc的，要手動添加在文章開頭，但網路上有教學使之預設開啟．或者你也可以加入到文章模板中．
+</div></article>
 
 
 #### 文章插入圖片
@@ -474,6 +472,11 @@ update link as:-->/.io//icarus_init.png
 ``` themes/icarus/include/style/base.styl
 $logo-height ?= 5rem
 ```
+
+<article class="message is-warning"><div class="message-header">Warning
+</div><div class="message-body">
+這邊要注意圖片是否會模糊（雖然在電腦檔案中看來正常），要設定適當的大小，或是換成svg檔案試試．
+</div></article>
 
 ### 更改卡片懸浮效果
 這個教學是來自 [挂件卡片增加浮动效果](https://astrobear.top/2021/08/23/Hexo%E4%B8%BB%E9%A2%98Icarus%E7%9A%84%E8%87%AA%E5%AE%9A%E4%B9%89/#%E6%8C%82%E4%BB%B6%E5%8D%A1%E7%89%87%E5%A2%9E%E5%8A%A0%E6%B5%AE%E5%8A%A8%E6%95%88%E6%9E%9C)
@@ -592,7 +595,7 @@ Icarus用户指南 - 主题配置 Google Structured Data 你可以在head配置�
 https://ppoffice.github.io/hexo-theme-icarus/Widgets/icarus%E7%94%A8%E6%88%B7%E6%8C%87%E5%8D%97-%E6%8C%82%E4%BB%B6/
 
 
-
+添加404公益页面
 ```
 
 
