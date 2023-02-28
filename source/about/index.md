@@ -1,12 +1,11 @@
 ---
-title: "關於我 About Me"
+title: "關於 About"
 date: 2020-09-06 13:53:06
 ---
 
 
 ### 關於 小研究式
-小研究式｜Mini Lab / 小研備忘室|Mini Lab Memo
-<div class="has-background-warning-light">小研究式｜Mini Lab </div>
+<span class="my-hightlight ">小研究式｜Mini Lab </span> 或是<span class="my-hightlight ">小研備忘室|Mini Lab Memo </span>
 
 ### 關於我
 <img src="/img/avatar_memo.png" width="150px" />
