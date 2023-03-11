@@ -4,17 +4,22 @@ date: 2020-09-06 13:53:06
 ---
 
 
-### 關於 小研究式
-<span class="my-hightlight ">小研究式｜Mini Lab </span> 或是<span class="my-hightlight ">小研備忘室|Mini Lab Memo </span>
+## <i class="fa fa-flask"></i> 關於 小研究式
+<span class="my-hightlight ">小研究式｜Mini Lab </span> 或又稱<span class="my-hightlight ">小研備忘室|Mini Lab Memo </span>
+是用來記錄學習或是生活相關的個人部落格，大部分是程式相關，自己不是很厲害的人，這些文章談不上教學，只是記錄自己學習的<span class="my-hightlight ">備忘筆記</span>，學習過程中受過很多網路上大神的幫助，跌跌撞撞走到現在，持續分享與紀錄，如果這些可以意外幫助到某一個人，我也會很開心的．
 
-### 關於我
+--------
+## <i class="fa fa-flask"></i> 關於我
 <img src="/img/avatar_memo.png" width="150px" />
 
 <h3 align="center">後端IT工程師，Go經歷兩年 & 正在學習 React。 喜歡貓狗．
 </h3>
-<h4>> 習慣透過實作紀錄與搜集整理資料來做比較理解，本部落格持續紀錄自學筆記，如有誤還請您不吝指出與指教＾.＾</h4>
 
->部落格大多是自己學習時記錄下來的內容，流程中較少說明與圖片，如果不清楚的地方請自行再深入研究，本部落格有時間也會再補上o(m_m) 
+- 透過實作紀錄與搜集整理資料來做比較理解
+- 本部落格持續紀錄自學筆記，如有誤還請您不吝指出與指教
+
+
+<article class='message is-info'><div class='message-body'>部落格大多是自己學習時記錄下來的內容，有些流程中較少說明與圖片，如果不清楚的地方最後都有附上參考連結，請自行再深入研究，有時間也會再將文章補完整的．<div></article>
 
 #### 基本資訊：
 
@@ -23,6 +28,7 @@ date: 2020-09-06 13:53:06
 - 📝 I regulary write articles on [https://minilabmemo.github.io/](https://minilabmemo.github.io/)
 
 - 📫 How to reach me **minilabmemo@gmail.com**
+
 
 #### 經歷與技能:
 

@@ -2,7 +2,7 @@ title: MiniLab × Memo
 subtitle: Mini Lab Memo
 description: 程式設計師| Go經歷三年 & 正在自學 React | 喜歡貓狗．<br> 持續紀錄自學筆記
 keywords: coder
-author: mina
+author: Mini Lab Memo
 language: zh-TW
 timezone: 'Asia/Taipei'
 url: 'https://minilabmemo.github.io/'
@@ -78,3 +78,4 @@ toc:
 
 hexo-insert-toc:
   maxdepth: 2
+  

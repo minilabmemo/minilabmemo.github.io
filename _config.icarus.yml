@@ -42,11 +42,11 @@ head:
     rss: 
 navbar:
     menu:
-        Home: /
-        Archives: /archives
-        Categories: /categories
-        Tags: /tags
-        About: /about
+        首頁|Home: /
+        全部|Archives: /archives
+        分類|Categories: /categories
+        標籤|Tags: /tags
+        關於|About: /about
             
     links:
          Golang Memo:
@@ -117,8 +117,8 @@ widgets:
     -
         position: left
         type: profile
-        author: Mina
-        author_title: Mini Lab Memo 程式ｘ生活ｘ筆記
+        author: Mini Lab Memo
+        author_title:  程式ｘ生活ｘ筆記
         location:  Taiwan
         avatar: /img/avatar_memo.png
         avatar_rounded: true
