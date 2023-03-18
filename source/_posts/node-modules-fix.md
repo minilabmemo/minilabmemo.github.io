@@ -1,5 +1,7 @@
 ---
-title: "[分享] 修改依賴源碼超簡單的補丁套件"
+title: "[分享] 修改依賴源碼超省時的補丁套件"
+cover: /img/posts/tools.png
+
 tags:
   - tool
   - modules
@@ -74,8 +76,13 @@ audited 543 packages in 2.279s
 本篇文章內容參考如下，如有引用錯誤或須加註問題，歡迎提出喔．
 </div></article>
 
+
 - [修改nodejs项目中node_modules的代码，不能生效吗？](https://www.zhihu.com/question/302249432)
   - 配置webpack alias 的方法介紹 （沒用過）
 - [使用 patch-package 修改第三方模块](marketplace.visualstudio.com)
   - 更多選項介紹
 - [Super Easy NPM Package Patching with ‘patch-package’](https://javascript.plainenglish.io/live-npm-package-patching-with-patch-package-b8f30d47779c)
+
+- Photo by <a href="https://unsplash.com/it/@webstacks?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Webstacks</a> on <a href="https://unsplash.com/photos/WbOR54pzvLM?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+- Photo by <a href="https://unsplash.com/@sincerelymedia?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Sincerely Media</a> on <a href="https://unsplash.com/photos/HoEYgBL_Gcs?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+  
