@@ -69,6 +69,10 @@ $ hexo deploy
 略
 Branch 'master' set up to track remote branch 'master' from 'https://github.com/yumememooo/yumememooo.github.io.git'.
 INFO  Deploy done: git
+
+// 部署時有時會卡住，這時可以停掉再試一次
+// 看看從別的分支用vscode上傳是不是正常，需不需要驗證
+// 其他看git 問題紀錄https://app.gitbook.com/s/g0YeSII30XzmXFpIwfHd/tools-cmd/cli/git/wen-ti-ji-lu
 ```
 
 ## upload
@@ -84,7 +88,11 @@ branch - master (only web files)
 ![my](/images/avatar_memo.png)
 或是用html寫法，可以控制大小
 <img src="/images/avatar_memo.png" width="150px" />
+
+//
+<a href=""></a>
 ```
+
 
 
 ### 個人分類清單
@@ -106,18 +114,11 @@ categories:
   - [技術工具,IDE]
   - [技術工具,Linux/Mac]
   - [技術工具,測試]
+  - [技術工具,modules]
 
 ```
 
-###  引言色彩
-```
-{% raw %}<div class="notification is-info">{% endraw %}
-**粗體** ...
-{% raw %}</div>{% endraw %}
-success
-warning
-danger
-```
+
 
 
 ### 程式碼區塊
@@ -128,14 +129,26 @@ diff “點我查看config.icarus.yml細節” >folded
 ### 引言樣式
 在我的文章裡面有沒有加raw都可以顯示 不知用意
 ```
-//全底色彩
-{% raw %}<div class="notification is-info">{% endraw %}
-xxx
+{% raw %}<div class="notification is-info">{% endraw %}xxx
 {% raw %}</div>{% endraw %}
+//色彩
+success
+warning
+danger
+```
+
+- 三種樣式
+```
+//全底色彩
+<div class="notification is-info">
+xxx
+</div>
+
 //側邊
 <article class="message is-info"><div class="message-body">
 xxx
-/div></article>
+</div></article>
+
 //header
 <article class="message is-info"><div class="message-header">title
 </div><div class="message-body">

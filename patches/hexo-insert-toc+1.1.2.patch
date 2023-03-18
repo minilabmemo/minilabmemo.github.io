@@ -1,0 +1,27 @@
+diff --git a/node_modules/hexo-insert-toc/src/slugify.js b/node_modules/hexo-insert-toc/src/slugify.js
+index 5dc420d..111a4e9 100644
+--- a/node_modules/hexo-insert-toc/src/slugify.js
++++ b/node_modules/hexo-insert-toc/src/slugify.js
+@@ -1,11 +1,13 @@
+ const {encodeURL} = require('hexo-util');
+ 
+-exports.slugify = function (str) {
+-  return encodeURL(str)
+-    .replace(/%20/g, '-')
+-    .replace(/&/g, 'amp')
+-    .replace(/!/g, '')
+-    .replace(/:/g, '')
+-    .replace(/[/]/g, 'x2F')
+-    .replace(/ /g, '-');
+-};
++// exports.slugify = function (str) {
++//   return encodeURL(str)
++//     .replace(/%20/g, '-')
++//     .replace(/&/g, 'amp')
++//     .replace(/!/g, '')
++//     .replace(/:/g, '')
++//     .replace(/[/]/g, 'x2F')
++//     .replace(/ /g, '-')
++//     .replace(/%25/g, '%')
++//     ;
++// };

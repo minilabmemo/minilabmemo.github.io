@@ -27,10 +27,10 @@ categories:
 <!-- toc -->
 
 
-## intro.
+## 效果介紹
 原本這個部落格的文章，就已經具有側邊欄toc了，只要在文章標頭放上`toc:true`即可，但我想要的效果是在文章開頭時就放上，這樣手機瀏覽時也能看到內容，這邊有找到安裝額外插件．
 
-## way1: use hexo-toc
+## 方法一: use hexo-toc
 
 ### 安裝 hexo-toc
 
@@ -60,7 +60,7 @@ toc:
 這個插件的問題：這樣做完之後，側邊欄的階層也跟著被影響了，我希望側邊欄可以多階層並隨著文章閱讀而擴展，而內文開頭就顯示第一層就好．找不到方法所以先卸載hexo-toc．
 </div></article>
 
-## way2: use hexo-insert-toc
+## 方法二 use hexo-insert-toc
 
 ### 安裝hexo-insert-toc
 - 插件來自：https://github.com/bennycode/hexo-insert-toc
@@ -102,12 +102,22 @@ hexo-insert-toc:
 這個插件產生出來的 toc 並不能客制class name，需要再自己加入，而且中文連結會無法跳轉，英文是正常的「尚不知如何解決，只好先練練英文了（誤）」．
 </div></article>
 
+#### 後記
+<article class="message is-success">
+  <div class="message-header">
+    <p>20230318更新</p>
+  </div>
+  <div class="message-body">
+    關於中文問題，後來有在這個作者的github上詢問.似乎是這個檔案   
+    <a href="https://github.com/bennycode/hexo-insert-toc/blob/v1.1.2/src/slugify.js">slugify.js</a>造成，嘗試修改 replace 其實沒有什麼用，所以我就整段註解掉，重新 hexo clean/hexo g ，就正常了，不太了解原因，看來是這個位置會變成<b>％E6</b>，但後來又變成<b>%25E6</b>，百分比符號又被變成<b>%25</b>，或許我使用的主題不需要這段，但這樣可以解決我的問題就好了，有時間再來研究．
+  </div>
+</article>
 
-## 網路參考文章
+
+
+## reference
 本篇文章內容參考如下
 
 - Photo by <a href="https://unsplash.com/@milanseitler?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Milan Seitler</a> on <a href="https://unsplash.com/photos/WzJoydMPTiI?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
   
 
-## 測試
-only test 
