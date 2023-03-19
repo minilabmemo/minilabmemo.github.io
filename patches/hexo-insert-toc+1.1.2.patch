@@ -1,11 +1,12 @@
 diff --git a/node_modules/hexo-insert-toc/src/slugify.js b/node_modules/hexo-insert-toc/src/slugify.js
-index 5dc420d..111a4e9 100644
+index 5dc420d..9dc3740 100644
 --- a/node_modules/hexo-insert-toc/src/slugify.js
 +++ b/node_modules/hexo-insert-toc/src/slugify.js
-@@ -1,11 +1,13 @@
- const {encodeURL} = require('hexo-util');
- 
--exports.slugify = function (str) {
+@@ -1,11 +1,4 @@
+-const {encodeURL} = require('hexo-util');
+-
++const {slugize} = require('hexo-util');
+ exports.slugify = function (str) {
 -  return encodeURL(str)
 -    .replace(/%20/g, '-')
 -    .replace(/&/g, 'amp')
@@ -13,15 +14,6 @@ index 5dc420d..111a4e9 100644
 -    .replace(/:/g, '')
 -    .replace(/[/]/g, 'x2F')
 -    .replace(/ /g, '-');
--};
-+// exports.slugify = function (str) {
-+//   return encodeURL(str)
-+//     .replace(/%20/g, '-')
-+//     .replace(/&/g, 'amp')
-+//     .replace(/!/g, '')
-+//     .replace(/:/g, '')
-+//     .replace(/[/]/g, 'x2F')
-+//     .replace(/ /g, '-')
-+//     .replace(/%25/g, '%')
-+//     ;
-+// };
++  return slugize(str, {transform: 1});
+ };
+\ No newline at end of file

@@ -155,3 +155,11 @@ xxx
 message
 </div></article>
 ```
+
+## 創建補丁
+```
+// npx patch-package package-name
+npx patch-package xxx
+
+npx patch-package hexo-insert-toc
+```

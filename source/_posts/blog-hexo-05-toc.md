@@ -109,7 +109,8 @@ hexo-insert-toc:
   </div>
   <div class="message-body">
     關於中文問題，後來有在這個作者的github上詢問.似乎是這個檔案   
-    <a href="https://github.com/bennycode/hexo-insert-toc/blob/v1.1.2/src/slugify.js">slugify.js</a>造成，嘗試修改 replace 其實沒有什麼用，所以我就整段註解掉，重新 hexo clean/hexo g ，就正常了，不太了解原因，看來是這個位置會變成<b>％E6</b>，但後來又變成<b>%25E6</b>，百分比符號又被變成<b>%25</b>，或許我使用的主題不需要這段，但這樣可以解決我的問題就好了，有時間再來研究．
+    <a href="https://github.com/bennycode/hexo-insert-toc/blob/v1.1.2/src/slugify.js">slugify.js</a>造成，嘗試修改 replace 其實沒有什麼用，所以我就整段註解掉（後來有照作者建議修改），重新 hexo clean/hexo g ，就正常了，不太了解細節，看來是這個位置會變成<b>％E6</b>，但後來又變成<b>%25E6</b>，百分比符號又被變成<b>%25</b>，或許我使用的主題不需要這段，但這樣可以解決我的問題就好了，有時間再來研究．
+    
   </div>
 </article>
 
