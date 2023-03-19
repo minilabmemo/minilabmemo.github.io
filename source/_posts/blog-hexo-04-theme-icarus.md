@@ -498,10 +498,23 @@ $logo-height ?= 5rem
                  }, i * 100);
 ```
 
-## 調換文章開頭顯示順序
-原本分類是放在更新時間後面，我把它移到前面顯示．
-```/themes/icarus/layout/common/article.jsx
-{/* Categories */}
+### 調換文章開頭顯示順序
+原本分類是放在更新時間後面，我把它移到前面顯示．為了我的分類效果可以出現
+```diff /themes/icarus/layout/common/article.jsx
++ {/* Categories first-word*/}
++      {page.categories && page.categories.length ? <span class="level-item">
++          {(() => {
++              const categories = [];
++              page.categories.forEach((category, i) => {
++                  if (i == 0) {
++                      categories.push(<span class="category-first-word">{category.name[0]}</span>);
++                      categories.push(<span> - </span>);
++                  }
++              });
++              return categories;
++          })()}
++      </span> : null}
++ {/* Categories */}
 {/* Creation Date */}
 {/* Last Update Date */}
 {/* author */}

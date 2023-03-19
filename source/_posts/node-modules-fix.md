@@ -47,7 +47,7 @@ npx patch-package xxx
 
 
 ## 部署
-- 修改package.json，新增命令postinstall
+- 修改package.json，新增命令 postinstall
 ```diff
 "scripts": {
 +  "postinstall": "patch-package"
@@ -63,12 +63,63 @@ npx patch-package xxx
 > hexo-site@0.0.0 postinstall xx/blog/minilabmemo.github.io
 > patch-package
 
-patch-package 6.5.1
-Applying patches...
++ patch-package 6.5.1
++ Applying patches...  //下面的檔案進行修改
 hexo-insert-toc@1.1.2 ✔
 audited 543 packages in 2.279s
 
 ```
+
+## 實際應用
+
+### hexo主題魔改
+之後曾有提過我有針對主題底層更改[魔改-theme-主題樣式](https://minilabmemo.github.io/2023/01/22/blog-hexo-04-theme-icarus/#%E9%AD%94%E6%94%B9-theme-%E4%B8%BB%E9%A1%8C%E6%A8%A3%E5%BC%8F)，後來又備份自己修改的地方，想一想或許可以用這個套件修補．
+
+- 原本架構
+```
+themes/icarus  //不會上傳  install from source git clone來的
+themes/icarus_fix_record //自己的修改備份紀錄
+```
+- 改用 install from NPM
+```
+npm install -S hexo-theme-icarus
+專案出現相依庫
+"hexo-theme-icarus": "^5.2.1",
+
+```
+- 接著移除掉themes/icarus 資料夾
+原本修改的地方就被恢復成原主題了
+
+- 接著再把我備份的修改紀錄去修改node_modules/hexo-theme-icarus
+```
+themes/icarus_fix_record/include/style/base.styl
+themes/icarus_fix_record/include/style/card.styl
+themes/icarus_fix_record/include/style/helper.styl
+themes/icarus_fix_record/layout/common/article.jsx
+...
+```
+- 創建補丁 `npx patch-package hexo-theme-icarus`
+  - 因為檔案會有點多，所以也可以再加上 --include ".*include.*" 讓他針對部分去修改就好
+  - 完成後去生成的檔案夾確認diff，這邊也可以記錄你的修改
+```
+$ npx patch-package hexo-theme-icarus
+patch-package 6.5.1
+• Creating temporary folder
+• Installing hexo-theme-icarus@5.2.1 with npm
+• Diffing your files with clean files
+✔ Created file patches/hexo-theme-icarus+5.2.1.patch
+
+💡 hexo-theme-icarus is on GitHub! To draft an issue based on your patch run
+
+    npx patch-package hexo-theme-icarus --create-issue
+$ npx patch-package hexo-theme-icarus --include ".*include.*"
+$ npx patch-package hexo-theme-icarus --include ".*(?:include|common).*"
+```
+
+- 重新安裝確認
+你可以刪除相依再次下 `npm install`確認，但似乎用 `npm install -S hexo-theme-icarus`是沒有作用的
+
+
 
 ## 網路參考文章
 

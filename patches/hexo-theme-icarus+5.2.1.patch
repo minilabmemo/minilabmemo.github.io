@@ -1,0 +1,126 @@
+diff --git a/node_modules/hexo-theme-icarus/include/style/base.styl b/node_modules/hexo-theme-icarus/include/style/base.styl
+index 6c3bbb9..d978e37 100644
+--- a/node_modules/hexo-theme-icarus/include/style/base.styl
++++ b/node_modules/hexo-theme-icarus/include/style/base.styl
+@@ -46,7 +46,7 @@ $menu-item-active-background-color ?= hsl(219, 70%, 96%)
+ $content-heading-weight ?= $weight-normal
+ 
+ 
+-$logo-height ?= 1.75rem
++$logo-height ?= 5rem
+ 
+ // FIXME: https://github.com/groenroos/bulma-stylus/issues/11
+ @import bulma-stylus-root + '/utilities/initial-variables'
+diff --git a/node_modules/hexo-theme-icarus/include/style/card.styl b/node_modules/hexo-theme-icarus/include/style/card.styl
+index db5f46f..1523562 100644
+--- a/node_modules/hexo-theme-icarus/include/style/card.styl
++++ b/node_modules/hexo-theme-icarus/include/style/card.styl
+@@ -16,3 +16,7 @@
+     .media + .media
+         border: none
+         margin-top: 0
++    
++    &:hover
++        box-shadow: 0 6px 15px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.1)
++        transform: translateY(-3px);
+diff --git a/node_modules/hexo-theme-icarus/include/style/helper.styl b/node_modules/hexo-theme-icarus/include/style/helper.styl
+index 84f1141..b7f5d90 100644
+--- a/node_modules/hexo-theme-icarus/include/style/helper.styl
++++ b/node_modules/hexo-theme-icarus/include/style/helper.styl
+@@ -138,6 +138,13 @@ for n in (0 .. 5)
+     &:hover
+         color: $primary !important
+ 
++.category-first-word
++    font-size: 20px;
++    background-color: #96d1f8;
++    padding: 5px;
++    color: white;
++    font-weight: 600;
++
+ /* ---------------------------------
+  *          Image helpers
+  * --------------------------------- */
+diff --git a/node_modules/hexo-theme-icarus/layout/common/article.jsx b/node_modules/hexo-theme-icarus/layout/common/article.jsx
+index 02e4d4c..396ed32 100644
+--- a/node_modules/hexo-theme-icarus/layout/common/article.jsx
++++ b/node_modules/hexo-theme-icarus/layout/common/article.jsx
+@@ -1,6 +1,6 @@
+ const moment = require('moment');
+-const { Component, Fragment } = require('inferno');
+-const { toMomentLocale } = require('hexo/lib/plugins/helper/date');
++const {Component, Fragment} = require('inferno');
++const {toMomentLocale} = require('hexo/lib/plugins/helper/date');
+ const Share = require('./share');
+ const Donates = require('./donates');
+ const Comment = require('./comment');
+@@ -20,9 +20,9 @@ function getWordCount(content) {
+ 
+ module.exports = class extends Component {
+     render() {
+-        const { config, helper, page, index } = this.props;
+-        const { article, plugins } = config;
+-        const { url_for, date, date_xml, __, _p } = helper;
++        const {config, helper, page, index} = this.props;
++        const {article, plugins} = config;
++        const {url_for, date, date_xml, __, _p} = helper;
+ 
+         const indexLaunguage = toMomentLocale(config.language || 'en');
+         const language = toMomentLocale(page.lang || page.language || config.language || 'en');
+@@ -46,16 +46,19 @@ module.exports = class extends Component {
+                     {/* Metadata */}
+                     {page.layout !== 'page' ? <div class="article-meta is-size-7 is-uppercase level is-mobile">
+                         <div class="level-left">
+-                            {/* Creation Date */}
+-                            {page.date && <span class="level-item" dangerouslySetInnerHTML={{
+-                                __html: _p('article.created_at', `<time dateTime="${date_xml(page.date)}" title="${new Date(page.date).toLocaleString()}">${date(page.date)}</time>`)
+-                            }}></span>}
+-                            {/* Last Update Date */}
+-                            {shouldShowUpdated && <span class="level-item" dangerouslySetInnerHTML={{
+-                                __html: _p('article.updated_at', `<time dateTime="${date_xml(page.updated)}" title="${new Date(page.updated).toLocaleString()}">${date(page.updated)}</time>`)
+-                            }}></span>}
+-                            {/* author */}
+-                            {page.author ? <span class="level-item"> {page.author} </span> : null}
++                            {/* Categories first-word*/}
++                            {page.categories && page.categories.length ? <span class="level-item">
++                                {(() => {
++                                    const categories = [];
++                                    page.categories.forEach((category, i) => {
++                                        if (i == 0) {
++                                            categories.push(<span class="category-first-word">{category.name[0]}</span>);
++                                            categories.push(<span> - </span>);
++                                        }
++                                    });
++                                    return categories;
++                                })()}
++                            </span> : null}
+                             {/* Categories */}
+                             {page.categories && page.categories.length ? <span class="level-item">
+                                 {(() => {
+@@ -69,6 +72,17 @@ module.exports = class extends Component {
+                                     return categories;
+                                 })()}
+                             </span> : null}
++                            {/* Creation Date */}
++                            {page.date && <span class="level-item" dangerouslySetInnerHTML={{
++                                __html: _p('article.created_at', `<time dateTime="${date_xml(page.date)}" title="${new Date(page.date).toLocaleString()}">${date(page.date)}</time>`)
++                            }}></span>}
++                            {/* Last Update Date */}
++                            {shouldShowUpdated && <span class="level-item" dangerouslySetInnerHTML={{
++                                __html: _p('article.updated_at', `<time dateTime="${date_xml(page.updated)}" title="${new Date(page.updated).toLocaleString()}">${date(page.updated)}</time>`)
++                            }}></span>}
++                            {/* author */}
++                            {page.author ? <span class="level-item"> {page.author} </span> : null}
++
+                             {/* Read time */}
+                             {article && article.readtime && article.readtime === true ? <span class="level-item">
+                                 {(() => {
+@@ -87,7 +101,7 @@ module.exports = class extends Component {
+                     {page.title !== '' && index ? <p class="title is-3 is-size-4-mobile"><a class="link-muted" href={url_for(page.link || page.path)}>{page.title}</a></p> : null}
+                     {page.title !== '' && !index ? <h1 class="title is-3 is-size-4-mobile">{page.title}</h1> : null}
+                     {/* Content/Excerpt */}
+-                    <div class="content" dangerouslySetInnerHTML={{ __html: index && page.excerpt ? page.excerpt : page.content }}></div>
++                    <div class="content" dangerouslySetInnerHTML={{__html: index && page.excerpt ? page.excerpt : page.content}}></div>
+                     {/* Licensing block */}
+                     {!index && article && article.licenses && Object.keys(article.licenses)
+                         ? <ArticleLicensing.Cacheable page={page} config={config} helper={helper} /> : null}
