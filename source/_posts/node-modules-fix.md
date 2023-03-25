@@ -5,6 +5,7 @@ cover: /img/posts/tools.png
 tags:
   - tool
   - modules
+  - hexo 
 toc: true
 date: 2023-03-18 11:25:44
 

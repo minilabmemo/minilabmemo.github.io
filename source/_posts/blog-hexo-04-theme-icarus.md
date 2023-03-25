@@ -120,6 +120,8 @@ npm install -S hexo-theme-icarus hexo-renderer-inferno
 {% raw %}<div class="notification is-warning">{% endraw %}
 Note:一開始我是用第二種安裝方式就裝起來了，不過看起來hexo-theme-icarus會出現在node_modules裡，不是在自己的themes/icarus
 兩種方式都可以正確套用到主題效果，不過考慮到之後可能自己會想改主題底層效果當作自己的部分，後來改用第一種方式安裝．
+
+20230319 更新，後來使用補丁，又改用第二種方式，這邊就依使用習慣即可．
 {% raw %}</div>{% endraw %}
 
 
@@ -498,27 +500,7 @@ $logo-height ?= 5rem
                  }, i * 100);
 ```
 
-### 調換文章開頭顯示順序
-原本分類是放在更新時間後面，我把它移到前面顯示．為了我的分類效果可以出現
-```diff /themes/icarus/layout/common/article.jsx
-+ {/* Categories first-word*/}
-+      {page.categories && page.categories.length ? <span class="level-item">
-+          {(() => {
-+              const categories = [];
-+              page.categories.forEach((category, i) => {
-+                  if (i == 0) {
-+                      categories.push(<span class="category-first-word">{category.name[0]}</span>);
-+                      categories.push(<span> - </span>);
-+                  }
-+              });
-+              return categories;
-+          })()}
-+      </span> : null}
-+ {/* Categories */}
-{/* Creation Date */}
-{/* Last Update Date */}
-{/* author */}
-```
+
 
 ---------
 ## [後記] 過程中處理問題
@@ -580,6 +562,10 @@ update link as:-->/.io//icarus_init.png
 
 ### 主題備份
 自己有開了一個 src 分支用來記錄所有原生檔案，因為上傳只會紀錄 public 檔案，但是theme這個資料夾裡面是 git clone 別人的（theme作者），所以其實是不會出現在自己分支內的，如果有魔改theme的要記得自己在備份一下．我自己是開了一個icarus_fix_record來記錄，雖然有點麻煩，但以後要更新比較方便（或許會更新ＸＤ），如果改得太多可以考慮解除git綁定上傳整個theme．
+
+<article class="message is-info"><div class="message-body">
+20230319更新：改用補丁更新，可以看最新文章．
+</div></article>
 
 ### 部署時卡住
 - 1.檢查token有沒有過期
