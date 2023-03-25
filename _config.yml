@@ -6,7 +6,7 @@ author: Mini Lab Memo
 language: zh-TW
 timezone: 'Asia/Taipei'
 url: 'https://minilabmemo.github.io/'
-root: /
+root: 'https://minilabmemo.github.io/'
 permalink: ':year/:month/:day/:title/'
 permalink_defaults: ':year/:month/:day/:title/'
 pretty_urls:

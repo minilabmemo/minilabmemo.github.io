@@ -83,31 +83,31 @@ search:
     type: insight
     index_pages: true
 comment:
-    type: disqus
+    type: facebook
     shortname: ''
-donates:
-    -
-        type: afdian
-        url: ''
-    -
-        type: alipay
-        qrcode: ''
-    -
-        type: buymeacoffee
-        url: ''
-    -
-        type: patreon
-        url: ''
-    -
-        type: paypal
-        business: ''
-        currency_code: USD
-    -
-        type: wechat
-        qrcode: ''
+# donates:
+#     -
+#         type: afdian
+#         url: ''
+#     -
+#         type: alipay
+#         qrcode: ''
+#     -
+#         type: buymeacoffee
+#         url: ''
+#     -
+#         type: patreon
+#         url: ''
+#     -
+#         type: paypal
+#         business: ''
+#         currency_code: USD
+#     -
+#         type: wechat
+#         qrcode: ''
 share:
-    type: sharethis
-    install_url: ''
+    type: addthis
+    install_url:  '//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-641e6ccab2930ef8'
 sidebar:
     left:
         sticky: false

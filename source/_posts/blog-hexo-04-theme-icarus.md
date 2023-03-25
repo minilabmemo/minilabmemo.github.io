@@ -117,12 +117,14 @@ git clone https://github.com/ppoffice/hexo-theme-icarus.git themes/icarus --dept
 ```
 npm install -S hexo-theme-icarus hexo-renderer-inferno
 ```
-{% raw %}<div class="notification is-warning">{% endraw %}
+
+<article class="message is-info"><div class="message-body">
 Note:一開始我是用第二種安裝方式就裝起來了，不過看起來hexo-theme-icarus會出現在node_modules裡，不是在自己的themes/icarus
 兩種方式都可以正確套用到主題效果，不過考慮到之後可能自己會想改主題底層效果當作自己的部分，後來改用第一種方式安裝．
 
 20230319 更新，後來使用補丁，又改用第二種方式，這邊就依使用習慣即可．
-{% raw %}</div>{% endraw %}
+
+</div></article>
 
 
 - 執行
