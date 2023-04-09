@@ -41,11 +41,6 @@ comment:
 +    type: facebook
 ```
 - 起在本地就可以看到效果了．
-- 如果按完分享出現404 ，可以去檢查root設定是否有指導正確網址．
-```diff _config.yml
-- root: /
-+ root: 'https://minilabmemo.github.io/'
-```
 
 
 ## 贊助按鈕

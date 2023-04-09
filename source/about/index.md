@@ -6,7 +6,7 @@ date: 2020-09-06 13:53:06
 
 ## <i class="fa fa-flask"></i> 關於 小研究式
 <span class="my-hightlight ">小研究式｜Mini Lab </span> 或又稱<span class="my-hightlight ">小研備忘室|Mini Lab Memo </span>
-是用來記錄學習或是生活相關的個人部落格，大部分是程式相關，自己不是很厲害的人，這些文章談不上教學，只是記錄自己學習的<span class="my-hightlight ">備忘筆記</span>，學習過程中受過很多網路上大神的幫助，跌跌撞撞走到現在，持續分享與紀錄，如果這些可以意外幫助到某一個人，我也會很開心的．
+是用來記錄學習或是生活相關的個人部落格，大部分是程式相關，這些文章談不上教學，只是記錄自己學習的<span class="my-hightlight ">備忘筆記</span>，學習過程中受過很多網路上大神的幫助，跌跌撞撞走到現在，持續分享與紀錄，如果這些可以意外幫助到某一個人，我也會很開心的．
 
 --------
 ## <i class="fa fa-flask"></i> 關於我
