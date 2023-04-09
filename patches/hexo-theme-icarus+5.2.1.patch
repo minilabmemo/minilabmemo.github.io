@@ -1,5 +1,5 @@
 diff --git a/node_modules/hexo-theme-icarus/include/style/base.styl b/node_modules/hexo-theme-icarus/include/style/base.styl
-index 6c3bbb9..d978e37 100644
+index 6c3bbb9..9db53a8 100644
 --- a/node_modules/hexo-theme-icarus/include/style/base.styl
 +++ b/node_modules/hexo-theme-icarus/include/style/base.styl
 @@ -46,7 +46,7 @@ $menu-item-active-background-color ?= hsl(219, 70%, 96%)
@@ -11,6 +11,17 @@ index 6c3bbb9..d978e37 100644
  
  // FIXME: https://github.com/groenroos/bulma-stylus/issues/11
  @import bulma-stylus-root + '/utilities/initial-variables'
+@@ -97,3 +97,10 @@ body > .section
+ 
+     ::-webkit-scrollbar-thumb:hover
+         background: rgba(0,0,0,0.24)
++
++.my-hightlight 
++        /* 前 50% 是透明 ( transparent ) ，後 50% 才有顏色 */
++        background-image: linear-gradient(transparent 50%, #5ab1ea78 50%);
++        /* 做偏移，依需求而定 */
++        margin: 0rem 0.25rem;
++        padding: 0rem 0.25rem;
 diff --git a/node_modules/hexo-theme-icarus/include/style/card.styl b/node_modules/hexo-theme-icarus/include/style/card.styl
 index db5f46f..1523562 100644
 --- a/node_modules/hexo-theme-icarus/include/style/card.styl
