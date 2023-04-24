@@ -163,5 +163,5 @@ npx patch-package xxx
 
 npx patch-package hexo-insert-toc
 npx patch-package hexo-theme-icarus --include ".*(?:include|common).*"
-
+npx patch-package hexo-component-inferno --include ".*.js"
 ```
