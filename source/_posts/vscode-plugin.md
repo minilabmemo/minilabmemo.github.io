@@ -221,7 +221,7 @@ React Hooks Snippets - React Hooks程式碼區段快速產生
 結束是否加分號
 ```
 
->note class_name %} ## 網路參考文章 
+>## 網路參考文章 
 
 | 連結 | 摘要 |
 | ----------- | --------|

@@ -5,6 +5,8 @@ tags:
   - ES6
   - 閉包
   - 解構賦值
+  - 自學筆記
+toc: true
 categories:
   - [Frontend,js]
 date: 2021-02-20 11:33:18
@@ -17,7 +19,8 @@ date: 2021-02-20 11:33:18
 
 ## JS歷史- ES6 2015
 ECMAScript是一種由Ecma國際定義的手稿語言規範，它往往被稱為JavaScript或JScript (維基)
-- ES6為ECMAScript2015，是大幅度的更新，討論度較高，
+- ES6 第 6 版為 ECMAScript2015，是大幅度的更新，討論度較高，
+- 2022年6月 ECMAScript 2022 （ES2022），第 13 版
 
 ---
 ## 宣告與各用法概念
@@ -30,13 +33,19 @@ ECMAScript是一種由Ecma國際定義的手稿語言規範，它往往被稱為
 ref:[关于变量命名的规则](https://developer.mozilla.org/zh-CN/docs/Learn/JavaScript/First_steps/Variables#%E5%85%B3%E4%BA%8E%E5%8F%98%E9%87%8F%E5%91%BD%E5%90%8D%E7%9A%84%E8%A7%84%E5%88%99)
 
 ### 變數
-- 宣告變數但不賦值=undefined
+- 宣告變數但不賦值 = undefined （不知道值）
+- 未宣報變數是 is not defined 
 - null常見於宣告後面定義成沒有值或找不到
 - 全域屬性 NaN 表示「非數值」（Not-A-Number）的數值
   - NaN 不等於（==、!=、===、!==）任何值，包括 NaN 本身。請使用 Number.isNaN() 或 isNaN() 來確認某個數值是否為 NaN。
 
+
+#### var 
+
 ref:
-[var 与 let 的区别](https://developer.mozilla.org/zh-CN/docs/Learn/JavaScript/First_steps/Variables#var_%E4%B8%8E_let_%E7%9A%84%E5%8C%BA%E5%88%AB) | [let](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let) | [NaN](https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/NaN)
+- [var 与 let 的区别](https://developer.mozilla.org/zh-CN/docs/Learn/JavaScript/First_steps/Variables#var_%E4%B8%8E_let_%E7%9A%84%E5%8C%BA%E5%88%AB) 
+-  [let](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let) 
+- [NaN](https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/NaN)
 
 
 
@@ -57,7 +66,7 @@ console.log(123 == "123");true
 - 部分開發者認為最好別用一般相等。嚴格比較更容易預測，且因為不必轉型，因此效率更好。
 
 ##### 同值相等
->label info@ES6%}  提出同值相等演算法，用來解決這個問題。Object.is就是部署這個演算法的新方法。同值相等解決了最後一個情況：比較兩個值是否功能相同 。
+> 提出同值相等演算法，用來解決這個問題。Object.is就是部署這個演算法的新方法。同值相等解決了最後一個情況：比較兩個值是否功能相同 。
 Object.is 會和嚴格相等做同樣的事，但會將 NaN、-0 和 +0 獨立處理，因此這三個不會相等
 
 
@@ -89,7 +98,7 @@ const b = 26900 || 24900;
 
 ```
 
-#### >label info@ES6%} - 展開語法（spread syntax）& 其餘語法（rest syntax）
+#### 展開語法（spread syntax）& 其餘語法（rest syntax）
 展開運算子(...) 允許可迭代的陣列或字串展開成０到多個參數
 
 
@@ -120,7 +129,7 @@ ref:[JavaScript中的字符串](https://developer.mozilla.org/zh-CN/docs/Learn/J
 
 
 #### [樣板字面值](https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Reference/Template_literals)
->label info@ES6%} 樣板字面值（Template literals）是允許嵌入運算式的字串字面值（string literals）。
+> 樣板字面值（Template literals）是允許嵌入運算式的字串字面值（string literals）。
 - 被反引號（back-tick，重音符號` ` )字元封閉，代替了雙或單引號。
 - 可以包含由錢字元及花括號所構成（${expression}）的佔位符（placeholders）
 ```js
@@ -140,7 +149,7 @@ tag `string text ${expression} string text`
 - Key 與 Value 名稱相同，可進行縮寫
 - 物件內可直接省略 function 關鍵字進行縮寫
 
-#### >label info@ES6%}  - 解構賦值 Destructuring assignment
+#### 解構賦值 Destructuring assignment
 可以把陣列或物件中的資料解開擷取成為獨立變數
 詳細請見:[MDN-解構賦值](https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)
 
@@ -323,19 +332,20 @@ no this new
 https://developer.cdn.mozilla.net/zh-TW/docs/Web/JavaScript/Reference/Functions/Arrow_functions#this_%E4%B8%8D%E5%88%86%E5%AE%B6
 
 ### JS的 Hoisting (提升)顶置特性
-- 變數(var hoisting)與函數都可以先使用再宣告
-- 但提升操作不再适用于 let 并引起一个错误(Uncaught ReferenceError)
- ref:[JavaScript Hoisting (提升)](https://shubo.io/javascript-hoisting/#javascript-hoisting-%E6%8F%90%E5%8D%87)
+- 變數(var hoisting)與函數(function hoisting)都可以先使用再宣告
+- 提升的是宣告並非是初始化的賦值
+- 但提升操作如果用於 let 會引起錯誤(Uncaught ReferenceError)
+ ref:[JavaScript Hoisting (提升)](https://shubo.io/javascript-hoisting/#javascript-hoisting-%E6%8F%90%E5%8D%87) 在「提升之後」以及「賦值之前」這段「期間」，如果你存取它就會拋出錯誤
 
 
-### >label info@ES6%}  - 使用module分檔 (import & export)
+### 使用module分檔 (import & export)
 
 ### 閉包（Closure）
 閉包是函式以及該函式被宣告時所在的作用域環境的組合。
 - 閉包的好處能把變數隱藏在裡面讓外部存取不到
 - 閉包在 callback 上的應用尤其常見
 - 在迴圈建立閉包：一個常見錯誤
-在 ECMAScript 2015 (>label info@ES6%} )導入 let 前，迴圈內建立的閉包，常會發生問題。
+在 ECMAScript 2015 導入 let 前，迴圈內建立的閉包，常會發生問題。
 範例請見： [simple_js_demo-closure](https://github.com/minilabmemo/simple_js_demo/blob/master/04_js_closure/closure.html)
 
 Ref:
@@ -443,7 +453,7 @@ TBD:
 https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Inheritance_and_the_prototype_chain
 
 
-### >label info@ES6%}  類別 (class) 
+###  類別 (class) 
 ECMAScript 6 中引入了類別 (class) 作為 JavaScript 現有原型程式(prototype-based)繼承的語法糖。類別語法並不是要引入新的物件導向繼承模型到 JavaScript 中，而是提供一個更簡潔的語法來建立物件和處理繼承。
 
 ref:[Classes](https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Reference/Classes)
@@ -521,7 +531,7 @@ JSLint 幫你檢查未定義的變數、函數、陳述式結尾有沒有加分�
 
 ### ESLint
 包括格式檢驗及質量效驗（未使用變量、三等號、全局變量聲明等問题）
-自由選擇要使用哪些規則，對 >label info@ES6%}  還有 JSX 的支援度跟其他 linter 相較之下也是最高的
+自由選擇要使用哪些規則，對 還有 JSX 的支援度跟其他 linter 相較之下也是最高的
 
 註： prettier 只是格式的檢驗（空格 格式化），不会對代码质量进行校验。但有些檢驗，ESLint沒有，所以可以ESLint＋prettier一起使用，也可以視使用情況不使用 Prettier。
 

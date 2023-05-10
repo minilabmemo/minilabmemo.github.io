@@ -115,7 +115,7 @@ go get -u -v github.com/davidrjenni/reftools/cmd/fillstruct
 
 
 
->note class_name %} # 參考文章 
+> # 參考文章 
 windows 安裝Go
 - [[Go] Go 語言於 Windows 上之安裝與環境設定](https://oranwind.org/go-go-yu-yan-yu-windows-shang-zhi-an-zhuang-yu-huan-jing-she-ding/ "[Go] Go 語言於 Windows 上之安裝與環境設定") 
 - [用vscode开发调试golang超简单教程](https://blog.csdn.net/v6543210/article/details/84504460)

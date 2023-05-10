@@ -253,11 +253,11 @@ go xxx
 #### 文章開頭標記
 
 ```
->note class_name %} Content (md partial supported) 
+>Content (md partial supported) 
 其中class_name可不設或是改成下方關鍵字
 ```
 
->note class_name %} Content (不設定) 淡灰色 
+>Content (不設定) 淡灰色 
 
 >note default %} 灰色 default 
 

@@ -52,7 +52,7 @@ public class MyComponent {
 
 ---
 
->note class_name %} 網路參考文章 
+>網路參考文章 
 
 - [spring-background-fire-and-forget-processing](https://stackoverflow.com/questions/33243255/spring-background-fire-and-forget-processing)
 - [Spring Boot(5) @Async 非同步執行緒池詳解](https://www.mdeditor.tw/pl/pIYL/zh-tw)

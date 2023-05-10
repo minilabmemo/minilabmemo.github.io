@@ -20,8 +20,8 @@ date: 2020-10-31 10:41:31
 
 - 一種是直接下docker run，再下對應參數，下一次起一個程式。
 	ex:docker run -v D:\home/work:/home/work --name myub -it ubuntu bash
-	
-|   |   |
+
+|  參數 | 意思  |
 | ------------ | ------------ |
 |  --name | 替container取名  |
 |  -p（小寫） |  hostPort對應containerPort |
@@ -29,6 +29,8 @@ date: 2020-10-31 10:41:31
 | -it  |  代表在執行Docker 虛擬容器環境時，開啟虛擬終端機，以互動的模式執行 |
 | --cpus=1.5  |  限制 CPU 使用量 |
 | --memory=300m --memory-swap=1g  |  限制記憶體與 swap 交換空間的用量 |
+
+
 
 
 ### docker-compose
@@ -80,7 +82,14 @@ date: 2020-10-31 10:41:31
 |  docker stop $(docker ps -a -q) | 停止所有容器 //在powershell下才有用   |
 
 
-  
+
+### 製作 docker image
+要針對服務去寫Dockerfile, 然後執行下列值令
+```
+docker build -t myname . --no-cache
+//
+-t: 鏡像的名字及標籤，通常 name:tag 或者 name 格式；可以在一次構建中為一個鏡像設置多個標籤。
+```
 
 ------------
 

@@ -83,21 +83,21 @@ deployment.apps/my-pod created
 D:\k8syaml>kubectl get pod -A
 
 - 看LOG
-kubectl -n eda logs my-pod-5b788d95bc-kx76k
+kubectl -n NsName logs my-pod-5b788d95bc-kx76k
 
 - 刪除
-D:\k8syaml>kubectl delete deployment my-pod -n eda  先刪除
+D:\k8syaml>kubectl delete deployment my-pod -n NsName  先刪除
 deployment.apps "my-pod" deleted
 
 - 重開
-D:\k8syaml>kubectl -n eda rollout restart deployment  nginx179   執行重開指令
+D:\k8syaml>kubectl -n NsName rollout restart deployment  nginx179   執行重開指令
 deployment.apps/nginx179 restarted   
 
 - 編輯一樣可以達到重開效果
-kubectl edit deployment -n eda  nginx179
+kubectl edit deployment -n NsName  nginx179
 kubectl get pod -A
 NAMESPACE     NAME                               READY   STATUS    RESTARTS   AGE
-eda           nginx179-5ddfbfccb8-76qz8          1/1     Running   0          84s//啟動成功
+NsName           nginx179-5ddfbfccb8-76qz8          1/1     Running   0          84s//啟動成功
 
 # minikube 
 
@@ -142,25 +142,27 @@ server version需要minikube有安裝才會出現
 >kubectl get nodes
 NAME       STATUS   ROLES                  AGE   VERSION
 minikube   Ready    control-plane,master   3d    v1.20.0
-```
+
 
 PS C:\> minikube dashboard
 Opening kubernetes dashboard in default browser...
+```
 
+- 啟動 minikube 之後，我們可以透過 kubectl run 在 minikube 上運行一個 Google 提供的 hello-minikube docker image，
 
-啟動 minikube 之後，我們可以透過 kubectl run 在 minikube 上運行一個 Google 提供的 hello-minikube docker image，
-
+```
 $ kubectl create deployment first-deployment --image=katacoda/docker-http-server
 deployment.apps/first-deployment created
 $ kubectl get pods
 NAME                               READY   STATUS    RESTARTS   AGE
 first-deployment-8cbf74484-xgc4l   1/1     Running   0          25s
+```
 
-
-在 minikube 上透過 kubectl get
+- 在 minikube 上透過 kubectl get
 
 來自 <https://ithelp.ithome.com.tw/articles/10197186> 
 
+```
 D:\k8syaml>kubectl get namespaces
 NAME              STATUS   AGE
 default           Active   7m52s
@@ -169,21 +171,24 @@ kube-public       Active   7m53s
 kube-system       Active   7m53s
 
 Create a new Namespaces
-D:\k8syaml>kubectl create namespace eda
-namespace/eda created
+D:\k8syaml>kubectl create namespace NsName
+namespace/NsName created
+```
 
-
-建立deployment
+- 建立deployment
+```
 https://kubernetes.io/zh/docs/concepts/workloads/controllers/deployment/
 D:\k8syaml>kubectl create -f my-first-pod.yaml   編輯要部屬的程式
 deployment.apps/my-pod created
 
 D:\k8syaml>kubectl get pods
 No resources found in default namespace.
+```
 
-D:\k8syaml>kubectl get pod -A
+- D:\k8syaml>kubectl get pod -A
+```
 NAMESPACE     NAME                               READY   STATUS    RESTARTS   AGE
-eda           my-pod-5b788d95bc-kx76k            0/1     Error     0          46s  建立不成功因為有相依
+NsName           my-pod-5b788d95bc-kx76k            0/1     Error     0          46s  建立不成功因為有相依
 kube-system   coredns-74ff55c5b-wf484            1/1     Running   0          10m
 kube-system   etcd-minikube                      1/1     Running   0          10m
 kube-system   kube-apiserver-minikube            1/1     Running   0          10m
@@ -191,17 +196,19 @@ kube-system   kube-controller-manager-minikube   1/1     Running   0          10
 kube-system   kube-proxy-skl6r                   1/1     Running   0          10m
 kube-system   kube-scheduler-minikube            1/1     Running   0          10m
 kube-system   storage-provisioner                1/1     Running   0          10m
+```
 
-看LOG
-kubectl -n eda logs my-pod-5b788d95bc-kx76k
+- 看LOG
+kubectl -n NsName logs my-pod-5b788d95bc-kx76k
 
 
-D:\k8syaml>kubectl delete deployment my-pod -n eda  先刪除
+- D:\k8syaml>kubectl delete deployment my-pod -n NS名稱  先刪除
 deployment.apps "my-pod" deleted
 
+```
 D:\k8syaml>kubectl get pod -A
 NAMESPACE     NAME                               READY   STATUS        RESTARTS   AGE
-eda           my-pod-5b788d95bc-kx76k            0/1     Terminating   5          6m20s
+xx           my-pod-5b788d95bc-kx76k            0/1     Terminating   5          6m20s
 kube-system   coredns-74ff55c5b-wf484            1/1     Running       0          16m
 kube-system   etcd-minikube                      1/1     Running       0          16m
 kube-system   kube-apiserver-minikube            1/1     Running       0          16m
@@ -225,7 +232,7 @@ deployment.apps/nginx179 created
 
 D:\k8syaml>kubectl get pod -A
 NAMESPACE     NAME                               READY   STATUS    RESTARTS   AGE
-eda           nginx179-75c6f6f5b8-bwzgm          1/1     Running   0          98s  //啟動成功
+NsName           nginx179-75c6f6f5b8-bwzgm          1/1     Running   0          98s  //啟動成功
 kube-system   coredns-74ff55c5b-wf484            1/1     Running   0          20m
 kube-system   etcd-minikube                      1/1     Running   0          20m
 kube-system   kube-apiserver-minikube            1/1     Running   0          20m
@@ -233,20 +240,23 @@ kube-system   kube-controller-manager-minikube   1/1     Running   0          20
 kube-system   kube-proxy-skl6r                   1/1     Running   0          20m
 kube-system   kube-scheduler-minikube            1/1     Running   0          20m
 kube-system   storage-provisioner                1/1     Running   0          20m
+```
 
-D:\k8syaml>kubectl -n eda rollout restart deployment  nginx179   執行重開指令
+```
+D:\k8syaml>kubectl -n NsName rollout restart deployment  nginx179   執行重開指令
 deployment.apps/nginx179 restarted   
 
 編輯一樣可以達到重開效果
-kubectl edit deployment -n eda  nginx179
+kubectl edit deployment -n NsName  nginx179
 kubectl get pod -A
 NAMESPACE     NAME                               READY   STATUS    RESTARTS   AGE
-eda           nginx179-5ddfbfccb8-76qz8          1/1     Running   0          84s//啟動成功
+NsName           nginx179-5ddfbfccb8-76qz8          1/1     Running   0          84s//啟動成功
+```
 
-
-建立stateful
+- 建立stateful
 https://kubernetes.io/zh/docs/tutorials/stateful-application/basic-stateful-set/
 
+```
 D:\k8syaml>kubectl apply -f my-web.yaml
 service/nginx created
 statefulset.apps/web created
@@ -263,7 +273,8 @@ D:\k8syaml>kubectl apply -f my-web.yaml
 service/nginx unchanged
 statefulset.apps/web created
 
-D:\k8syaml>kubectl edit statefulset -n eda  my-web
+D:\k8syaml>kubectl edit statefulset -n NsName  my-web
 Edit cancelled, no changes made.
 
 
+```

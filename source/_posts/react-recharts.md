@@ -46,6 +46,6 @@ function RenderLineChart() {
 <RenderLineChart />
 ```
 
->note class_name %} ## 網路參考文章 
+>## 網路參考文章 
 
 [recharts](https://recharts.org/en-US)
