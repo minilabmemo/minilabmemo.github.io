@@ -5,7 +5,7 @@ tags:
   - ES6
   - 閉包
   - 解構賦值
-  - 自學筆記
+  - note
 toc: true
 categories:
   - [Frontend,js]

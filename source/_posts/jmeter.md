@@ -3,7 +3,7 @@ title: 整合測試工具 jmeter 初體驗
 tags:
   - test
   - jmeter
-  - qa
+  - SQA
 categories:
   - [技術工具,測試]
 date: 2022-07-01 21:32:36
