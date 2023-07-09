@@ -10320,10 +10320,17 @@ body > .section {
   border-radius: 0px 0px 5px 5px;
 }
 .ref::before {
-  content: "本篇文章內容參考如下，如有引用錯誤或須加註問題，歡迎提出喔。";
+  content: "本篇文章內容參考如下，如有引用錯誤或須加註問題，歡迎提出!";
   display: block;
   color: #947600;
   padding: 1.25em 1.5em;
+}
+.my-toc {
+  border: 3px solid #ffdd57;
+  padding-right: 32px;
+  background-color: #fffbeb;
+  border-radius: 5px 5px 5px 5px;
+  width: fit-content;
 }
 .blockquote {
   background-color: #eef6fc;
@@ -10812,6 +10819,7 @@ body > .section {
   padding: 5px;
   color: #fff;
   font-weight: 600;
+  margin-right: 2px;
 }
 .image.is-7by3 {
   padding-top: 42.8%;
