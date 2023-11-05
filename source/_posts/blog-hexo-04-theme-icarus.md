@@ -384,7 +384,7 @@ providers:
 #### logo
 logo可以放置自己的圖片，svg檔案或png檔案都可以．
 #### highlight 
-  代碼區塊我改成深色主題atom-one-dark，從它們提供的 [styles 檔案位置](https://github.com/highlightjs/highlight.js/tree/9.18.1/src/styles) 中找到的，預覽可以從[highlight.js demo](https://highlightjs.org/static/demo/) 看到效果．
+  代碼區塊我改成深色主題atom-one-dark，從它們提供的 [styles 檔案位置](https://github.com/highlightjs/highlight.js/tree/9.18.1/src/styles) 中找到的，預覽可以從[highlight.js demo](https://highlightjs.org/static/demo/) 看到效果。（不過切換成深色要注意黑色文字是否被吃掉）
 #### sidebar
   left/right.sticky: true 這設定可以固定左右側邊欄，閱讀時到下方時才會不會看不到
 #### toc 

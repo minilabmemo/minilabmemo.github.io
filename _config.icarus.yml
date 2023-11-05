@@ -2,89 +2,87 @@ version: 5.1.0
 variant: default
 logo: /img/mini.svg
 head:
-    favicon: /img/bookmark.png
-    manifest:
-        name: 
-        short_name: 
-        start_url: 
-        theme_color: 
-        background_color: 
-        display: standalone
-        icons:
-            -
-                src: ''
-                sizes: ''
-                type: 
-    open_graph:
-        title: 
-        type: blog
-        url: 
-        image: 
-        site_name: 
-        author: 
-        description: 
-        twitter_card: 
-        twitter_id: 
-        twitter_site: 
-        google_plus: 
-        fb_admins: 
-        fb_app_id: 
-    structured_data:
-        title: 
-        description: 
-        url: 
-        author: 
-        publisher: 
-        publisher_logo: 
-        image: 
-    meta:
-        - ''
-    rss: 
+  favicon: /img/bookmark.png
+  manifest:
+    name:
+    short_name:
+    start_url:
+    theme_color:
+    background_color:
+    display: standalone
+    icons:
+      - src: ''
+        sizes: ''
+        type:
+  open_graph:
+    title:
+    type: blog
+    url:
+    image:
+    site_name:
+    author:
+    description:
+    twitter_card:
+    twitter_id:
+    twitter_site:
+    google_plus:
+    fb_admins:
+    fb_app_id:
+  structured_data:
+    title:
+    description:
+    url:
+    author:
+    publisher:
+    publisher_logo:
+    image:
+  meta:
+    - ''
+  rss:
 navbar:
-    menu:
-        首頁|Home: /
-        全部|Archives: /archives
-        分類|Categories: /categories
-        標籤|Tags: /tags
-        關於|About: /about
-            
-    links:
-         Golang Memo:
-            icon: fa fa-book
-            url: https://minilabmemo.gitbook.io/golang-memo/ 
+  menu:
+    首頁 | Home: /
+    全部 | Archives: /archives
+    分類 | Categories: /categories
+    標籤 | Tags: /tags
+    關於 | About: /about
 
-  
+  links:
+    Golang Memo:
+      icon: fa fa-book
+      url: https://minilabmemo.gitbook.io/golang-memo/
+
 footer:
-    links:
-        Creative Commons:
-            icon: fab fa-creative-commons
-            url: https://creativecommons.org/
-        Attribution 4.0 International:
-            icon: fab fa-creative-commons-by
-            url: https://creativecommons.org/licenses/by/4.0/
+  links:
+    Creative Commons:
+      icon: fab fa-creative-commons
+      url: https://creativecommons.org/
+    Attribution 4.0 International:
+      icon: fab fa-creative-commons-by
+      url: https://creativecommons.org/licenses/by/4.0/
 article:
-    highlight:
-        theme: atom-one-dark
-        clipboard: true
-        fold: unfolded
-    readtime: true
-    update_time: true
-    licenses:
-        Creative Commons:
-            icon: fab fa-creative-commons
-            url: https://creativecommons.org/
-        Attribution:
-            icon: fab fa-creative-commons-by
-            url: https://creativecommons.org/licenses/by/4.0/
-        Noncommercial:
-            icon: fab fa-creative-commons-nc
-            url: https://creativecommons.org/licenses/by-nc/4.0/
+  highlight:
+    theme: atom-one-light
+    clipboard: true
+    fold: unfolded
+  readtime: true
+  update_time: true
+  licenses:
+    Creative Commons:
+      icon: fab fa-creative-commons
+      url: https://creativecommons.org/
+    Attribution:
+      icon: fab fa-creative-commons-by
+      url: https://creativecommons.org/licenses/by/4.0/
+    Noncommercial:
+      icon: fab fa-creative-commons-nc
+      url: https://creativecommons.org/licenses/by-nc/4.0/
 search:
-    type: insight
-    index_pages: true
+  type: insight
+  index_pages: true
 comment:
-    type: facebook
-    shortname: ''
+  type: facebook
+  shortname: ''
 # donates:
 #     -
 #         type: afdian
@@ -106,98 +104,91 @@ comment:
 #         type: wechat
 #         qrcode: ''
 share:
-    type: addthis
-    install_url:  '//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-641e6ccab2930ef8'
+  type: addthis
+  install_url: '//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-641e6ccab2930ef8'
 sidebar:
-    left:
-        sticky: false
-    right:
-        sticky: true
+  left:
+    sticky: false
+  right:
+    sticky: true
 widgets:
-    -
-        position: left
-        type: profile
-        author: Mini Lab Memo
-        author_title:  程式ｘ生活ｘ筆記
-        location:  Taiwan
-        avatar: /img/my-14.png
-        avatar_rounded: true
-        gravatar: 
-        follow_link: https://github.com/minilabmemo
-        social_links:
-            Github:
-                icon: fab fa-github
-                url: https://github.com/minilabmemo
-            Medium:
-                icon: fa-brands fa-medium
-                url: https://medium.com/@mini.lab.memo/about
-            Facebook:
-                icon: fab fa-facebook
-                url: https://www.facebook.com/minilabmemo/
-    
-    -
-        position: left
-        type: links
-        links:
-            Golang: https://minilabmemo.gitbook.io/golang-memo/ 
-            note-blog: /note-blog/
-            Hexo: https://hexo.io
-            Bulma: https://bulma.io
-    -
-        position: right
-        type: toc
-        index: true
-        collapsed: true
-        depth: 5
+  - position: left
+    type: profile
+    author: Mini Lab Memo
+    author_title: 程式ｘ生活ｘ筆記
+    location: Taiwan
+    avatar: /img/my-14.png
+    avatar_rounded: true
+    gravatar:
+    follow_link: https://github.com/minilabmemo
+    social_links:
+      Github:
+        icon: fab fa-github
+        url: https://github.com/minilabmemo
+      Medium:
+        icon: fa-brands fa-medium
+        url: https://medium.com/@mini.lab.memo/about
+      Facebook:
+        icon: fab fa-facebook
+        url: https://www.facebook.com/minilabmemo/
 
-    -
-        position: left
-        type: categories
-    -
-        position: right
-        type: recent_posts
-    -
-        position: left
-        type: archives
-    -
-        position: left
-        type: tags
-        order_by: name
-        amount: 
-        show_count: true
+  - position: left
+    type: links
+    links:
+      Golang: https://minilabmemo.gitbook.io/golang-memo/
+      note-blog: /note-blog/
+      Hexo: https://hexo.io
+      Bulma: https://bulma.io
+  - position: right
+    type: toc
+    index: true
+    collapsed: true
+    depth: 5
+
+  - position: left
+    type: categories
+  - position: right
+    type: recent_posts
+  - position: left
+    type: archives
+  - position: left
+    type: tags
+    order_by: name
+    amount:
+    show_count: true
 
 plugins:
-    animejs: true
-    back_to_top: true
-    baidu_analytics:
-        tracking_id: 
-    bing_webmaster:
-        tracking_id: 
-    busuanzi: true
-    cnzz:
-        id: 
-        web_id: 
-    cookie_consent:
-        type: info
-        theme: edgeless
-        static: false
-        position: bottom-left
-        policyLink: https://www.cookiesandyou.com/
-    gallery: true
-    google_analytics:
-        tracking_id: 
-    hotjar:
-        site_id: 
-    katex: false
-    mathjax: false
-    outdated_browser: false
-    progressbar: true
-    statcounter:
-        project: 
-        security: 
-    twitter_conversion_tracking:
-        pixel_id: 
+  animejs: true
+  back_to_top: true
+  baidu_analytics:
+    tracking_id:
+  bing_webmaster:
+    tracking_id:
+  busuanzi: true
+  cnzz:
+    id:
+    web_id:
+  cookie_consent:
+    type: info
+    theme: edgeless
+    static: false
+    position: bottom-left
+    policyLink: https://www.cookiesandyou.com/
+  gallery: true
+  google_analytics:
+    tracking_id: G-QZRX36Z792
+  hotjar:
+    site_id:
+  katex: false
+  mathjax: false
+  outdated_browser: false
+  progressbar: true
+  statcounter:
+    project:
+    security:
+  twitter_conversion_tracking:
+    pixel_id:
 providers:
-    cdn: jsdelivr
-    fontcdn: google
-    iconcdn: fontawesome
+  cdn: jsdelivr
+  fontcdn: google
+  iconcdn: fontawesome

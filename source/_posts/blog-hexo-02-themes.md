@@ -1,17 +1,18 @@
 ---
-title: "[Blog] 使用 Hexo 撰寫部落格 02- 更換主題編寫與個人化設定"
+title: '[Blog] 使用 Hexo 撰寫部落格 02- 更換主題編寫與個人化設定'
 tags:
   - hexo
   - blog
 toc: true
 categories:
-  - [技術工具,blog]
+  - [技術工具, blog]
 date: 2022-05-01 10:06:30
 ---
 
-> 上一篇已經建立好基本網站架構了，這篇收集本站所有更改主題為NextT及更換的個人化設定．
+> 上一篇已經建立好基本網站架構了，這篇收集本站所有更改主題為 NextT 及更換的個人化設定．
 
 #### 主題呈現效果
+
 <img src="/images/next-home.png" width="200px" />
 <img src="/images/next_post.png" width="200px" />
 <img src="/images/next_tags.png" width="200px" />
@@ -41,17 +42,18 @@ language: zh-TW
 
 1. 在 hexo 網站上挑選主題：https://hexo.io/themes/
 2. 然後依照教學 ~~clone 對方的主題到自己的 theme 資料夾(通常都有 git 指令，在自己資料夾照下即可)~~
-- 20220405更新 使用fork對方的主題庫到自己的庫，然後用submodule進theme資料夾
+
+- 20220405 更新 使用 fork 對方的主題庫到自己的庫，然後用 submodule 進 theme 資料夾
+
 3. 修改主網站設定\_config.yml 來更換
 
-
 ---
-##### 部署修改紀錄 （可跳至最後一步）
 
+##### 部署修改紀錄 （可跳至最後一步）
 
 - 本部落格採用 Next，它是一個相當熱門的主題,且有很多中文文檔說明，我也是看了範例網站，真的太喜歡才決定架 hexo 的，紀錄操作步驟如下．
 
-- (`嘗試1:啟動失敗`)>label danger@失敗 %} 更換主題
+- (`嘗試1:啟動失敗`)失敗 更換主題
 
   1. git clone https://github.com/iissnan/hexo-theme-next themes/next:
 
@@ -67,7 +69,7 @@ WARN   It's rebase to v6.0.0 and future maintenance will resume there
  ===============================================================
 ```
 
-原因應該是找到的文章教學，clone 來源太舊了？改參考官方更新步驟[从 NexT v5.1.x 更新](https://github.com/theme-next/hexo-theme-next/blob/master/docs/zh-CN/UPDATE-FROM-5.1.X.md "从 NexT v5.1.x 更新")
+原因應該是找到的文章教學，clone 來源太舊了？改參考官方更新步驟[从 NexT v5.1.x 更新](https://github.com/theme-next/hexo-theme-next/blob/master/docs/zh-CN/UPDATE-FROM-5.1.X.md '从 NexT v5.1.x 更新')
 
 - （`嘗試2:啟動成功 但曾經部署網站成功後來失敗`)>label danger@失敗 %} 試著更換主題
 
@@ -78,17 +80,18 @@ WARN   It's rebase to v6.0.0 and future maintenance will resume there
    theme: next-reloaded
 3. 重新開啟就正常了
 
-- `嘗試3:成功`) >label success@現況Ｖ %} 2022 04 發現部署後 網站一直沒有更新，部署上傳後會跑部署流程，正常會有綠色勾勾，但某次之後都是紅色勾勾，點擊發現一直沒有辦法找到submoudule themes/next-reloaded
- - 排查過程：蠻奇怪的，不太懂沒有用到submoudule，不知道是不是殘留，部署的源碼也有看到theme/next-reloaded的連接．
-  1. 決定用fork方式一份自己的主題[my-hexo-theme-next)](https://github.com/minilabmemo/my-hexo-theme-next)，並用submoudule加入
- ```
- git submodule add https://github.com/xxx/my-hexo-theme-next.git themes/my-hexo-theme-next
- ```
-  2. 然後砍掉其他不要的主題，另外發現.deploy_git裡面有殘留theme/next-reloaded...等東西，就直接把.deploy_git資料夾整個砍掉，重新跑就部署成功了． （這時會發現.deploy_git跟上傳的檔案裡面都沒有theme中奇怪的next-reloaded的連接）
+- `嘗試3:成功` 2022 04 發現部署後 網站一直沒有更新，部署上傳後會跑部署流程，正常會有綠色勾勾，但某次之後都是紅色勾勾，點擊發現一直沒有辦法找到 submoudule themes/next-reloaded
+- 排查過程：蠻奇怪的，不太懂沒有用到 submoudule，不知道是不是殘留，部署的源碼也有看到 theme/next-reloaded 的連接．
 
+1. 決定用 fork 方式一份自己的主題[my-hexo-theme-next)](https://github.com/minilabmemo/my-hexo-theme-next)，並用 submoudule 加入
 
->之後想更換別的主題也是這樣喔
+```
+git submodule add https://github.com/xxx/my-hexo-theme-next.git themes/my-hexo-theme-next
+```
 
+2. 然後砍掉其他不要的主題，另外發現.deploy_git 裡面有殘留 theme/next-reloaded...等東西，就直接把.deploy_git 資料夾整個砍掉，重新跑就部署成功了． （這時會發現.deploy_git 跟上傳的檔案裡面都沒有 theme 中奇怪的 next-reloaded 的連接）
+
+> 之後想更換別的主題也是這樣喔
 
 ### 主題設定
 
@@ -142,7 +145,7 @@ categories:
 ---
 ```
 
-3. 開啟menu頁面(側邊欄)
+3. 開啟 menu 頁面(側邊欄)
 
 ```yaml _config.yml
 # Usage: `Key: /link/ || icon`
@@ -208,8 +211,9 @@ blah blah blah
 
 #### 文章中程式碼區塊
 
-##### 更改主題 
-/themes/next-reloaded/_config.yml
+##### 更改主題
+
+/themes/next-reloaded/\_config.yml
 
 ```
   highlight_theme: night
@@ -223,28 +227,34 @@ blah blah blah
 ```
 
 ##### 標籤外掛（Tag Plugins）
-```go
+
+````go
 依序為 語言 左上標題 右上網址 網址名稱
->codeblock lang:go terminal https://minilabmemo.github.io/ 完整程式碼 %}
+>(% codeblock lang:go terminal https://minilabmemo.github.io/ 完整程式碼 %}
 go xxx
->endcodeblock %}
+> {% endcodeblock %}
 
 \\ Backtick Code Block
 ```go  terminal https://minilabmemo.github.io/ 完整程式碼
 ```diff
-- 
-+ 
-```
-- codeblock效果
->codeblock lang:go terminal https://minilabmemo.github.io/ 完整程式碼 %}
-go xxx
->endcodeblock %}
+-
++
+````
 
-- Backtick Code Block效果
+- codeblock 效果
+
+  > {% codeblock lang:go terminal https://minilabmemo.github.io/ 完整程式碼 %}
+  > go xxx
+  > {% endcodeblock %}
+
+- Backtick Code Block 效果
+
 ```golang terminal https://minilabmemo.github.io/ 完整程式碼
 go xxx
 ```
-- diff效果
+
+- diff 效果
+
 ```diff
 - go xxx
 + go xxx
@@ -253,23 +263,11 @@ go xxx
 #### 文章開頭標記
 
 ```
->Content (md partial supported) 
+>Content (md partial supported)
 其中class_name可不設或是改成下方關鍵字
 ```
 
->Content (不設定) 淡灰色 
-
->note default %} 灰色 default 
-
->note primary %} 紫色 primary 
-
-> 綠色 success 
-
->藍色 info 
-
->note warning %} 黃色 warning 
-
->note danger %} 紅色 danger 
+> Content (不設定) 淡灰色
 
 主題\_config 文件配置关键字：note，可修改成想要的風格
 
@@ -288,13 +286,12 @@ note:
 ```
 
 #### 標籤標注
->label info@標示藍色底色 %}
->label warning@標示黃色底色 %}
->label danger@標示danger底色 %}
+
 ```
->label info@標示藍色底色 %}
->label warning@標示黃色底色 %}
->label danger@標示danger底色 %}
+> {% label info@標示藍色底色 %} > {% label warning@標示黃色底色 %} > {% label danger@標示 danger 底色 %}
+> {% label info@標示藍色底色 %}
+> {% label warning@標示黃色底色 %}
+> {% label danger@標示danger底色 %}
 ```
 
 #### 文章中貼上圖片
@@ -361,7 +358,6 @@ back2top:
   scrollpercent: true 顯示百分比
 ```
 
-
 ### 個人化設定
 
 #### 預設新增文章模板
@@ -381,15 +377,20 @@ blabla..... 前言
 
 意外發現的方法，藉由這樣修改 hexo new post 時就可以把基本的設定加好了
 
-
 ### 參考文章
+
+<div class="ref">
+
 - [NextT 開始使用](https://theme-next.iissnan.com/getting-started.html)
 - [NextT 主题配置](https://theme-next.iissnan.com/theme-settings.html)
 - [NextT 內置標籤](https://theme-next.iissnan.com/tag-plugins.html)
 - [Hexo 个人博客 NexT 主题设置 Scheme 外观](https://blog.csdn.net/mqdxiaoxiao/article/details/92843057?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-3.channel_param&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-3.channel_param)
 - [hexo 页脚添加访客人数和总访问量](https://chrischen0405.github.io/2018/09/11/post20180911/)
-- [【Hexo插件系列】 常用tag](https://blog.eson.org/pub/fc959554/)
+- [【Hexo 插件系列】 常用 tag](https://blog.eson.org/pub/fc959554/)
+
+</div>
 
 #### deploy
+
 - [在 hexo 中使用 git submodules 管理主題](https://www.gushiciku.cn/pl/2Vvn/zh-tw)
-- [用Github Pages+Hexo搭建博客之(七)如何删除一篇已经发布的文章 #成功解决：同时删除掉.deploy_git文件夹](https://blog.csdn.net/qq_34243930/article/details/109046120)
+- [用 Github Pages+Hexo 搭建博客之(七)如何删除一篇已经发布的文章 #成功解决：同时删除掉.deploy_git 文件夹](https://blog.csdn.net/qq_34243930/article/details/109046120)

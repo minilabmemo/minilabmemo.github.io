@@ -9,13 +9,21 @@ categories:
 date: 2020-05-30T18:32:15+08:00
 ---
 
->上一篇已建立一個基本專案，開始可以對index.js做一些改寫練習，並使用JSX語法 
 
+<article class="message is-info"><div class="message-body">
+上一篇已建立一個基本專案，開始可以對index.js做一些改寫練習，並練習如何使用 JSX 語法 來撰寫。
+
+</div></article>
 
 <!--more-->
+## 目錄 | Contents
+<div class="my-toc">
+<!-- toc -->
+</div>
+
 
 # JSX 
-看起來是html與ＪＳ混合使用，比較接近 JavaScript 而不是 HTML，ＪＳＸ允許你使用 JavaScript 所有的功能。
+看起來是 html 與 JS 混合使用，比較接近 JavaScript 而不是 HTML， JSX 允許你使用 JavaScript 所有的功能。
 - Ref :https://zh-hant.reactjs.org/docs/introducing-jsx.html
 
 ## html 區域
@@ -29,15 +37,18 @@ date: 2020-05-30T18:32:15+08:00
 ## React 中的 JSX 區域
 接著看一下src/index.js裡的程式碼
 
-### 基本範例: 直接撰寫html
-```javascript
+### 基本範例: 直接撰寫 html
+
+```react
+// APP是組件
 ReactDOM.render(<App />, document.getElementById('root'));
 
-或是改成
+//或是改成
 ReactDOM.render(
   <h1> Hello world!</h1>,
 document.getElementById('root'));
 ```
+
 解說：
 - 由 React DOM 函式將元素渲染 ROOT 這個DOM 節點中
 - 而將 html當參數傳遞是使用一種Javascript語法: JSX
@@ -52,8 +63,8 @@ ReactDOM.render(
 
 ```
 
-#### 關於Babel
- 是JavaScript 前處理器，編譯器，主要能轉換JSX與ES6成各瀏覽器支持的ＪＳ
+#### 關於 Babel
+ 是JavaScript 前處理器，編譯器，主要能轉換JSX與ES6成各瀏覽器支持的 JS
 ```
 const element = (
   <h1 className="text">
@@ -70,9 +81,9 @@ const element = React.createElement(
 );
 ```
 ------------
-### 範例: 在html中可以用{JS} 表達式崁入變數
+### 範例: 在 html中 可以用 {JS} 表達式崁入變數
 
-```javascript
+```react
 //js函式宣告或是變數宣告區
 const styleRed = { color: 'red' };
 const pic=()=>{ //html語法可以當作參數傳遞
@@ -99,7 +110,7 @@ ReactDOM.render(
 
 
 ### 範例: 帶入屬性命名與Event
-```javascript
+```react
 const getValue=(event)=>{
   console.log(event.target.value)
 }
@@ -131,7 +142,7 @@ export default function App() {
 }
 
 ```
-- 在style內的是ＪＳ物件也可以把他們只給一個const變數
+- 在style內的是 JS物件也可以把他們只給一個const變數
 - 內容與css不同的是必須是小寫駱駝且去除'-'
 - 這種寫法的缺點是不行用hover等特殊效果，需利用其他模組化stylr寫法
 
@@ -140,8 +151,9 @@ export default function App() {
 
 
 # 網路參考文章
->note warning %} <span style="font-size: 9px;">
-學習路上感謝網路大神們，如果你發現了我，可以查看參考文章了解更多概念👇👇👇
-</span>
+
+<div class="ref">
 - [【React.js入門 - 06】 JSX](https://ithelp.ithome.com.tw/articles/10216468)
 - [React篇: JSX語法撰寫指引](https://eyesofkids.gitbooks.io/react-basic-zh-tw/content/day18_deeper_jsx/ "React篇: JSX語法撰寫指引")
+
+</div>

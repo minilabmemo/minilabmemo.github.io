@@ -8,16 +8,12 @@ categories:
 date: 2020-09-18 18:37:37
 ---
 
->cq %}
 
 # 什麼是 vscode
-
->endcq %}
 
  <blockquote class="blockquote-center">
  Visual Studio Code（簡稱vscode）是一個由微軟開發，同時支援Windows 、 Linux和macOS等操作系統的免費程式碼編輯器，它支援測試，並內建了Git 版本控制功能，同時也具有開發環境功能，例如代碼補全、代碼片段和代碼重構等。 （維基百科）</blockquote>
 
-> 本篇記錄自身常用設定與插件紀錄．[✍持續更新中]
 <!--more-->
 
 ## 開啟命令面板

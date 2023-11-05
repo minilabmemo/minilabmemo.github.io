@@ -1,18 +1,18 @@
 ---
-title: "[Blog] 使用 Hexo 撰寫部落格 01- 建立部落格"
+title: '[Blog] 使用 Hexo 撰寫部落格 01- 建立部落格'
 tags:
   - hexo
   - blog
 categories:
-  - [技術工具,blog]
+  - [技術工具, blog]
 date: 2021-01-31 10:06:20
 ---
 
->cq %}
+> cq %}
 
 # hexo 是什麼？
 
->endcq %}
+> endcq %}
 
  <blockquote class="blockquote-center">
  
@@ -103,9 +103,11 @@ More info: [Writing](https://hexo.io/docs/writing.html)
 - 如對語法有一點熟悉，就直接用 vscode 打開檔案開始撰寫內文，並可以安裝 vscode markdown preview 插件，邊改邊預覽．
 
 - 編寫完再啟動部落格並在瀏覽器查看效果． （可帶--draft 顯示草稿）
+
 ```
 hexo s --draft
 ```
+
 ---
 
 ## 部署網站
@@ -113,11 +115,12 @@ hexo s --draft
 ### 建立與設定 Git 空間
 
 - 先在 github 上新增一個專案叫與帳號一樣命名叫做“[yourname].github.io”
->建立完成後會有教你如何建立commit & push的語法，建議要先建立連結，之後部署才會順利．
->```
->git push -u origin master
->```
->
+
+  > 建立完成後會有教你如何建立 commit & push 的語法，建議要先建立連結，之後部署才會順利．
+  >
+  > ```
+  > git push -u origin master
+  > ```
 
 - 配置 \_config.yml
 
@@ -150,10 +153,10 @@ INFO  Deploy done: git
 
 其他空間部署說明(ex:heroku) More info: [Deployment](https://hexo.io/docs/one-command-deployment.html)
 
-> 註：部署會上傳至剛剛config的位置，測試發現只會上傳web檔案相關如果有上傳source/theme 檔案也會被移除．
-因為在開發環境時可以先開一個src branch 來控管原始檔案．
-<br>branch - src (have all files)
-<br>branch - master (only web files)
+> 註：部署會上傳至剛剛 config 的位置，測試發現只會上傳 web 檔案相關如果有上傳 source/theme 檔案也會被移除．
+> 因為在開發環境時可以先開一個 src branch 來控管原始檔案．
+> <br>branch - src (have all files)
+> <br>branch - master (only web files)
 
 ### 個人網站網址
 
@@ -168,15 +171,12 @@ $ hexo clean
 清除快取檔案 (db.json) 和已產生的靜態檔案 (public)
 ```
 
->label warning@下一篇會介紹如何更換主題及內文撰寫%}
-
+> 下一篇會介紹如何更換主題及內文撰寫%}
 
 ---
 
 ## 參考文章
->note warning %} <span style="font-size: 9px;">
-學習路上感謝網路大神們，如果你發現了我，可以查看參考文章了解更多概念👇👇👇
-</span>
+
 - Quick Start
   Welcome to [Hexo](https://hexo.io/)! Check [documentation](https://hexo.io/docs/) for more info. If you get any problems when using Hexo, you can find the answer in [troubleshooting](https://hexo.io/docs/troubleshooting.html) or you can ask me on [GitHub](https://github.com/hexojs/hexo/issues)
 

@@ -30,10 +30,15 @@ categories:
 <!-- toc -->
 </div>
 
+-----
+<div class="blockquote">
+ 重點引言
+</div>
+<span class="my-hightlight ">備忘筆記</span>
+
 ## 網路參考文章
 
-<div class="notification is-warning">
-本篇文章內容參考如下
+<div class="ref">
 </div>
 
 
@@ -68,3 +73,14 @@ xxx
 message
 </div></article>
 ```
+-------------
+
+
+## 網路參考文章
+
+<div class="ref">
+
+- Photo by <a href="https://unsplash.com/@mediamodifier?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Mediamodifier</a> on <a href="https://unsplash.com/photos/nPZzZpWhPwg?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+
+  
+</div>

@@ -275,8 +275,6 @@ GET /event/_search
 
 
 ###  網路參考文章
->note warning %} <span style="font-size: 9px;">
-學習路上感謝網路大神們，如果你發現了我，可以查看參考文章了解更多概念👇👇👇
-</span>
+
 - [elastic-組合查詢 中文](https://www.elastic.co/guide/cn/elasticsearch/guide/current/bool-query.html "elastic-組合查詢 中文")
 

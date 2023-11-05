@@ -7,17 +7,19 @@ categories:
 date: 2021-02-27 20:40:59
 ---
 
->整理react學習“個人筆記” 
 
-本文內容：
-- React component (組件)語法
-- props 是什麼
-  - ES6箭頭函式組件
-- State的用法
-- 生命週期
+<article class="message is-info"><div class="message-body">
+整理React 組件、函式與生命週期 用法重點筆記。
+</div></article>
+
+<!--more-->
+## 目錄 | Contents
+<div class="my-toc">
+<!-- toc -->
+</div>
 
 
-### React component (組件)語法
+## React component (組件)語法
 - component 就像是 JavaScript 的 function
 - ReactDOM.render 中{函式名稱}變成了<函式名稱/> see:[Render Element](https://zh-hant.reactjs.org/docs/rendering-elements.html)
 - Component 命名首字必須大寫，大寫駝峰的方式，否則 React 會把它當作一般的 HTML 元素處理，並跳出Warning提示，看到大寫駝峰命名變數時，可以知道是 React 組件而非一般函式。
@@ -25,7 +27,7 @@ date: 2021-02-27 20:40:59
 
 ----
 
-### props 是什麼
+## props 是什麼
 - component 就像是 JavaScript 的 function，它接收任意的參數（稱之為「props」）並且回傳畫面的 React element。
 - props 通常是不可變的(唯獨Immutable)，不能修改自己的
 
@@ -34,15 +36,15 @@ Ref:[Components 與 Props] (https://zh-hant.reactjs.org/docs/components-and-prop
 
 
 
-#### function component vs class component
+### function component vs class component
 接著看看兩種寫法轉換 Function 成 Class ：
 
-##### 使用function 來做 component
+#### 使用function 來做 component
 - 如果需要向component傳参数，可以使用 props 對象，
 - 用return (html)
 
 
-````javascript function component
+```js function component
 
 function HelloName(props) {
 	return <h1>Hello {props.name}!</h1>;
@@ -53,15 +55,15 @@ ReactDOM.render(
 	</React.StrictMode>,
 	document.getElementById('example')
 );
-````
+```
 
-##### 使用ES6 class來做 component
-- 也可以使用ES6  class來 來定義 
+#### 使用ES6 class來做 component
+- 也可以使用ES6  class 來 來定義 
 - 繼承React.Component且在用render(){}包一層
 - props 要改用 this.props
 - 用render(){return html}
 
-````javascript class來 component
+```jsx class來 component
 class HelloName extends React.Component {
   render() {
     return <h1>Hello, {this.props.name}</h1>;
@@ -74,7 +76,7 @@ ReactDOM.render(
 	</React.StrictMode>,
 	document.getElementById('example')
 );
-````
+```
 
 
 
@@ -83,7 +85,7 @@ ReactDOM.render(
 
 
 
-#### React組件 ES6箭頭函式組件 寫法
+### React組件 ES6箭頭函式組件 寫法
 接著看看`箭頭函式語法`可以簡潔,少打很多字元
 - const App: () => JSX.Element //大寫駱駝命名
 - 縮寫：如果裡面只有return 可以去掉{}與return，但通常會有一些變數存在，個人習慣保留．
@@ -100,8 +102,8 @@ const Hello = () => {
 
 
 
-### State的用法
-Props 是唯讀的(Immutable)，State 類似於 prop，但它是私有且由 component 完全控制的。當state被改變時，會進入re-render的update程序，更新畫面
+## State的用法
+Props 是唯讀的(Immutable)，State 類似於 prop，但它是私有且由 component 完全控制的。當<span class="my-hightlight ">state被改變時，會進入re-render的update程序，更新畫面</span>。
 
 #### class(setState) vs function(useState)
 
@@ -114,7 +116,7 @@ Props 是唯讀的(Immutable)，State 類似於 prop，但它是私有且由 com
 - 範例練習:透過一個新的按鈕去改變時間 [Refresh Time](https://codesandbox.io/s/refreshtime-ju4pv?file=/src/index.js "Refresh Time")
 
 
-````javascript
+```jsx
 import React from "react";
 import ReactDOM from "react-dom";
 
@@ -159,18 +161,21 @@ ReactDOM.render(
 );
 
 
-````
+```
 
-#### 2.使用function component更改state（用useState）
+### 2.使用function component更改state（用useState）
 - 沒有內部狀態（State），是 Stateless Components。
 - 沒有 Lifecycle Hooks 和 refs。
 - 如果想要更改props 要改用useState，useState-是一個基礎的Hook，是可以在function component中使用設定state，而不需要轉換成class。
-> hook意思是“鈎子”，在音樂上，指的是一首歌曲中最能鈎人的部分。Hook 是 React 16.8 增加的新功能。讓你不必寫 class 就能使用 state 以及其他 React 的功能。使用hook可以更簡化且被推崇使用。
+
+<div class="blockquote">
+ hook意思是“鈎子”，在音樂上，指的是一首歌曲中最能鈎人的部分。Hook 是 React 16.8 增加的新功能。讓你不必寫 class 就能使用 state 以及其他 React 的功能。使用hook可以更簡化且被推崇使用。
+</div>
 
 - useState它回傳了一對值：目前的 state 跟一個可以更新 state 的 function。
 - 範例改寫練習 [Refresh_Time_useState](https://codesandbox.io/s/refreshtimeusestate-xns3c?file=/src/index.js "Refresh_Time_useState")
 
-```javascript
+```react
 //1.加上useState引入
 import React, { useState } from 'react';
 import ReactDOM from "react-dom";
@@ -203,7 +208,7 @@ ReactDOM.render(
 
 ----
 
-#### （延伸說明）hooks 與 Function Component
+### （延伸說明）hooks 與 Function Component
 
 [使用 State Hook](https://zh-hant.reactjs.org/docs/hooks-state.html)
 
@@ -216,11 +221,11 @@ ReactDOM.render(
 
 -----
 
-### 生命週期
+## 生命週期
 元件被安裝時(Mount)、元件被更新時(Update)、元件被移除時(Unmount)
 *註：原本想要一樣比較一下class 原本的用法，但還是直接介紹function component(useEffect)更簡潔．
 
-#### useEffect hook
+### useEffect hook
 
 ```
 useEffect(() => {
@@ -241,7 +246,9 @@ Ref:
 
 ----
 
-### 網路參考範例:
+## 網路參考範例:
+
+<div class="ref">
 
 [React State(状态)](https://www.runoob.com/react/react-state.html "React State(状态)") @runoob基礎與線上範例
 **[State 和生命週期](https://zh-hant.reactjs.org/docs/state-and-lifecycle.html "State 和生命週期") @React中文React解說
@@ -251,3 +258,5 @@ Ref:
 
 [React hook](https://zh-hant.reactjs.org/docs/hooks-intro.html) @React 中文解說Hook系列
 [使用 State Hook](https://zh-hant.reactjs.org/docs/hooks-state.html "使用 State Hook") @React 中文解說State Hook中寫法對比
+
+</div>

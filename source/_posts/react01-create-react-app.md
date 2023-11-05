@@ -12,11 +12,18 @@ date: 2020-05-16T15:42:53+08:00
 ---
 
 
->快速安裝 React 專案與建置開發環境，創建React App是創建單頁React應用程序的官方支持方式。 它提供了無需配置的現代化構建設置。 
 
+<article class="message is-info"><div class="message-body">
+快速安裝 React 專案與建置開發環境，創建React App是創建單頁React應用程序的官方支持方式。 它提供了無需配置的現代化構建設置。 
 
+</div></article>
 
 <!--more-->
+## 目錄 | Contents
+<div class="my-toc">
+<!-- toc -->
+</div>
+
 
 
 #### 安裝node.js (npm)

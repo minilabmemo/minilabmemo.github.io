@@ -124,10 +124,8 @@ $ npx patch-package hexo-theme-icarus --include ".*(?:include|common).*"
 
 ## 網路參考文章
 
-<article class="message is-warning"><div class="message-body">
-本篇文章內容參考如下，如有引用錯誤或須加註問題，歡迎提出喔．
-</div></article>
 
+<div class="ref">
 
 - [修改nodejs项目中node_modules的代码，不能生效吗？](https://www.zhihu.com/question/302249432)
   - 配置webpack alias 的方法介紹 （沒用過）
@@ -138,3 +136,5 @@ $ npx patch-package hexo-theme-icarus --include ".*(?:include|common).*"
 - Photo by <a href="https://unsplash.com/it/@webstacks?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Webstacks</a> on <a href="https://unsplash.com/photos/WbOR54pzvLM?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
 - Photo by <a href="https://unsplash.com/@sincerelymedia?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Sincerely Media</a> on <a href="https://unsplash.com/photos/HoEYgBL_Gcs?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
   
+
+</div>

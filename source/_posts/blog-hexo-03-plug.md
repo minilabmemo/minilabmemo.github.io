@@ -1,15 +1,16 @@
 ---
-title: "[Blog] 使用 Hexo 撰寫部落格 03 - 外部資源/插件設定"
+title: '[Blog] 使用 Hexo 撰寫部落格 03 - 外部資源/插件設定'
 tags:
   - hexo
   - blog
   - google_analytics
 categories:
-  - [技術工具,blog]
+  - [技術工具, blog]
 date: 2022-02-03 10:06:30
 ---
 
 > 外部也有一些插件與資源可以幫助部落格更加豐富，本篇記錄用到的外部插件使用方式．
+
 <!--more-->
 
 ## 外部資源/插件設定
@@ -62,22 +63,26 @@ tag_cloud:
 **PS:不要使用 hexo g -d 或者 hexo d -g 这类组合命令。**详情见: Issue 7
 ```
 
+### 新增 Google Analytics 流量分析
 
-### 新增Google Analytics 流量分析
-Google分析是一個由Google所提供的網站流量統計服務。Google 分析現在是網際網路上使用最廣泛的網路分析服務。
+Google 分析是一個由 Google 所提供的網站流量統計服務。Google 分析現在是網際網路上使用最廣泛的網路分析服務。
 
-（雖然這部落格只是用來來自己筆記的，流量應該很少，但想要用來玩玩看google的分析網站而試試）
+（雖然這部落格只是用來來自己筆記的，流量應該很少，但想要用來玩玩看 google 的分析網站而試試）
 
 #### 1.註冊 google analysis
-這邊我註冊了一個帳戶名（yume），資源名稱為hexo_blog，名稱之後都可以更改，接著填寫一些想要分析的內容與目的等等，完成後就會得到一個資源，也會有資源ID（但這不是我們要的），點入該新建的資源後，再新增一個資源串流，就可以得到評估ＩＤ了．
+
+這邊我註冊了一個帳戶名（yume），資源名稱為 hexo_blog，名稱之後都可以更改，接著填寫一些想要分析的內容與目的等等，完成後就會得到一個資源，也會有資源 ID（但這不是我們要的），點入該新建的資源後，再新增一個資源串流，就可以得到評估ＩＤ了．
 
 ##### 代碼設定操作說明
-這邊提供了兩種方式說明：
-- 1.新增網頁內代碼，全域網站內有說明如果在網站上head區塊加入代碼範例或是使用google代碼管理工具．
-- 2.使用現有的網頁內代碼：內有提到gtag.js與你的評估ID資訊．
 
-#### 2.修改hexo的主題設定檔
-由於目前我用的主題已經有現有的相關代碼設定，因此只要在上面拿到的評估ID，貼到主題設定檔中的app_id裡就可以了．
+這邊提供了兩種方式說明：
+
+- 1.新增網頁內代碼，全域網站內有說明如果在網站上 head 區塊加入代碼範例或是使用 google 代碼管理工具．
+- 2.使用現有的網頁內代碼：內有提到 gtag.js 與你的評估 ID 資訊．
+
+#### 2.修改 hexo 的主題設定檔
+
+由於目前我用的主題已經有現有的相關代碼設定，因此只要在上面拿到的評估 ID，貼到主題設定檔中的 app_id 裡就可以了．
 
 ```yml themes/next-reloaded/_config.yml
 # Google Analytics
@@ -88,7 +93,8 @@ google_analytics:
   only_pageview: false
 ```
 
-- 當然有的時候會遇到不失效的問題，網路有說有的代碼會去判斷主設定檔的hostname與github 是否
+- 當然有的時候會遇到不失效的問題，網路有說有的代碼會去判斷主設定檔的 hostname 與 github 是否
+
 ```
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
@@ -96,13 +102,18 @@ url: https://minilabmemo.github.io/
 ```
 
 #### 最終效果
-網路上可說可以在剛剛的分頁按下測試，但發現並沒有，且一直出現過去48小時並未收到資料，
+
+網路上可說可以在剛剛的分頁按下測試，但發現並沒有，且一直出現過去 48 小時並未收到資料，
 不過實際瀏覽可以看到分析結果喔!!
 ![GA.png)](/images/GA.png)
 
-
 ## 參考文章
+
+<div class="ref">
+
 - [Hexo 添加标签云](https://www.jianshu.com/p/2bb36378045d)
 - [Hexo 加上 Google analysis](https://op30132.github.io/2019/12/27/hexo-google-analysis/)
-- [Hexo的Next主题中配置Google Analytics之后不生效的问题](https://iamlay.com/2020/06/27/HexoGoogleAnalytics/)
+- [Hexo 的 Next 主题中配置 Google Analytics 之后不生效的问题](https://iamlay.com/2020/06/27/HexoGoogleAnalytics/)
 - [Hexo fluid 中关联 Google Anlytics 的具体方法](https://zhuanlan.zhihu.com/p/338903685)
+
+</div>
