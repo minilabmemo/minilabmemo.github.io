@@ -71,6 +71,7 @@ Branch 'master' set up to track remote branch 'master' from 'https://github.com/
 INFO  Deploy done: git
 
 // 部署時有時會卡住，這時可以停掉再試一次
+// 如果出現Everything up-to-date 要重新 clean/g 再重新部署才會成功
 // 看看從別的分支用vscode上傳是不是正常，需不需要驗證
 // 其他看git 問題紀錄https://app.gitbook.com/s/g0YeSII30XzmXFpIwfHd/tools-cmd/cli/git/wen-ti-ji-lu
 ```
