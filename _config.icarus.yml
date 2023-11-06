@@ -128,14 +128,17 @@ widgets:
       Medium:
         icon: fa-brands fa-medium
         url: https://medium.com/@mini.lab.memo/about
-      Facebook:
-        icon: fab fa-facebook
-        url: https://www.facebook.com/minilabmemo/
+      # Facebook:
+      #   icon: fab fa-facebook
+      #   url: https://www.facebook.com/minilabmemo/
+      # Instagram:
+      #   icon: fab fa-instagram
+      #   url: https://www.instagram.com/minilab_memo/
 
   - position: left
     type: links
     links:
-      Golang: https://minilabmemo.gitbook.io/golang-memo/
+      Golang Book: https://minilabmemo.gitbook.io/golang-memo/
       note-blog: /note-blog/
       Hexo: https://hexo.io
       Bulma: https://bulma.io

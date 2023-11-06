@@ -105,7 +105,7 @@ test('renders the title with the correct text', () => {
 
 
 Create React App 本身就可以直接使用 npm run test 開始執行測試。
-- `npm test -- --coverage` 可以看到多了覆蓋率與未覆蓋的地方
+- `npm test -- --coverage` 可以看到多了覆蓋率與未覆蓋的地方，這指令也會多出一個 converage 資料夾，裡面有index.html 也可以看到結果，不過這個資料夾是被git濾掉不會上傳的。
 ```json
  "scripts": {
     "start": "react-scripts start",
@@ -141,7 +141,7 @@ Time:        3.496 s, estimated 4 s
 ## 插件
 因為我是用vscode做開發，而安裝插件jest可以有更好的測試面板做使用，安裝完之後只要檔案有任何更動，不管是不是測試檔案都會重新執行測試。
 - 通過的項目就會在左側出現打勾。
-- 上面測試報告的未覆蓋範圍可以透過cmd+shift+P->Jest:Toggle Coverage 找出未覆蓋範圍。
+- 上面測試報告的未覆蓋範圍可以透過cmd+shift+P->Jest:Toggle Coverage 提示未覆蓋範圍。
 
 <img src="/images/jest-vscode.png" width="ˇ300px" />
 
