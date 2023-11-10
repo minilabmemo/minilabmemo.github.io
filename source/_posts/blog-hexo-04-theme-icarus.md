@@ -156,9 +156,9 @@ $ hexo config theme icarus
 ```
 
 ### 修正 config.icarus 檔案 配置版面
+- _config.icarus.yml 是進到首頁的配置，可以另外新增 _config.post.yml (文章頁面) 和_config.page.yml (自訂頁面) 來覆蓋。 
 
-
-```diff “點我查看config.icarus.yml細節” >folded 
+```diff “點我查看 _config.icarus.yml細節” >folded 
 version: 5.1.0
 variant: default
 - logo: /img/logo.svg
@@ -613,3 +613,4 @@ https://ppoffice.github.io/hexo-theme-icarus/Widgets/icarus%E7%94%A8%E6%88%B7%E6
 - [Hexo博客指南|第十二篇:Icarus配置 - 网站分析插件](https://ji2xpro.github.io/88bd6454/)
     - 不蒜子网页计数器 及其他統計插件
 - 圖片來源：https://unsplash.com/
+- [icarus个性化配置] (http://www.anticme.com/2021/03/26/icarus%E4%B8%AA%E6%80%A7%E5%8C%96%E9%85%8D%E7%BD%AE/#%E8%A1%A5%E5%85%A8%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6)

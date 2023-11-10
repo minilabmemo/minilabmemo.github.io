@@ -123,8 +123,8 @@ categories:
 
 
 ### 程式碼區塊
-diff >folded
-diff “點我查看config.icarus.yml細節” >folded 
+diff >folded 
+diff “點我查看config.icarus.yml細節” >folded   這是摺疊樣式
 
 
 ### 引言樣式

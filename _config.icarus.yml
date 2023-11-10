@@ -152,7 +152,7 @@ widgets:
     type: categories
   - position: right
     type: recent_posts
-  - position: left
+  - position: right
     type: archives
   - position: left
     type: tags
