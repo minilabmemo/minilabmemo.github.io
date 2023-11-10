@@ -1,21 +1,21 @@
 # _config.post.yml中的配對所有“文章”生效
 sidebar:
   left:
-    sticky: true
-  right:
     sticky: false
+  right:
+    sticky: true
 widgets:
   #- position: left
   #  type: profile
   #- position: left
   #  type: links
-  - position: left
+  - position: right
     type: toc
  # - position: left
  #   type: categories
-  - position: left
+  - position: right
     type: recent_posts
 #  - position: left
 #    type: archives
-  - position: left
+  - position: right
     type: tags

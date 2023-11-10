@@ -1,5 +1,5 @@
 diff --git a/node_modules/hexo-theme-icarus/include/style/base.styl b/node_modules/hexo-theme-icarus/include/style/base.styl
-index 6c3bbb9..9db53a8 100644
+index 6c3bbb9..f723bf9 100644
 --- a/node_modules/hexo-theme-icarus/include/style/base.styl
 +++ b/node_modules/hexo-theme-icarus/include/style/base.styl
 @@ -46,7 +46,7 @@ $menu-item-active-background-color ?= hsl(219, 70%, 96%)
@@ -11,7 +11,7 @@ index 6c3bbb9..9db53a8 100644
  
  // FIXME: https://github.com/groenroos/bulma-stylus/issues/11
  @import bulma-stylus-root + '/utilities/initial-variables'
-@@ -97,3 +97,10 @@ body > .section
+@@ -97,3 +97,81 @@ body > .section
  
      ::-webkit-scrollbar-thumb:hover
          background: rgba(0,0,0,0.24)
@@ -22,6 +22,78 @@ index 6c3bbb9..9db53a8 100644
 +        /* 做偏移，依需求而定 */
 +        margin: 0rem 0.25rem;
 +        padding: 0rem 0.25rem;
++
++.content
++    h2
++        font-weight: 700;
++        color: #3398dc;
++        border-left: 5px solid;
++        padding-left: 5px;
++
++.content
++    h3,h4
++        font-weight: 600;
++        color: #3398dc;
++    ul
++        margin-top 1em;
++        margin-bottom: 1em;
++
++#網路參考文章
++     background-color: #ffdd57;
++     color:black;
++     border:0px;
++     border-radius:5px 5px 0px 0px;
++     margin-bottom:0px;
++     font-size: 1.2em;
++     font-weight: 500;
++     padding:8px;
++
++.ref
++    border:3px solid #ffdd57;
++    padding:5px;
++    background-color: #fffbeb;
++    border-radius:0px 0px 5px 5px;
++    &::before
++        content:"本篇文章內容參考如下，如有引用錯誤或須加註問題，歡迎提出!"
++        display:block;
++        color: #947600;
++        padding: 1.25em 1.5em;
++
++.my-toc
++    border: 3px solid #ffdd57;
++    padding-right: 32px;
++    background-color: #fffbeb;
++    border-radius: 5px 5px 5px 5px;
++    width: fit-content;
++    
++
++.blockquote
++    background-color: #eef6fc;
++    border-radius: 4px;
++    padding: 2rem 1.5rem;
++    position: relative;
++    margin-top: 1.6rem;
++    margin-bottom: 1.5rem;
++    &::before 
++        content: "\f10d";
++        top: -20px;
++        margin-right: -16px;
++        right: 100%;
++        font-family: FontAwesome;
++        position: absolute;
++        color: #039be5;
++        font-size: 34px;
++    &::after 
++        content: "\f10e";
++        margin-left: -16px;
++        left: 100%;  
++        top: auto;
++        bottom: -20px;
++        font-family: FontAwesome;
++        position: absolute;
++        color: #039be5;
++        font-size: 34px;
+\ No newline at end of file
 diff --git a/node_modules/hexo-theme-icarus/include/style/card.styl b/node_modules/hexo-theme-icarus/include/style/card.styl
 index db5f46f..1523562 100644
 --- a/node_modules/hexo-theme-icarus/include/style/card.styl
@@ -35,10 +107,10 @@ index db5f46f..1523562 100644
 +        box-shadow: 0 6px 15px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.1)
 +        transform: translateY(-3px);
 diff --git a/node_modules/hexo-theme-icarus/include/style/helper.styl b/node_modules/hexo-theme-icarus/include/style/helper.styl
-index 84f1141..b7f5d90 100644
+index 84f1141..a572428 100644
 --- a/node_modules/hexo-theme-icarus/include/style/helper.styl
 +++ b/node_modules/hexo-theme-icarus/include/style/helper.styl
-@@ -138,6 +138,13 @@ for n in (0 .. 5)
+@@ -138,6 +138,14 @@ for n in (0 .. 5)
      &:hover
          color: $primary !important
  
@@ -48,6 +120,7 @@ index 84f1141..b7f5d90 100644
 +    padding: 5px;
 +    color: white;
 +    font-weight: 600;
++    margin-right: 2px;
 +
  /* ---------------------------------
   *          Image helpers
@@ -135,3 +208,149 @@ index 02e4d4c..396ed32 100644
                      {/* Licensing block */}
                      {!index && article && article.licenses && Object.keys(article.licenses)
                          ? <ArticleLicensing.Cacheable page={page} config={config} helper={helper} /> : null}
+diff --git a/node_modules/hexo-theme-icarus/layout/common/footer.jsx b/node_modules/hexo-theme-icarus/layout/common/footer.jsx
+index fcdecd9..08ce896 100644
+--- a/node_modules/hexo-theme-icarus/layout/common/footer.jsx
++++ b/node_modules/hexo-theme-icarus/layout/common/footer.jsx
+@@ -1,5 +1,5 @@
+-const { Component } = require('inferno');
+-const { cacheComponent } = require('hexo-component-inferno/lib/util/cache');
++const {Component} = require('inferno');
++const {cacheComponent} = require('hexo-component-inferno/lib/util/cache');
+ 
+ class Footer extends Component {
+     render() {
+@@ -35,14 +35,14 @@ class Footer extends Component {
+                             {footerLogo}
+                         </a>
+                         <p class="is-size-7">
+-                            <span dangerouslySetInnerHTML={{ __html: `&copy; ${siteYear} ${author || siteTitle}` }}></span>
++                            <span dangerouslySetInnerHTML={{__html: `&copy; ${siteYear} ${author || siteTitle}`}}></span>
+                             &nbsp;&nbsp;Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>&nbsp;&&nbsp;
+                             <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a>
+                             {showVisitorCounter ? <br /> : null}
+                             {showVisitorCounter ? <span id="busuanzi_container_site_uv"
+-                                dangerouslySetInnerHTML={{ __html: visitorCounterTitle }}></span> : null}
++                                dangerouslySetInnerHTML={{__html: visitorCounterTitle}}></span> : null}
+                         </p>
+-                        {copyright ? <p class="is-size-7" dangerouslySetInnerHTML={{ __html: copyright }}></p> : null}
++                        {copyright ? <p class="is-size-7" dangerouslySetInnerHTML={{__html: copyright}}></p> : null}
+                     </div>
+                     <div class="level-end">
+                         {Object.keys(links).length ? <div class="field has-addons">
+@@ -63,9 +63,9 @@ class Footer extends Component {
+ }
+ 
+ module.exports = cacheComponent(Footer, 'common.footer', props => {
+-    const { config, helper } = props;
+-    const { url_for, _p, date } = helper;
+-    const { logo, title, author, footer, plugins } = config;
++    const {config, helper} = props;
++    const {url_for, _p, date} = helper;
++    const {logo, title, author, footer, plugins} = config;
+ 
+     const links = {};
+     if (footer && footer.links) {
+diff --git a/node_modules/hexo-theme-icarus/layout/common/head.jsx b/node_modules/hexo-theme-icarus/layout/common/head.jsx
+index 887713d..40f685a 100644
+--- a/node_modules/hexo-theme-icarus/layout/common/head.jsx
++++ b/node_modules/hexo-theme-icarus/layout/common/head.jsx
+@@ -1,4 +1,4 @@
+-const { Component } = require('inferno');
++const {Component} = require('inferno');
+ const MetaTags = require('hexo-component-inferno/lib/view/misc/meta');
+ const WebApp = require('hexo-component-inferno/lib/view/misc/web_app');
+ const OpenGraph = require('hexo-component-inferno/lib/view/misc/open_graph');
+@@ -30,8 +30,8 @@ function getPageTitle(page, siteTitle, helper) {
+ 
+ module.exports = class extends Component {
+     render() {
+-        const { site, config, helper, page } = this.props;
+-        const { url_for, cdn, fontcdn, iconcdn, is_post } = helper;
++        const {site, config, helper, page} = this.props;
++        const {url_for, cdn, fontcdn, iconcdn, is_post} = helper;
+         const {
+             url,
+             head = {},
+diff --git a/node_modules/hexo-theme-icarus/layout/common/widgets.jsx b/node_modules/hexo-theme-icarus/layout/common/widgets.jsx
+index a8f4688..5759085 100644
+--- a/node_modules/hexo-theme-icarus/layout/common/widgets.jsx
++++ b/node_modules/hexo-theme-icarus/layout/common/widgets.jsx
+@@ -1,5 +1,5 @@
+ const logger = require('hexo-log')();
+-const { Component } = require('inferno');
++const {Component} = require('inferno');
+ const view = require('hexo-component-inferno/lib/core/view');
+ const classname = require('hexo-component-inferno/lib/util/classname');
+ 
+@@ -65,7 +65,7 @@ function isColumnSticky(config, position) {
+ 
+ class Widgets extends Component {
+     render() {
+-        const { site, config, helper, page, position } = this.props;
++        const {site, config, helper, page, position} = this.props;
+         const widgets = formatWidgets(config.widgets)[position] || [];
+         const columnCount = getColumnCount(config.widgets, config, page);
+ 
+diff --git a/node_modules/hexo-theme-icarus/layout/layout.jsx b/node_modules/hexo-theme-icarus/layout/layout.jsx
+index 098a278..01485c1 100644
+--- a/node_modules/hexo-theme-icarus/layout/layout.jsx
++++ b/node_modules/hexo-theme-icarus/layout/layout.jsx
+@@ -1,4 +1,4 @@
+-const { Component } = require('inferno');
++const {Component} = require('inferno');
+ const classname = require('hexo-component-inferno/lib/util/classname');
+ const Head = require('./common/head');
+ const Navbar = require('./common/navbar');
+@@ -9,7 +9,7 @@ const Search = require('./common/search');
+ 
+ module.exports = class extends Component {
+     render() {
+-        const { site, config, page, helper, body } = this.props;
++        const {site, config, page, helper, body} = this.props;
+ 
+         const language = page.lang || page.language || config.language;
+         const columnCount = Widgets.getColumnCount(config.widgets, config, page);
+@@ -28,7 +28,7 @@ module.exports = class extends Component {
+                                 'is-12': columnCount === 1,
+                                 'is-8-tablet is-8-desktop is-8-widescreen': columnCount === 2,
+                                 'is-8-tablet is-8-desktop is-6-widescreen': columnCount === 3
+-                            })} dangerouslySetInnerHTML={{ __html: body }}></div>
++                            })} dangerouslySetInnerHTML={{__html: body}}></div>
+                             <Widgets site={site} config={config} helper={helper} page={page} position={'left'} />
+                             <Widgets site={site} config={config} helper={helper} page={page} position={'right'} />
+                         </div>
+diff --git a/node_modules/hexo-theme-icarus/layout/tag.jsx b/node_modules/hexo-theme-icarus/layout/tag.jsx
+index 2b6e425..b3be89f 100644
+--- a/node_modules/hexo-theme-icarus/layout/tag.jsx
++++ b/node_modules/hexo-theme-icarus/layout/tag.jsx
+@@ -1,10 +1,10 @@
+-const { Component, Fragment } = require('inferno');
++const {Component, Fragment} = require('inferno');
+ const Index = require('./index');
+ 
+ module.exports = class extends Component {
+     render() {
+-        const { config, page, helper } = this.props;
+-        const { url_for, _p } = helper;
++        const {config, page, helper} = this.props;
++        const {url_for, _p} = helper;
+ 
+         return <Fragment>
+             <div class="card">
+diff --git a/node_modules/hexo-theme-icarus/layout/tags.jsx b/node_modules/hexo-theme-icarus/layout/tags.jsx
+index e8c5a38..c0e55f7 100644
+--- a/node_modules/hexo-theme-icarus/layout/tags.jsx
++++ b/node_modules/hexo-theme-icarus/layout/tags.jsx
+@@ -1,9 +1,9 @@
+-const { Component } = require('inferno');
++const {Component} = require('inferno');
+ const Tags = require('hexo-component-inferno/lib/view/widget/tags');
+ 
+ module.exports = class extends Component {
+     render() {
+-        const { site, helper } = this.props;
++        const {site, helper} = this.props;
+ 
+         return <Tags.Cacheable site={site} helper={helper} />;
+     }

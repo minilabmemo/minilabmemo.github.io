@@ -83,7 +83,7 @@ branch - master (only web files)
 ----
 
 ### image
-要把圖片放到source/images裏面
+要把圖片放到 source/images 裏面
 > reminder:hexo g
 ```
 ![my](/images/avatar_memo.png)
@@ -128,7 +128,7 @@ diff “點我查看config.icarus.yml細節” >folded   這是摺疊樣式
 
 
 ### 引言樣式
-在我的文章裡面有沒有加raw都可以顯示 不知用意
+在我的文章裡面有沒有加 raw 都可以顯示 不知用意
 ```
 {% raw %}<div class="notification is-info">{% endraw %}xxx
 {% raw %}</div>{% endraw %}
@@ -166,3 +166,9 @@ npx patch-package hexo-insert-toc
 npx patch-package hexo-theme-icarus --include ".*(?:include|common).*"
 npx patch-package hexo-component-inferno --include ".*.js"
 ```
+
+## 補助插件
+- [AutoCorrect](https://marketplace.visualstudio.com/items?itemName=huacnlee.autocorrect)
+自動幫助你加入中英文間的空格，錯誤會出現波浪
+- [Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker)
+自動幫你拼字檢查，打錯英文時會出現波浪
