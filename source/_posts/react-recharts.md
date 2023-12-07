@@ -46,6 +46,10 @@ function RenderLineChart() {
 <RenderLineChart />
 ```
 
+- 問題
+如果導入後看不見，注意是否是寬跟高沒給對。
+
+
 >## 網路參考文章 
 
 [recharts](https://recharts.org/en-US)
