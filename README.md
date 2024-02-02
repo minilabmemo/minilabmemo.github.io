@@ -1,23 +1,26 @@
 ---
-title:  HEXO BLOG
+
+title: HEXO BLOG
 
 這是一個使用 HEXO 主題架設的部落格，方便快速建立文章及部屬在 github 上。
 
-
-
 ## 安裝工具
+
 - node.js
 - install hexo-cli
+
 ```
  npm install -g hexo-cli
- ```
+```
 
 - first download node_modules
+
 ```
  npm install
 ```
 
 ### 版本資訊
+
 ```
 $ hexo -v
 INFO  Validating config
@@ -41,7 +44,6 @@ icu: 68.2
 tz: 2020d
 unicode: 13.0
 ```
-
 
 ### Create a new post 新增文章
 
@@ -80,11 +82,15 @@ INFO  Deploy done: git
 
 branch - src (have all files)
 branch - master (only web files)
-----
+
+---
 
 ### image
+
 要把圖片放到 source/images 裏面
+
 > reminder:hexo g
+
 ```
 ![my](/images/avatar_memo.png)
 或是用html寫法，可以控制大小
@@ -94,9 +100,8 @@ branch - master (only web files)
 <a href=""></a>
 ```
 
-
-
 ### 個人分類清單
+
 ```
 Front-Matter
 categories:
@@ -119,16 +124,15 @@ categories:
 
 ```
 
-
-
-
 ### 程式碼區塊
-diff >folded 
-diff “點我查看config.icarus.yml細節” >folded   這是摺疊樣式
 
+diff >folded
+diff “點我查看 config.icarus.yml 細節” >folded 這是摺疊樣式
 
 ### 引言樣式
+
 在我的文章裡面有沒有加 raw 都可以顯示 不知用意
+
 ```
 {% raw %}<div class="notification is-info">{% endraw %}xxx
 {% raw %}</div>{% endraw %}
@@ -139,6 +143,7 @@ danger
 ```
 
 - 三種樣式
+
 ```
 //全底色彩
 <div class="notification is-info">
@@ -158,6 +163,7 @@ message
 ```
 
 ## 創建補丁
+
 ```
 // npx patch-package package-name
 npx patch-package xxx
@@ -168,7 +174,13 @@ npx patch-package hexo-component-inferno --include ".*.js"
 ```
 
 ## 補助插件
+
 - [AutoCorrect](https://marketplace.visualstudio.com/items?itemName=huacnlee.autocorrect)
-自動幫助你加入中英文間的空格，錯誤會出現波浪
+  自動幫助你加入中英文間的空格，錯誤會出現波浪
 - [Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker)
-自動幫你拼字檢查，打錯英文時會出現波浪
+  自動幫你拼字檢查，打錯英文時會出現波浪
+
+## TODO
+
+- [x] 將內容欄位加大 fix: hexo-theme-icarus
+- [ ] hexo 版型沒有多階層清單？
