@@ -1,5 +1,5 @@
 ---
-title: '[react+scss] 在 create-react-app 中引用 scss 簡易開發'
+title: "[react+scss] 在 create-react-app 中引用 scss 簡易開發"
 tags:
   - scss
   - react
@@ -11,8 +11,7 @@ date: 2023-11-07 10:27:52
 ---
 
 <article class="message is-info"><div class="message-body">
-之前在 react 項目中使用的是 css-in-js，css-in-js 的寫法雖然可以解決污染問題，但寫法多變需要時間熟練，後來學會 scss 後，也發現 scss 的用法在 react 項目其實也蠻常見的，套用 css 邏輯即可，網路上也有些文章探討這兩者的差異，有興趣可以自行搜索。
-- 本篇介紹基本 scss 簡易用法，及在已有 react( create-react-app ) 基底下使用。
+之前在 React 專案中使用了 CSS-in-JS。CSS-in-JS 的寫法雖然能解決樣式污染問題，但它的寫法較為多變，需要一定的時間來熟練，且轉化 CSS 語法較為麻煩。後來發現在 React 專案中也常能看到 SCSS 的使用，而且只要套用 CSS 的邏輯即可。本篇紀錄在已有 React（Create React App）基礎上的啟用 SCSS 的方法。
 
 </div></article>
 
@@ -26,13 +25,21 @@ date: 2023-11-07 10:27:52
 
 ---
 
+## React 專案
+
+用以下指令快速建立 create-react-app 專案。
+
 <div class="blockquote">
  <a href="https://create-react-app.dev/">create-react-app</a>  是由 Facebook 開發，透過執行一個命令來設定現代 Web 應用程式的 react 專案。
 </div>
 
+```
+npx create-react-app my-app
+cd my-app
+npm start
+```
+
 ## 建置 SCSS 環境
-
-
 
 ### 方法一：先寫 scss 轉成 css 引入
 
@@ -74,19 +81,19 @@ webpack compiled with 1 error and 1 warning
 
 ## SCSS 寫法
 
-可以看這份教學文 https://sass-lang.com/guide，裡面有很詳細對應說明，以下簡單列出幾個用法解釋。
+你可以參考這份教學文件：Sass 官方指南：https://sass-lang.com/guide，裡面有很詳細對應說明，以下簡單列出幾個用法並進行解釋。
 
 ### 變數 Variables
 
-就是定義變數，用$name 取代即可，但原本的 css 其實後來也有變數功能，這邊不多說明。
+SCSS 中可以定義變量，使用 $name 來引用。雖然原本的 CSS 後來也引進了變數功能，可以視情況使用。
 
 ### 階層 Nesting
 
-原本的 CSS 通常是用空格來區分親子選擇器，但這邊可以用與 HTML 相似的階層結構定義。
+在 SCSS 中，你可以使用類似 HTML 結構的巢狀方式來定義樣式規則。這種方式更加清晰和易於維護，與原生 CSS 中用空格區分父子選擇器的寫法相比更加直觀。
 
 ### 分割
 
-如果你是將 scss 編譯成 css，但又不想要製造大量的 css 檔案的話可以使用 `_xxx.scss` 命名，這類檔案將不會產生出 xxx.css，再將這些檔案集合到統一的 scss 檔案中。
+如果你想要將 SCSS 編譯成 CSS，但又不想產生大量的 CSS 文件，可以使用 \_xxx.scss 命名的方式。這類文件不會單獨產生 xxx.css 文件，而是被集合到統一的 SCSS 文件中。這種方式有助於組織和管理樣式文件，使得專案結構更加清晰。
 
 ## 插件工具
 
