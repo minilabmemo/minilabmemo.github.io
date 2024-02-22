@@ -127,7 +127,7 @@ categories:
 ### 程式碼區塊
 
 diff >folded
-diff “點我查看 config.icarus.yml 細節” >folded 這是摺疊樣式
+diff“點我查看 config.icarus.yml 細節” >folded 這是摺疊樣式
 
 ### 引言樣式
 
@@ -161,6 +161,16 @@ xxx
 message
 </div></article>
 ```
+
+### 標籤 tag
+ <span class="tag is-warning is-medium">語法</span>：
+
+
+### 螢光筆重點
+
+<span class="my-hightlight ">藍色底線</span>
+
+---
 
 ## 創建補丁
 

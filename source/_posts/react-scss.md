@@ -1,5 +1,5 @@
 ---
-title: "[react+scss] 在 create-react-app 中引用 scss 簡易開發"
+title: "[react+scss] 快速在 create-react-app 中引用 scss 簡易開發"
 tags:
   - scss
   - react
@@ -81,7 +81,7 @@ webpack compiled with 1 error and 1 warning
 
 ## SCSS 寫法
 
-你可以參考這份教學文件：Sass 官方指南：https://sass-lang.com/guide，裡面有很詳細對應說明，以下簡單列出幾個用法並進行解釋。
+你可以參考這份教學文件：[Sass 官方指南](https://sass-lang.com/guide)，裡面有很詳細對應說明，以下簡單列出幾個用法並進行解釋。
 
 ### 變數 Variables
 
