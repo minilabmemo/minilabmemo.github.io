@@ -1,5 +1,5 @@
 ---
-title: '[Blog] 在文章底部加上 分享/贊助/評論 內容'
+title: "[Blog] 在文章底部加上 分享/贊助/評論 內容"
 tags:
   - blog
   - hexo
@@ -7,11 +7,11 @@ toc: true
 categories:
   - - 技術工具
     - blog
-date: 2023-02-27 21:17:34
+date: 2022-01-27 21:17:34
 ---
 
 <article class="message is-info"><div class="message-body">
-一開始設置完 blog，底部有幾個區塊- 分享/贊助/評論 沒有設定，是會跳出紅色框框的，這篇就來把文章底部相關的互動給補齊吧．
+一開始設置完 blog，底部有幾個區塊 - 分享/贊助/評論 沒有設定，是會跳出紅色框框的，這篇就來把文章底部相關的互動給補齊吧．
 </div></article>
 
 <!--more-->

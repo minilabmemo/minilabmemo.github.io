@@ -115,7 +115,7 @@ widgets:
   - position: left
     type: profile
     author: Mini Lab Memo
-    author_title: 程式ｘ生活ｘ筆記
+    author_title: 程式 x 生活 x 筆記
     location: Taiwan
     avatar: /img/my-14.png
     avatar_rounded: true
@@ -139,7 +139,6 @@ widgets:
     type: links
     links:
       Golang Book: https://minilabmemo.gitbook.io/golang-memo/
-      note-blog: /note-blog/
       Hexo: https://hexo.io
       Bulma: https://bulma.io
   - position: right
