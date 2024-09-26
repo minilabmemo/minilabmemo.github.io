@@ -115,7 +115,7 @@ widgets:
   - position: left
     type: profile
     author: Mini Lab Memo
-    author_title: 程式 x 生活 x 筆記
+    author_title: 程式 x 研究 x 筆記
     location: Taiwan
     avatar: /img/my-14.png
     avatar_rounded: true

@@ -7,7 +7,7 @@ categories:
   - - Frontend
     - js
 
-date: 2024-02-10 15:43:01
+date: 2023-02-28 21:17:34
 ---
 
 <article class="message is-info"><div class="message-body">
@@ -98,8 +98,7 @@ Animal.prototype.makeSound = function () {
 
 ```
 
-- ES6 class 寫法
-  在 ES2015 有提供 class 關鍵字，但那只是個語法糖，JS 仍然是基於原型的語言。-MDN
+- ES6 class 寫法在 ES2015 有提供 class 關鍵字，但那只是個語法糖，JS 仍然是基於原型的語言。-MDN
 
 ```JavaScript
 class Animal {
@@ -135,8 +134,7 @@ myAnimal.makeSound();
 
 ## 原型鏈
 
-看看由上述程式碼形成的原型鏈：
-<img src="/images/prototype_chain.png" width="800px" />
+看看由上述程式碼形成的原型鏈： <img src="/images/prototype_chain.png" width="800px" />
 
 - 對象內部的 [[Prototype]]
 
@@ -160,24 +158,21 @@ myAnimal.makeSound();
 
   ```
 
-- 訪問對象原型 (內部的 `[[Prototype]]` )
-  <span class="tag is-warning is-medium">語法</span>： `obj.__proto__ `不過這個用法已準備移除，示例先用此表示，建議可改用 `Object.getPrototypeOf(obj)`
+- 訪問對象原型 (內部的 `[[Prototype]]` ) <span class="tag is-warning is-medium">語法</span>： `obj.__proto__ `不過這個用法已準備移除，示例先用此表示，建議可改用 `Object.getPrototypeOf(obj)`
 
   ```JavaScript
   console.log(myAnimal.__proto__==Animal.prototype);  //true
 
   ```
 
-- 判斷屬性是否在本身還是原型身上。
-  <span class="tag is-warning is-medium">語法</span>：`obj.hasOwnProperty (屬性名稱)`
+- 判斷屬性是否在本身還是原型身上。 <span class="tag is-warning is-medium">語法</span>：`obj.hasOwnProperty (屬性名稱)`
 
   ```JavaScript
   console.log(myAnimal.hasOwnProperty('makeSound')); // false
   console.log(myAnimal.__proto__.hasOwnProperty('makeSound')); // true
   ```
 
-- 判斷 constructor 構造函數的 prototype 屬性是否在 object 的原型鏈上
-  <span class="tag is-warning is-medium">語法</span>：`object instanceof constructor`
+- 判斷 constructor 構造函數的 prototype 屬性是否在 object 的原型鏈上 <span class="tag is-warning is-medium">語法</span>：`object instanceof constructor`
   ```JavaScript
   console.log(myAnimal instanceof Animal); // true
   console.log(myAnimal instanceof Object); // true
@@ -194,6 +189,7 @@ myAnimal.makeSound();
 
 <div class="ref">
 
-- Photo by <a href="https://unsplash.com/@mediamodifier?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Mediamodifier</a> on <a href="https://unsplash.com/photos/nPZzZpWhPwg?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+- Photo by <a href="https://unsplash.com/@mediamodifier?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Mediamodifier</a> on
+  <a href="https://unsplash.com/photos/nPZzZpWhPwg?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
 
 </div>
