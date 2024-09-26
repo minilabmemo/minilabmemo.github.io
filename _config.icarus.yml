@@ -11,8 +11,8 @@ head:
     background_color:
     display: standalone
     icons:
-      - src: ''
-        sizes: ''
+      - src: ""
+        sizes: ""
         type:
   open_graph:
     title:
@@ -37,7 +37,7 @@ head:
     publisher_logo:
     image:
   meta:
-    - ''
+    - ""
   rss:
 navbar:
   menu:
@@ -82,7 +82,7 @@ search:
   index_pages: true
 comment:
   type: facebook
-  shortname: ''
+  shortname: ""
 # donates:
 #     -
 #         type: afdian
@@ -105,7 +105,7 @@ comment:
 #         qrcode: ''
 share:
   type: addthis
-  install_url: '//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-641e6ccab2930ef8'
+  install_url: "//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-641e6ccab2930ef8"
 sidebar:
   left:
     sticky: false
@@ -125,20 +125,21 @@ widgets:
       Github:
         icon: fab fa-github
         url: https://github.com/minilabmemo
+      Instagram:
+        icon: fab fa-instagram
+        url: https://www.instagram.com/minilabmemo/
       Medium:
         icon: fa-brands fa-medium
         url: https://medium.com/@mini.lab.memo/about
       # Facebook:
       #   icon: fab fa-facebook
       #   url: https://www.facebook.com/minilabmemo/
-      # Instagram:
-      #   icon: fab fa-instagram
-      #   url: https://www.instagram.com/minilab_memo/
 
   - position: left
     type: links
     links:
       Golang Book: https://minilabmemo.gitbook.io/golang-memo/
+      Memo Notes: https://minilabmemo.github.io/memo-code-blog/
       Hexo: https://hexo.io
       Bulma: https://bulma.io
   - position: right
