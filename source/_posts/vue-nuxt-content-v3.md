@@ -1,6 +1,6 @@
 ---
 title: "202501  @nuxt/content v2 升級 v3 筆記"
-date: 2025-04-11 18:37:37
+date: 2025-04-10 18:37:37
 
 tags:
   - nuxt
