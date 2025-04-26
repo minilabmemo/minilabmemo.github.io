@@ -51,6 +51,9 @@ navbar:
     Golang Memo:
       icon: fa fa-book
       url: https://minilabmemo.gitbook.io/golang-memo/
+    Memo Notes:
+      icon: fa fa-archive
+      url: https://minilabmemo.github.io/memo-code-blog/
 
 footer:
   links:
