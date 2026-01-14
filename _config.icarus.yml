@@ -51,6 +51,9 @@ navbar:
     Golang Memo:
       icon: fa fa-book
       url: https://minilabmemo.gitbook.io/golang-memo/
+    FE Memo:
+      icon: fa fa-window-restore
+      url: https://minilabmemo.gitbook.io/frontend-memo/
     Memo Notes:
       icon: fa fa-archive
       url: https://minilabmemo.github.io/memo-code-blog/
@@ -142,6 +145,7 @@ widgets:
     type: links
     links:
       Golang Book: https://minilabmemo.gitbook.io/golang-memo/
+      Frontend Book: https://minilabmemo.gitbook.io/frontend-memo/
       Memo Notes: https://minilabmemo.github.io/memo-code-blog/
       Hexo: https://hexo.io
       Bulma: https://bulma.io
